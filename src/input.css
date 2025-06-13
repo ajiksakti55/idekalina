@@ -73,10 +73,24 @@
   color: rgb(83 69 60 / var(--tw-text-opacity));
 }
 
+/* desain01 */
+.fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 2s ease,
+    transform 2s ease;
+}
+
+.fade-up.show {
+  opacity: 1;
+  transform: translateY(0);
+}
 /* end custome css */
 
 @theme {
   --font-poppins: "Poppins", sans-serif;
+  --font-pinyon: "Pinyon Script", cursive;
   --font-dmserif: "DM Serif Display", serif;
   --color-idekalina: #faf6f0;
   --color-idekatext: #53453c;
@@ -84,6 +98,14 @@
   --color-idekabuttonhover: #a87c60;
   --color-idekasecond: #eed6c8;
   --color-idekadiscn: #f76c5e;
+  --color-ideka01: #9f6e45;
+  --breakpoint-xs: 25rem;
+  --breakpoint-xm: 41.875rem;
+  --breakpoint-1xl: 50rem;
+  --breakpoint-xxl: 55.625rem;
+  --breakpoint-3xl: 59.063rem;
+  --breakpoint-xx: 70rem;
+  --breakpoint-2xx: 75.625rem;
 }
 
 @layer base {
