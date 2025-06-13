@@ -679,6 +679,9 @@
   .border-idekatext {
     border-color: var(--color-idekatext);
   }
+  .bg-ideka01 {
+    background-color: var(--color-ideka01);
+  }
   .bg-idekabutton {
     background-color: var(--color-idekabutton);
   }
