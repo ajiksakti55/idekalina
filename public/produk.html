@@ -26,79 +26,78 @@
   <body class="bg-idekalina font-poppins text-idekatext">
     <!-- navbar -->
     <header
-      class="absolute top-0 z-50 mx-auto flex w-full items-center px-10 pt-4 md:px-30 lg:px-4 lg:pt-0 xl:px-10"
+      class="absolute top-0 z-50 w-full px-4 pt-4 lg:px-4 lg:pt-0 xl:px-10"
     >
-      <div class="container lg:mx-auto xl:mx-0">
-        <div class="relative flex items-center justify-between">
-          <div class="">
-            <a href="index.html">
-              <img class="h-auto w-35 md:w-40" src="img/Hero/logo.png" alt="" />
-            </a>
-          </div>
-          <div class="flex items-center">
-            <button
-              id="hamburger"
-              name="hamburger"
-              type="button"
-              class="absolute right-0 block items-center lg:hidden"
-            >
-              <span
-                class="hamburger origin-top-left transition duration-300 ease-in-out"
-              ></span>
-              <span
-                class="hamburger transition duration-300 ease-in-out"
-              ></span>
-              <span
-                class="hamburger origin-bottom-left transition duration-300 ease-in-out"
-              ></span>
-            </button>
+      <div
+        class="flex w-full items-center justify-between px-4 lg:container lg:mx-auto"
+      >
+        <!-- Logo -->
+        <a href="index.html">
+          <img class="h-auto w-35 md:w-40" src="img/Hero/logo.png" alt="" />
+        </a>
 
-            <nav
-              id="nav-menu"
-              class="bg-idekasecond absolute top-full right-4 hidden w-full max-w-3/4 rounded-lg py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
-            >
-              <ul class="block lg:flex lg:space-x-6 xl:space-x-8">
-                <li class="group">
-                  <a
-                    class="group-hover:text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
-                    href="index.html"
-                    >Home</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    class="text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
-                    href="produk.html"
-                    >Produk</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    class="group-hover:text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
-                    href="/idekalina/#testimonial"
-                    >Testimonial</a
-                  >
-                </li>
-                <li class="group">
-                  <a
-                    class="group-hover:text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
-                    href="/idekalina/#carapemesanan"
-                    >Cara Pemesanan</a
-                  >
-                </li>
-                <li class="group py-3">
-                  <button>
-                    <a
-                      class="bg-idekabutton hover:bg-idekabuttonhover mx-8 flex rounded-full px-3 py-2 text-base text-white shadow-lg transition lg:mx-0 lg:px-4 lg:text-lg"
-                      href="https://wa.me/6281235962004?text=Halo%20Idekalina,%20saya%20ingin%20menanyakan%20soal%20undangan%20digital%20dan%20fisik"
-                      target="_blank"
-                      >Hubungi Kami</a
-                    >
-                  </button>
-                </li>
-              </ul>
-            </nav>
-          </div>
+        <!-- Navigation & Hamburger -->
+        <div class="flex items-center lg:ml-auto">
+          <!-- Navigation -->
+          <nav
+            id="nav-menu"
+            class="bg-idekasecond absolute top-full right-4 hidden w-full max-w-3/4 rounded-lg py-5 shadow-lg lg:static lg:block lg:max-w-full lg:rounded-none lg:bg-transparent lg:shadow-none"
+          >
+            <ul class="block lg:flex lg:space-x-6 xl:space-x-8">
+              <li class="group">
+                <a
+                  class="group-hover:text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
+                  href="index.html"
+                  >Home</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  class="group-hover:text-idekabuttonhover text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
+                  href="produk.html"
+                  >Produk</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  class="group-hover:text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
+                  href="/idekalina/#testimonial"
+                  >Testimonial</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  class="group-hover:text-idekabuttonhover mx-8 flex py-6 text-base lg:mx-0 lg:text-lg"
+                  href="/idekalina/#carapemesanan"
+                  >Cara Pemesanan</a
+                >
+              </li>
+              <li class="group py-3">
+                <a
+                  class="bg-idekabutton hover:bg-idekabuttonhover mx-8 flex rounded-full px-3 py-2 text-base text-white shadow-lg transition lg:mx-0 lg:px-4 lg:text-lg"
+                  href="https://wa.me/6281235962004?text=Halo%20Idekalina,%20saya%20ingin%20menanyakan%20soal%20undangan%20digital%20dan%20fisik"
+                  target="_blank"
+                  >Hubungi Kami</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <!-- Hamburger Button -->
+          <button
+            id="hamburger"
+            name="hamburger"
+            type="button"
+            class="ml-2 block lg:hidden"
+          >
+            <span
+              class="hamburger origin-top-left transition duration-300 ease-in-out"
+            ></span>
+            <span class="hamburger transition duration-300 ease-in-out"></span>
+            <span
+              class="hamburger origin-bottom-left transition duration-300 ease-in-out"
+            ></span>
+          </button>
         </div>
       </div>
     </header>
