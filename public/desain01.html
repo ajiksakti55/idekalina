@@ -12,377 +12,456 @@
     <link href="output.css" rel="stylesheet" />
   </head>
   <body class="text-ideka01 font-poppins overflow-hidden bg-white">
-    <!-- Halaman 1 -->
-    <section
-      id="halaman1"
-      class="fixed inset-0 z-50 min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- Bunga Header -->
-      <div class="relative z-20 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="xs:-mt-25 xm:-mt-35 1xl:-mt-45 3xl:-mt-50 xx:-mt-70 h-auto w-full max-w-full sm:-mt-20 md:-mt-30 lg:-mt-60 xl:-mt-90"
-        />
+    <div class="flex h-screen w-screen">
+      <!-- KIRI (sticky) -->
+      <div class="sticky top-0 hidden h-screen w-[70%] sm:block">
+        <img src="img/01/Page1/test.jpg" class="h-full w-full object-cover" />
       </div>
-      <!-- pengantin -->
+
+      <!-- KANAN (scrollable) -->
       <div
-        class="xs:-mt-60 xxl:-mt-100 3xl:-mt-110 xx:-mt-120 2xx:-mt-138 relative z-40 -mt-45 flex justify-center sm:-mt-79 md:-mt-90 lg:-mt-115 xl:-mt-128"
+        id="kontenKanan"
+        class="w-full max-w-[640px] overflow-y-auto scroll-smooth sm:max-w-[430px] lg:w-[30%] lg:max-w-none"
       >
-        <img class="w-70 sm:w-80" src="img/01/cover landing.png" alt="" />
-      </div>
-
-      <!-- Teks -->
-      <div class="text-center">
-        <h1 class="mt-2 text-3xl">the wedding of</h1>
-        <p class="font-pinyon text-7xl">Ayundya & <br />Baskoro</p>
-      </div>
-
-      <!-- Tombol -->
-      <div class="flex justify-center py-5">
-        <button
-          id="bukaUndangan"
-          class="bg-ideka01 inline-flex items-center rounded-full px-6 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+        <!-- HALAMAN 1 -->
+        <section
+          id="halaman1"
+          class="min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
         >
-          <img src="img/01/Envelope.png" alt="Amplop" class="mr-2 h-auto w-5" />
-          Buka Undangan
-        </button>
-      </div>
-    </section>
+          <!-- BUNGA -->
+          <div class="relative z-20 w-full overflow-hidden">
+            <img
+              src="img/01/Page1/bunga cover.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 w-full sm:-mt-0"
+            />
+          </div>
+          <!-- PENGANTIN -->
+          <div class="relative z-40 -mt-40 flex justify-center">
+            <img
+              class="xm:-mt-5 xxm:-mt-18 w-70 sm:-mt-0 sm:w-50"
+              src="img/01/Page1/pengantin.png"
+              alt=""
+            />
+          </div>
+          <!-- TEXT -->
+          <h1 class="mt-2 text-xl">the wedding of</h1>
+          <h1 class="font-pinyon text-[46px] font-semibold">
+            Ayundya & Baskoro
+          </h1>
+          <h2>Kepada Yth:</h2>
+          <h3 class="font-semibold">Nama Tamu</h3>
+          <!-- TOMBOL -->
+          <div class="flex justify-center py-5">
+            <button
+              id="bukaUndangan"
+              class="bg-ideka01 inline-flex items-center rounded-full px-6 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+            >
+              <img
+                src="img/01/Envelope.png"
+                alt="Amplop"
+                class="mr-2 h-auto w-5"
+              />
+              Buka Undangan
+            </button>
+          </div>
+        </section>
 
-    <!-- Halaman 2 -->
-    <section
-      id="halaman2"
-      class="fade-up min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- Bunga Header -->
-      <div class="relative z-20 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="xs:-mt-25 xm:-mt-35 1xl:-mt-45 3xl:-mt-50 xx:-mt-70 h-auto w-full max-w-full sm:-mt-20 md:-mt-30 lg:-mt-60 xl:-mt-90"
-        />
-      </div>
-      <!-- pengantin -->
-      <div
-        class="xs:-mt-60 xxl:-mt-100 3xl:-mt-110 xx:-mt-120 2xx:-mt-138 relative z-40 -mt-45 flex justify-center sm:-mt-79 md:-mt-90 lg:-mt-115 xl:-mt-128"
-      >
-        <img class="w-70" src="img/01/12.png" alt="" />
-      </div>
-
-      <!-- Teks -->
-      <div class="text-center">
-        <h1 class="mt-2 text-3xl">the wedding of</h1>
-        <p class="font-pinyon text-7xl">Ayundya & <br />Baskoro</p>
-      </div>
-    </section>
-
-    <!-- Halaman 3 -->
-    <section
-      id="halaman3"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- logo -->
-      <div>
-        <img
-          class="mx-auto flex w-3/4 py-10"
-          src="img/01/coverhal2.png"
-          alt=""
-        />
-      </div>
-      <!-- text -->
-      <div class="mx-auto flex px-10 pb-5">
-        <p class="text-center">
-          Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
-          pasangan-pasangan untukmu dari jenismu sendiri, agar kamu cenderung
-          dan merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa
-          kasih dan sayang. Sungguh, pada yang demikian itu benar-benar terdapat
-          tanda-tanda (kebesaran Allah) bagi kaum yang berpikir.
-        </p>
-      </div>
-    </section>
-
-    <!-- Halaman 3 -->
-    <section
-      id="halaman3"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- logo -->
-      <div>
-        <img
-          class="mx-auto flex w-11/12 py-10"
-          src="img/01/mempelaiwanita.png"
-          alt=""
-        />
-      </div>
-      <!-- text -->
-      <div class="mx-auto flex px-10 pb-5">
-        <h1 class="font-pinyon text-center text-7xl">Ayundya Larasati</h1>
-      </div>
-      <div class="mx-auto flex px-10 pb-5">
-        <h2 class="text-center font-semibold">
-          Putri pertama dari Bapak Sutrisno & Ibu Sri Wahyuni
-        </h2>
-      </div>
-    </section>
-
-    <!-- Halaman 4 -->
-    <section
-      id="halaman3"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- logo -->
-      <div>
-        <img
-          class="mx-auto flex w-11/12 py-10"
-          src="img/01/mempelaipria.png"
-          alt=""
-        />
-      </div>
-      <!-- text -->
-      <div class="mx-auto flex px-10 pb-5">
-        <h1 class="font-pinyon text-center text-7xl">Baskoro Wicaksono</h1>
-      </div>
-      <div class="mx-auto flex px-10 pb-5">
-        <h2 class="text-center font-semibold">
-          Putra pertama dari Bapak Sujono & Ibu Siti
-        </h2>
-      </div>
-    </section>
-
-    <!-- halaman 5 -->
-    <section
-      id="halaman5"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- Bunga Header -->
-      <div class="relative z-20 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="xs:-mt-25 xm:-mt-35 1xl:-mt-45 3xl:-mt-50 xx:-mt-70 h-auto w-full max-w-full sm:-mt-20 md:-mt-30 lg:-mt-60 xl:-mt-90"
-        />
-      </div>
-      <!-- Frame -->
-      <div
-        class="xs:-mt-60 xxl:-mt-100 3xl:-mt-110 xx:-mt-120 2xx:-mt-138 relative z-40 -mt-25 flex justify-center sm:-mt-79 md:-mt-90 lg:-mt-115 xl:-mt-128"
-      >
-        <img class="w-90" src="img/01/hal5frame copy.png" alt="" />
-      </div>
-
-      <!-- Teks -->
-      <div class="relative z-50 -mt-105 px-14 text-center">
-        <h1 class="font-pinyon mb-4 text-6xl">Akad Nikah</h1>
-        <h2 class="mb-4">Sabtu, 25 April 2026</h2>
-        <h2 class="mb-4 font-semibold">08.00 WIB</h2>
-        <h3 class="mb-4 font-semibold">
-          Masjid Al-Hikmah, Jl. Lembayung No. 10, Sleman, Yogyakarta
-        </h3>
-        <button
-          class="bg-ideka01 inline-flex items-center rounded-full px-6 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+        <!-- HALAMAN 2 -->
+        <section
+          id="halaman2"
+          class="hidden min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
         >
-          Lihat Lokasi
-        </button>
-      </div>
-    </section>
-
-    <!-- halaman 6 -->
-    <section
-      id="halaman5"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- Bunga Header -->
-
-      <!-- Frame -->
-      <div class="relative flex justify-center pt-28">
-        <img class="w-90" src="img/01/hal5frame copy.png" alt="" />
-      </div>
-
-      <!-- Teks -->
-      <div class="relative z-50 -mt-105 px-12 text-center">
-        <h1 class="font-pinyon mb-16 text-6xl">Resepsi</h1>
-        <h2 class="mb-4">Sabtu, 25 April 2026</h2>
-        <h2 class="mb-4 font-semibold">06.00 WIB</h2>
-        <h3 class="mb-20 font-semibold">
-          Masjid Al-Hikmah, Jl. Lembayung No. 10, Sleman, Yogyakarta
-        </h3>
-      </div>
-      <div class="relative z-20 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="bottom-0 h-auto w-full max-w-full rotate-180"
-        />
-      </div>
-    </section>
-    <!-- halaman 7 -->
-    <section
-      id="halaman5"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- Bunga Header -->
-      <div class="relative z-10 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="xs:-mt-25 xm:-mt-35 1xl:-mt-45 3xl:-mt-50 xx:-mt-70 h-auto w-full max-w-full sm:-mt-20 md:-mt-30 lg:-mt-60 xl:-mt-90"
-        />
-      </div>
-
-      <!-- Frame -->
-      <div class="relative z-20 -mt-33 flex justify-center">
-        <img class="w-full" src="img/01/hal5frame copy.png" alt="" />
-      </div>
-
-      <!-- Teks -->
-      <div class="relative z-50 -mt-115 px-9 text-center">
-        <h1 class="font-pinyon mb-2 text-5xl">Cerita Kita</h1>
-        <div class="space-y-1 text-[10px] leading-relaxed">
-          <div>
-            <strong class="block">2020 – Pertemuan Pertama</strong>
-            <p>
-              Kami pertama kali bertemu di kampus saat menghadiri acara
-              organisasi. Tanpa disadari, hari itu menjadi awal dari cerita
-              kami.
+          <!-- bunga -->
+          <div class="relative z-20 w-full overflow-hidden">
+            <img
+              src="img/01/Page1/bunga cover.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 w-full sm:-mt-0"
+            />
+          </div>
+          <!-- pengantin -->
+          <div class="relative z-40 -mt-43 flex justify-center">
+            <img
+              class="xm:-mt-5 xxm:-mt-18 w-60 sm:-mt-0 sm:w-50"
+              src="img/01/Page2/duapengantin.png"
+              alt=""
+            />
+          </div>
+          <h1 class="mt-2">the wedding of</h1>
+          <div class="leading-none">
+            <h1 class="font-pinyon -mb-5 text-[55px] font-medium">Ayundya</h1>
+            <div class="font-pinyon my-[-4px] text-5xl leading-none">&</div>
+            <h1 class="font-pinyon -mt-5 text-[55px] font-medium">Baskoro</h1>
+          </div>
+          <h2 class="font-bold">25.09.2025</h2>
+          <!-- konten tambahan halaman 2 bisa kamu lanjutkan -->
+        </section>
+        <!-- halaman 3 -->
+        <section
+          id="halaman3"
+          class="hidden min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- Logo -->
+          <div class="relative z-40 flex justify-center pt-10 pb-10">
+            <img
+              class="xm:-mt-5 xxm:-mt-18 h-auto w-70 sm:-mt-0 sm:w-50"
+              src="img/01/page3/frame.png"
+              alt=""
+            />
+          </div>
+          <div class="mx-10 -mb-19 text-center text-[11px]">
+            <p class="mb-4 leading-relaxed font-bold">
+              Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+              pasangan pasangan untukmu dari jenismu sendiri, agar kamu
+              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+              antaramu rasa kasih dan sayang.
+            </p>
+            <p class="mx-2 mb-4 font-bold">
+              Sungguh, pada yang demikian itu <br />benar-benar terdapat
+              tanda-tanda <br />
+              (kebesaran Allah) bagi kaum yang berpikir.
+            </p>
+            <p class="mt-6 text-sm font-bold tracking-widest uppercase">
+              QS Ar-Rum : 21
             </p>
           </div>
-          <div>
-            <strong class="block">2021 – Semakin Dekat</strong>
-            <p>
-              Perbincangan yang awalnya singkat, berubah menjadi kebiasaan yang
-              dinanti. Kami belajar saling mengenal dan memahami.
-            </p>
+
+          <!-- bunga -->
+          <div class="relative z-20 w-full overflow-hidden">
+            <img
+              src="img/01/page3/bunga page3.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 w-full sm:-mt-0"
+            />
           </div>
-          <div>
-            <strong class="block">2022 – Resmi Bersama</strong>
-            <p>
-              Pada tanggal 12 Februari, kami memutuskan untuk melangkah bersama.
-              Doa dan tawa menemani setiap hari yang kami jalani.
-            </p>
+        </section>
+        <!-- halaman 4 -->
+        <section
+          id="halaman4"
+          class="hidden min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="relative z-20 -mt-0.5 w-full overflow-hidden">
+            <img
+              src="img/01/page4/bunga page4.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 w-full sm:-mt-0"
+            />
           </div>
-          <div>
-            <strong class="block">2024 – Lamaran</strong>
-            <p>
-              Dalam sebuah acara sederhana dan penuh haru, dua keluarga bertemu.
-              Janji untuk masa depan pun diucapkan.
-            </p>
+          <!-- pengantin -->
+          <div class="pt-35 pl-8 sm:pt-15">
+            <div class="relative z-40">
+              <img
+                class="xm:-mt-5 xxm:-mt-18 h-auto w-[120px] sm:-mt-0"
+                src="img/01/page4/pengantin wanita.png"
+                alt=""
+              />
+            </div>
+            <!-- emblem -->
+            <div class="relative z-30 ml-5 flex justify-center">
+              <img
+                class="-mt-95 h-[360px] w-auto"
+                src="img/01/page4/emblem.png"
+                alt=""
+              />
+            </div>
+            <div class="relative z-50 -mt-80 ml-32 text-left">
+              <p class="text-xs font-bold">Mempelai Wanita</p>
+              <p class="font-pinyon text-3xl">Ayundya</p>
+              <p class="mb-5 text-xl font-bold">Prameswari</p>
+              <p class="mb-5 text-[11px]">
+                Putri pertama dari <br />
+                <span class="font-semibold"
+                  >Bapak H. Bambang Santoso <br />
+                  & Ibu Hj. Nurhayati</span
+                >
+              </p>
+              <p class="text-[11px]">
+                Jl. Cempaka Indah No. 21 <br />
+                Kel. Sukamaju, Kec. Tegalrejo <br />
+                Yogyakarta 55243
+              </p>
+            </div>
           </div>
-          <div>
-            <strong class="block">2025 – Hari Bahagia</strong>
-            <p>
-              Hari ini, kami siap menapaki bab baru. Menjadi pasangan dalam
-              cinta yang tak lagi sekadar kisah.
-            </p>
+        </section>
+        <!-- halaman 5 -->
+        <section
+          id="halaman5"
+          class="hidden min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- pengantin -->
+          <div class="pt-25 pl-0 sm:pt-15">
+            <div class="relative z-40 pl-60">
+              <img
+                class="xm:-mt-5 xxm:-mt-18 h-auto w-[120px] sm:-mt-0"
+                src="img/01/page5/PENGANTIN PRIA.png"
+                alt=""
+              />
+            </div>
+            <!-- emblem -->
+            <div class="relative z-30 flex justify-center">
+              <img
+                class="-mt-90 mr-15 h-[360px] w-auto"
+                src="img/01/page4/emblem.png"
+                alt=""
+              />
+            </div>
+            <div class="relative z-50 -mt-75 mr-38 text-right">
+              <p class="text-xs font-bold">Mempelai Pria</p>
+              <p class="font-pinyon text-3xl">Baskoro</p>
+              <p class="mb-5 text-xl font-bold">Satya Nugroho</p>
+              <p class="mb-5 text-[11px]">
+                Putra kedua dari <br />
+                <span class="font-semibold"
+                  >Bapak H. Widodo <br />
+                  & Ibu Hj. Siti Rohmah</span
+                >
+              </p>
+              <p class="text-[11px]">
+                Jl. Mawar No. 23 <br />
+                Kelurahan Mantrijeron, <br />
+                Kecamatan Mantrijeron <br />
+                Kota Yogyakarta
+              </p>
+            </div>
           </div>
-        </div>
+        </section>
+        <!-- halaman 6 -->
+        <section
+          id="halaman6"
+          class="hidden min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="sm:-mt-15">
+            <div>
+              <img src="img/01/page6/bg bunga.png" alt="" />
+            </div>
+            <!-- emblem -->
+            <div class="relative z-30 mx-auto flex justify-center">
+              <img
+                class="-mt-135 h-[370px] w-auto"
+                src="img/01/page4/emblem.png"
+                alt=""
+              />
+            </div>
+            <div class="relative z-50 mx-auto -mt-110 text-center">
+              <p class="font-pinyon text-4xl">Akad Nikah</p>
+              <p class="mb-5 text-xl font-bold">
+                Minggu, <br />
+                14 Desember 2025
+              </p>
+              <p class="mb-5 text-[11px] font-bold">
+                08.00 WIB - selesai <br />
+                <span class="font-normal"
+                  >Masjid Raya Al-Furqan <br />
+                  Jl. Melati No. 88, <br />
+                  Yogyakarta</span
+                >
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- halaman 7 -->
+        <section
+          id="halaman7"
+          class="hidden min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="sm:pt-30">
+            <div>
+              <img
+                class="relative z-40"
+                src="img/01/page6/bg bunga.png"
+                alt=""
+              />
+            </div>
+            <!-- emblem -->
+            <div class="relative z-40 mx-auto flex justify-center">
+              <img
+                class="-mt-135 h-[370px] w-auto"
+                src="img/01/page4/emblem.png"
+                alt=""
+              />
+            </div>
+            <div class="relative z-50 mx-auto -mt-110 text-center">
+              <p class="font-pinyon text-4xl">Resepsi</p>
+              <p class="mb-5 text-xl font-bold">
+                Minggu, <br />
+                14 Desember 2025
+              </p>
+              <p class="mb-5 text-[11px] font-bold">
+                11.00 - 13.00 WIB <br />
+                <span class="font-normal"
+                  >The Harmony Hall <br />
+                  Jl. Anggrek No. 27, Sleman <br />
+                  Yogyakarta</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="hidden sm:block">
+            <img
+              src="img/01/Page1/background.png"
+              alt="Bunga bawah"
+              class="h-70 w-auto"
+            />
+          </div>
+        </section>
+        <!-- halaman 8 -->
+        <section
+          id="halaman7"
+          class="hidden min-h-screen bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="mx-4 sm:pt-10">
+            <div class="mx-auto flex justify-center">
+              <img
+                class="ml-5 h-auto w-50"
+                src="img/01/page8/bunga streaming.png"
+                alt=""
+              />
+            </div>
+            <div class="mx-auto mb-5 justify-center">
+              <h1 class="font-pinyon py-4 text-4xl">Live Streaming</h1>
+              <p class="text-center font-bold">
+                Temui kami secara virtual untuk menyaksikan acara pernikahan
+                kami melalui tautan di bawah ini:
+              </p>
+            </div>
+            <div class="mb-5">
+              <button
+                id="bukaUndangan"
+                class="bg-ideka01 inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page8/icon ig.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                @username
+              </button>
+            </div>
+            <div>
+              <button
+                id="bukaUndangan"
+                class="bg-ideka01 inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page8/icon youtube.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                @username
+              </button>
+            </div>
+            <!-- counting -->
+            <div>
+              <h1 class="font-pinyon mt-10 text-4xl">
+                Counting Days <br />
+                To Big Days
+              </h1>
+            </div>
+            <div
+              id="countdown"
+              class="mt-5 flex justify-center gap-3 text-white"
+            >
+              <!-- Hari -->
+              <div
+                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+              >
+                <span id="days" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">hari</span>
+              </div>
+              <!-- Jam -->
+              <div
+                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+              >
+                <span id="hours" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">jam</span>
+              </div>
+              <!-- Menit -->
+              <div
+                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+              >
+                <span id="minutes" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">menit</span>
+              </div>
+              <!-- Detik -->
+              <div
+                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+              >
+                <span id="seconds" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">detik</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-      <div class="relative z-10 -mt-15 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="bottom-0 h-auto w-full max-w-full rotate-180"
-        />
-      </div>
-    </section>
-    <!-- halaman 8 -->
-    <section
-      id="halaman5"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- Bunga Header -->
-      <div class="relative z-10 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="xs:-mt-25 xm:-mt-35 1xl:-mt-45 3xl:-mt-50 xx:-mt-70 h-auto w-full max-w-full sm:-mt-20 md:-mt-30 lg:-mt-60 xl:-mt-90"
-        />
-      </div>
+    </div>
 
-      <!-- Frame -->
-      <div class="relative z-20 -mt-33 flex justify-center">
-        <img class="w-full" src="img/01/hal5framebrown.png" alt="" />
-      </div>
-
-      <!-- Teks -->
-      <div class="relative z-50 -mt-100 px-20 text-center text-white">
-        <h1 class="font-pinyon mb-6 text-5xl">Live Straming</h1>
-        <p class="mb-25 font-semibold">
-          Temui kami secara virtual untuk menyaksikan acara pernikahan kami
-          melalui tautan di bawah ini:
-        </p>
-      </div>
-      <div class="relative z-10 -mt-15 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="bottom-0 h-auto w-full max-w-full rotate-180"
-        />
-      </div>
-    </section>
-    <!-- halaman 9 -->
-    <section
-      id="halaman5"
-      class="min-h-screen bg-[url('img/01/bg.png')] bg-cover bg-center bg-no-repeat"
-    >
-      <!-- Bunga Header -->
-      <div class="relative z-10 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="xs:-mt-25 xm:-mt-35 1xl:-mt-45 3xl:-mt-50 xx:-mt-70 h-auto w-full max-w-full sm:-mt-20 md:-mt-30 lg:-mt-60 xl:-mt-90"
-        />
-      </div>
-
-      <!-- Frame -->
-      <div class="relative z-20 -mt-33 flex justify-center">
-        <img class="w-full" src="img/01/hal5framebrown.png" alt="" />
-      </div>
-
-      <!-- Teks -->
-      <div class="relative z-50 -mt-100 px-10 text-center text-white">
-        <h1 class="font-pinyon mb-6 text-5xl">Wedding Gift</h1>
-        <p class="mb-50 text-center text-xs font-semibold">
-          Tanpa mengurangi rasa hormat, bagi Bapak/Ibu/Saudara/i yang ingin
-          memberikan tanda kasih untuk kami, dapat melalui:
-        </p>
-      </div>
-      <div class="relative z-10 -mt-15 w-full overflow-hidden">
-        <img
-          src="img/01/11.png"
-          alt="Bunga Atas"
-          class="bottom-0 h-auto w-full max-w-full rotate-180"
-        />
-      </div>
-    </section>
-
-    <!-- Script -->
+    <!-- SCRIPT -->
     <script>
       const bukaBtn = document.getElementById("bukaUndangan");
       const halaman1 = document.getElementById("halaman1");
-      const halaman2 = document.getElementById("halaman2");
+      const kontenKanan = document.getElementById("kontenKanan");
+      const semuaHalaman = document.querySelectorAll("[id^='halaman']");
 
-      const sudahBuka = sessionStorage.getItem("bukaUndangan");
-
-      if (sudahBuka === "true") {
+      function bukaUndangan() {
         halaman1.style.display = "none";
         document.body.classList.remove("overflow-hidden");
 
-        halaman2.classList.add("show");
-        halaman2.scrollIntoView();
+        semuaHalaman.forEach((halaman) => {
+          if (halaman.id !== "halaman1") {
+            halaman.classList.remove("hidden");
+          }
+        });
+
+        kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
       }
 
-      bukaBtn.addEventListener("click", () => {
-        halaman1.style.display = "none";
-        document.body.classList.remove("overflow-hidden");
+      if (sessionStorage.getItem("bukaUndangan") === "true") {
+        bukaUndangan();
+      }
 
-        // Tambahkan delay sedikit agar animasi terlihat
-        setTimeout(() => {
-          halaman2.classList.add("show");
-          halaman2.scrollIntoView({ behavior: "smooth" });
-        }, 50);
-
+      bukaBtn?.addEventListener("click", () => {
         sessionStorage.setItem("bukaUndangan", "true");
+        bukaUndangan();
       });
+      // counting
+
+      const targetDate = new Date("2025-07-16T14:26:00").getTime();
+
+      const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          clearInterval(countdown);
+
+          const countdownSection = document.getElementById("countdown");
+
+          countdownSection.innerHTML = `
+    <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
+      <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
+      <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
+    </div>
+  `;
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days").innerText = days;
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+      }, 1000);
     </script>
   </body>
 </html>

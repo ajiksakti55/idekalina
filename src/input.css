@@ -74,6 +74,14 @@
 }
 
 /* desain01 */
+.fixed-width-wrapper {
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+}
+
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
@@ -102,13 +110,8 @@
   --color-idekasecond: #eed6c8;
   --color-idekadiscn: #f76c5e;
   --color-ideka01: #9f6e45;
-  --breakpoint-xs: 25rem;
-  --breakpoint-xm: 41.875rem;
-  --breakpoint-1xl: 50rem;
-  --breakpoint-xxl: 55.625rem;
-  --breakpoint-3xl: 59.063rem;
-  --breakpoint-xx: 70rem;
-  --breakpoint-2xx: 75.625rem;
+  --breakpoint-xm: 26.875rem;
+  --breakpoint-xxm: 36.25rem;
 }
 
 @layer base {
