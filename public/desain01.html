@@ -15,7 +15,7 @@
     <div class="flex h-screen w-screen">
       <!-- KIRI (sticky) -->
       <div class="sticky top-0 hidden h-screen w-[70%] sm:block">
-        <img src="img/01/Page1/test.jpg" class="h-full w-full object-cover" />
+        <img src="img/01/Page1/bgkiri.png" class="h-full w-full object-cover" />
       </div>
 
       <!-- KANAN (scrollable) -->
@@ -481,6 +481,269 @@
                 Salin Nomor
               </button>
             </div>
+            <!-- BNI -->
+
+            <div class="bg-idekasecond mx-10 rounded-xl p-4 shadow-md">
+              <img
+                src="img/01/page10/bni.png"
+                alt="Mandiri"
+                class="mx-auto mb-2 h-10"
+              />
+              <p class="font-semibold">An. Ayudya Prameswari</p>
+              <p class="mb-2 text-sm">No. Rekening: 123 00 4567890 1</p>
+              <!-- Notifikasi -->
+              <div
+                id="copyNotification"
+                class="bg-idekabutton fixed bottom-5 left-1/2 z-50 hidden -translate-x-1/2 transform rounded-full px-4 py-2 text-sm text-white shadow-lg"
+              >
+                Nomor berhasil disalin!
+              </div>
+              <button
+                onclick="copyToClipboard('1230045678901')"
+                id="bukaUndangan"
+                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page10/icon copy.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                Salin Nomor
+              </button>
+            </div>
+            <!-- DANA -->
+
+            <div
+              class="bg-idekasecond relative z-20 mx-10 rounded-xl p-4 shadow-md"
+            >
+              <img
+                src="img/01/page10/dana.png"
+                alt="Mandiri"
+                class="mx-auto mb-2 h-10"
+              />
+              <p class="font-semibold">An. Ayudya Prameswari</p>
+              <p class="mb-2 text-sm">No. Rekening: 123 00 4567890 1</p>
+              <!-- Notifikasi -->
+              <div
+                id="copyNotification"
+                class="bg-idekabutton fixed bottom-5 left-1/2 z-50 hidden -translate-x-1/2 transform rounded-full px-4 py-2 text-sm text-white shadow-lg"
+              >
+                Nomor berhasil disalin!
+              </div>
+              <button
+                onclick="copyToClipboard('1230045678901')"
+                id="bukaUndangan"
+                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page10/icon copy.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                Salin Nomor
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- halaman11 -->
+        <section
+          id="halaman11"
+          class="relative z-10 -mt-0.5 hidden bg-[url('img/01/Page1/background.png')] bg-cover bg-center pb-20 text-center"
+        >
+          <div class="relative z-10 mx-auto flex justify-end">
+            <img
+              class="mt-10 w-full max-w-sm"
+              src="img/01/page11/bunga page11.png"
+              alt="Bunga Halaman 11"
+            />
+          </div>
+
+          <div
+            class="relative mx-auto -mt-55 flex w-full max-w-sm flex-col items-center p-4"
+          >
+            <img
+              class="absolute inset-0 z-10 mx-auto h-170 w-75 object-fill"
+              src="img/01/page11/bgform.png"
+              alt="Bingkai RSVP"
+            />
+
+            <div class="relative z-20 w-full px-10 pt-2 pb-10">
+              <h2 class="font-pinyon mt-4 text-4xl text-[#71502f]">Rsvp</h2>
+              <p class="mb-6 text-sm leading-tight font-semibold">
+                Konfirmasi Kehadiran <br />
+                & Ucapan Selamat
+              </p>
+
+              <div
+                class="mb-1 flex items-center justify-start text-xs font-semibold"
+              >
+                <img
+                  class="mr-1 w-4"
+                  src="img/01/page11/tweet.png"
+                  alt="Twitter Icon"
+                />
+                <p id="commentCountDisplay">5 Comments</p>
+              </div>
+
+              <form id="rsvpForm" class="space-y-1">
+                <input
+                  id="namaInput"
+                  type="text"
+                  placeholder="Nama..."
+                  class="w-full rounded-md border border-[#c2a47d] px-3 py-2 text-sm placeholder:text-gray-400 focus:border-[#71502f] focus:bg-transparent focus:ring-2 focus:ring-[#71502f] focus:outline-none"
+                />
+                <textarea
+                  id="ucapanInput"
+                  placeholder="Ucapan"
+                  rows="4"
+                  maxlength="500"
+                  class="w-full rounded-md border border-[#c2a47d] px-3 py-1 text-sm placeholder:text-gray-400 focus:border-[#71502f] focus:bg-transparent focus:ring-2 focus:ring-[#71502f] focus:outline-none"
+                ></textarea>
+                <div class="text-right text-[10px] text-gray-500">500</div>
+                <select
+                  id="konfirmasiInput"
+                  class="w-full rounded-md border border-[#c2a47d] px-3 py-2 text-sm text-gray-700 focus:border-[#71502f] focus:bg-transparent focus:ring-2 focus:ring-[#71502f] focus:outline-none"
+                >
+                  <option value="" disabled selected>
+                    Konfirmasi Kehadiran
+                  </option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                  <option value="Masih Ragu">Masih Ragu</option>
+                </select>
+                <div class="flex justify-end pt-2">
+                  <button
+                    type="submit"
+                    id="kirimButton"
+                    class="rounded-md bg-[#7b5e3d] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[#5d472d]"
+                  >
+                    Kirim
+                  </button>
+                </div>
+              </form>
+
+              <div
+                id="daftarKomentar"
+                class="relative z-30 mt-6 h-60 space-y-2 overflow-y-scroll pr-4"
+              >
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Rian Hidayat
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      <svg
+                        class="mr-1 h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">
+                    Selamat atas pernikahannya! Semoga samawa.
+                  </p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Siska Dewi
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      <svg
+                        class="mr-1 h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">Selamat</p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Budi Santoso
+                    <span
+                      class="inline-flex items-center rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700"
+                    >
+                      <svg
+                        class="mr-1 h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                      Tidak Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">
+                    Mohon maaf belum bisa hadir.
+                  </p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Tamu Dummy 4
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">Semoga lancar.</p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Tamu Dummy 5
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">Happy wedding!</p>
+                </div>
+              </div>
+            </div>
           </div>
         </section>
       </div>
@@ -492,6 +755,10 @@
       const halaman1 = document.getElementById("halaman1");
       const kontenKanan = document.getElementById("kontenKanan");
       const semuaHalaman = document.querySelectorAll("[id^='halaman']");
+
+      // ===============================
+      // START: KODE FUNGSI UTAMA ANDA
+      // ===============================
 
       function bukaUndangan() {
         halaman1.style.display = "none";
@@ -527,11 +794,11 @@
           const countdownSection = document.getElementById("countdown");
 
           countdownSection.innerHTML = `
-            <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
-              <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
-              <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
-            </div>
-          `;
+                  <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
+                    <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
+                    <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
+                  </div>
+                `;
           return;
         }
 
@@ -563,6 +830,202 @@
           }
         });
       }
+
+      // ===============================
+      // END: KODE FUNGSI UTAMA ANDA
+      // ===============================
+
+      // ===============================
+      // 🔗 FITUR KONEKSI GOOGLE SHEETS (Fetch API) 🚀
+      // ===============================
+
+      // 🚨 GANTI DENGAN URL WEB APP DARI GOOGLE APPS SCRIPT ANDA!
+      const URL_APPS_SCRIPT =
+        "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
+
+      // 1. Ambil elemen yang dibutuhkan
+      const form = document.getElementById("rsvpForm");
+      const daftarKomentar = document.getElementById("daftarKomentar");
+      const commentCountDisplay = document.getElementById(
+        "commentCountDisplay",
+      );
+
+      // Fungsi untuk menghitung dan menampilkan jumlah komentar (diupdate agar bisa menerima error)
+      function updateCommentCount(count) {
+        if (typeof count === "number") {
+          commentCountDisplay.textContent = `${count} Comments`;
+          return;
+        }
+        const actualCount =
+          daftarKomentar.querySelectorAll(".rounded-md.border").length;
+        commentCountDisplay.textContent = `${actualCount} Comments`;
+      }
+
+      // 2. Fungsi untuk membuat elemen komentar baru (DIJAGA DARI KODE LAMA)
+      function buatKomentarBaru(nama, ucapan, konfirmasi) {
+        // Tentukan styling badge (Hadir/Tidak Hadir/Masih Ragu)
+        let badgeClass;
+        let iconPath;
+
+        if (konfirmasi === "Hadir") {
+          badgeClass = "bg-green-100 text-green-700";
+          iconPath = "M5 13l4 4L19 7"; // Checkmark
+        } else if (konfirmasi === "Tidak Hadir") {
+          badgeClass = "bg-red-100 text-red-700";
+          iconPath = "M6 18L18 6M6 6l12 12"; // X
+        } else {
+          // Masih Ragu
+          badgeClass = "bg-yellow-100 text-yellow-700";
+          iconPath =
+            "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"; // Exclamation
+        }
+
+        // Buat HTML lengkap untuk komentar baru
+        const komentarHTML = `
+          <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+              <div class="flex items-center justify-between text-sm font-bold">
+                  ${nama}
+                  <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${badgeClass}">
+                      <svg class="mr-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${iconPath}"></path>
+                      </svg>
+                      ${konfirmasi}
+                  </span>
+              </div>
+              <p class="mt-1 text-xs text-gray-700">${ucapan}</p>
+          </div>
+      `;
+
+        // Tambahkan komentar baru di bagian atas (menggunakan afterbegin)
+        daftarKomentar.insertAdjacentHTML("afterbegin", komentarHTML);
+      }
+
+      // ===============================
+      // ➡️ Fungsi Mengirim Data (POST) ke GAS
+      // ===============================
+
+      form?.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nama = document.getElementById("namaInput").value.trim();
+        const ucapan = document.getElementById("ucapanInput").value.trim();
+        const konfirmasi = document.getElementById("konfirmasiInput").value;
+
+        if (!nama || !ucapan || konfirmasi === "") {
+          alert(
+            "Mohon lengkapi semua kolom form (Nama, Ucapan, dan Konfirmasi Kehadiran).",
+          );
+          return;
+        }
+
+        const kirimButton = document.getElementById("kirimButton");
+        kirimButton.textContent = "Mengirim...";
+        kirimButton.disabled = true;
+
+        // Data yang akan dikirim ke Apps Script dalam format JSON
+        const payload = {
+          nama: nama,
+          ucapan: ucapan,
+          konfirmasi: konfirmasi,
+        };
+
+        fetch(URL_APPS_SCRIPT, {
+          method: "POST",
+          headers: {
+            // Content-Type harus 'text/plain' agar Apps Script bisa mem-parsing data POST
+            "Content-Type": "text/plain;charset=utf-8",
+          },
+          body: JSON.stringify(payload),
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.json();
+            } else {
+              // Jika respons HTTP bukan 200 OK
+              throw new Error(`Koneksi Gagal (Status: ${response.status})`);
+            }
+          })
+          .then((data) => {
+            // Pastikan data tersimpan (sukses) berdasarkan respons Apps Script
+            if (data.result === "success") {
+              alert(
+                "Konfirmasi & Ucapan Selamat Anda berhasil dikirim dan tersimpan!",
+              );
+
+              // Muat ulang daftar komentar untuk menampilkan data terbaru dari server
+              ambilDanTampilkanKomentar();
+
+              // Kosongkan form
+              form.reset();
+            } else {
+              // Jika Apps Script merespon dengan result: "error"
+              throw new Error(data.message || "Penyimpanan data gagal.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error saat mengirim data:", error);
+            alert(
+              "Terjadi kesalahan saat mengirim data. Coba periksa URL Apps Script dan Deployment Anda.",
+            );
+          })
+          .finally(() => {
+            // Kembalikan tombol ke keadaan normal
+            kirimButton.textContent = "Kirim";
+            kirimButton.disabled = false;
+          });
+      });
+
+      // ===============================
+      // 🔗 Fungsi Mengambil Data (GET) dari GAS
+      // ===============================
+
+      function ambilDanTampilkanKomentar() {
+        // Kosongkan daftar komentar saat loading
+        daftarKomentar.innerHTML =
+          '<p class="text-sm text-center text-gray-500">Memuat ucapan...</p>';
+
+        fetch(URL_APPS_SCRIPT, {
+          method: "GET",
+        })
+          .then((response) => response.json())
+          .then((dataKomentar) => {
+            // Hapus pesan loading
+            daftarKomentar.innerHTML = "";
+
+            if (dataKomentar && dataKomentar.length > 0) {
+              dataKomentar.forEach((item) => {
+                // Panggil fungsi yang sudah ada (buatKomentarBaru) untuk setiap item yang diambil
+                buatKomentarBaru(item.nama, item.ucapan, item.konfirmasi);
+              });
+              updateCommentCount(); // Hitung jumlah setelah semua ditampilkan
+            } else {
+              daftarKomentar.innerHTML =
+                '<p class="text-sm text-center text-gray-500">Jadilah yang pertama memberikan ucapan selamat! 🎉</p>';
+              updateCommentCount(0);
+            }
+          })
+          .catch((error) => {
+            console.error("Error saat mengambil data:", error);
+            daftarKomentar.innerHTML =
+              '<p class="text-sm text-center text-red-500">Gagal memuat ucapan dari server. Cek koneksi Anda.</p>';
+            updateCommentCount(0);
+          });
+      }
+
+      // ===============================
+      // 🏃 Inisialisasi: Ambil Komentar Saat Halaman Dimuat
+      // ===============================
+
+      // Panggil fungsi ini saat pertama kali halaman dimuat
+      document.addEventListener("DOMContentLoaded", function () {
+        // Pastikan DOM elemen form sudah ada sebelum dipanggil
+        if (daftarKomentar) {
+          ambilDanTampilkanKomentar();
+        } else {
+          // Jika elemen daftarKomentar tidak ditemukan, atur hitungan ke 0
+          updateCommentCount(0);
+        }
+      });
     </script>
   </body>
 </html>
