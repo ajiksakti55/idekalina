@@ -11,7 +11,16 @@
     />
     <link href="output.css" rel="stylesheet" />
   </head>
-  <body class="text-ideka01 font-poppins overflow-hidden bg-white">
+  <body class="text-ideka01 font-poppins bg-white">
+    <!-- audio -->
+    <!-- <audio id="undanganMusic" loop>
+      <source
+        src="img/01/audio/Victor Lundberg - I Fall.mp3"
+        type="audio/mp3"
+      />
+      Browser Anda tidak mendukung elemen audio.
+    </audio> -->
+    <!-- end audio -->
     <div class="flex h-screen w-screen">
       <!-- KIRI (sticky) -->
       <div class="sticky top-0 hidden sm:block sm:h-screen sm:flex-grow">
@@ -50,11 +59,11 @@
             Ayundya & Baskoro
           </h1>
           <h2>Kepada Yth:</h2>
-          <h3 class="font-semibold">Nama Tamu</h3>
+          <h3 class="font-semibold" id="namaTamuDisplay">Nama Tamu</h3>
           <!-- TOMBOL -->
           <div class="flex justify-center py-5">
             <button
-              id="bukaUndangan"
+              id="bukaUndanganButton"
               class="bg-ideka01 inline-flex items-center rounded-full px-6 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
             >
               <img
@@ -77,24 +86,31 @@
             <img
               src="img/01/Page1/bunga cover.png"
               alt="Bunga Atas"
-              class="xm:-mt-30 w-full sm:-mt-0"
+              class="xm:-mt-30 scroll-fade w-full transition-all duration-6000 sm:-mt-0"
             />
           </div>
           <!-- pengantin -->
           <div class="relative z-40 -mt-43 flex justify-center">
             <img
-              class="xm:-mt-5 xxm:-mt-18 w-60 sm:-mt-0 sm:w-50"
+              class="xm:-mt-5 xxm:-mt-18 scroll-fade scroll-fade-bottom w-60 transition-all duration-4000 sm:-mt-0 sm:w-50"
               src="img/01/Page2/duapengantin.png"
               alt=""
             />
           </div>
-          <h1 class="mt-2">the wedding of</h1>
-          <div class="leading-none">
+          <h1
+            class="scroll-fade scroll-fade-bottom mt-2 transition-all delay-2000 duration-3000"
+          >
+            the wedding of
+          </h1>
+          <div
+            class="scroll-fade scroll-fade-bottom leading-none transition-all delay-3000 duration-3000"
+          >
             <h1 class="font-pinyon -mb-5 text-[55px] font-medium">Ayundya</h1>
             <div class="font-pinyon my-[-4px] text-5xl leading-none">&</div>
             <h1 class="font-pinyon -mt-5 text-[55px] font-medium">Baskoro</h1>
+            <h2 class="font-bold">25.09.2025</h2>
           </div>
-          <h2 class="font-bold">25.09.2025</h2>
+
           <!-- konten tambahan halaman 2 bisa kamu lanjutkan -->
         </section>
         <!-- halaman 3 -->
@@ -545,7 +561,6 @@
             </div>
           </div>
         </section>
-
         <!-- halaman11 -->
         <section
           id="halaman11"
@@ -789,7 +804,7 @@
                 class="mb-3 h-10 w-auto object-contain"
               />
 
-              <p class="mb-5 text-center text-sm text-white">
+              <p class="mb-5 text-center text-[11px] text-white">
                 Wrapped in gratitude, exclusive design for
                 <span class="font-semibold">Ayudya & Baskoro</span>
               </p>
@@ -803,7 +818,7 @@
                   <img
                     src="img/01/page12/logoig.png"
                     alt="Instagram"
-                    class="h-8 w-8 object-contain"
+                    class="h-5 w-5 object-contain"
                   />
                 </a>
 
@@ -815,7 +830,7 @@
                   <img
                     src="img/01/page12/logowa.png"
                     alt="WhatsApp"
-                    class="h-8 w-8 object-contain"
+                    class="h-5 w-5 object-contain"
                   />
                 </a>
               </div>
@@ -827,38 +842,49 @@
 
     <!-- SCRIPT -->
     <script>
-      const bukaBtn = document.getElementById("bukaUndangan");
+      const bukaBtn = document.getElementById("bukaUndanganButton");
       const halaman1 = document.getElementById("halaman1");
       const kontenKanan = document.getElementById("kontenKanan");
       const semuaHalaman = document.querySelectorAll("[id^='halaman']");
 
-      // ===============================
-      // START: KODE FUNGSI UTAMA ANDA
-      // ===============================
-
       function bukaUndangan() {
-        halaman1.style.display = "none";
+        // --- Sembunyikan Cover ---
+        if (halaman1) halaman1.style.display = "none";
         document.body.classList.remove("overflow-hidden");
 
+        // --- konten utama terlihat ---
+        if (kontenKanan) {
+          kontenKanan.classList.remove("hidden", "opacity-0", "invisible");
+        }
         semuaHalaman.forEach((halaman) => {
           if (halaman.id !== "halaman1") {
             halaman.classList.remove("hidden");
           }
         });
+        if (kontenKanan) kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
 
-        kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
+        const music = document.getElementById("undanganMusic");
+        if (music) {
+          music.volume = 0.8;
+          try {
+            music.play();
+          } catch (error) {
+            console.warn("Autoplay musik gagal, tombol tetap berfungsi.");
+          }
+        }
+
+        // Simpan status dibuka
+        sessionStorage.setItem("undanganDibuka", "true");
       }
 
-      if (sessionStorage.getItem("bukaUndangan") === "true") {
+      //tombol berfungsi saat di-klik
+      if (sessionStorage.getItem("undanganDibuka") === "true") {
         bukaUndangan();
       }
 
-      bukaBtn?.addEventListener("click", () => {
-        sessionStorage.setItem("bukaUndangan", "true");
-        bukaUndangan();
-      });
+      bukaBtn?.addEventListener("click", bukaUndangan);
 
-      // countdown
+      // FITUR: COUNTDOWN
       const targetDate = new Date("2026-07-16T14:26:00").getTime();
 
       const countdown = setInterval(() => {
@@ -874,7 +900,7 @@
                     <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
                     <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
                   </div>
-                `;
+              `;
           return;
         }
 
@@ -891,15 +917,13 @@
         document.getElementById("seconds").innerText = seconds;
       }, 1000);
 
-      // ===============================
-      // ✨ Fitur: Notifikasi "Berhasil Disalin"
-      // ===============================
+      // FITUR: NOTIFIKASI COPY
+
       function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
           const notif = document.getElementById("copyNotification");
           if (notif) {
             notif.classList.remove("hidden");
-            // Sembunyikan setelah 2 detik
             setTimeout(() => {
               notif.classList.add("hidden");
             }, 2000);
@@ -907,26 +931,16 @@
         });
       }
 
-      // ===============================
-      // END: KODE FUNGSI UTAMA ANDA
-      // ===============================
-
-      // ===============================
-      // 🔗 FITUR KONEKSI GOOGLE SHEETS (Fetch API) 🚀
-      // ===============================
-
-      // 🚨 GANTI DENGAN URL WEB APP DARI GOOGLE APPS SCRIPT ANDA!
+      // FITUR: GOOGLE SHEETS (FETCH API) (TETAP)
       const URL_APPS_SCRIPT =
         "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
 
-      // 1. Ambil elemen yang dibutuhkan
       const form = document.getElementById("rsvpForm");
       const daftarKomentar = document.getElementById("daftarKomentar");
       const commentCountDisplay = document.getElementById(
         "commentCountDisplay",
       );
 
-      // Fungsi untuk menghitung dan menampilkan jumlah komentar (diupdate agar bisa menerima error)
       function updateCommentCount(count) {
         if (typeof count === "number") {
           commentCountDisplay.textContent = `${count} Comments`;
@@ -937,48 +951,38 @@
         commentCountDisplay.textContent = `${actualCount} Comments`;
       }
 
-      // 2. Fungsi untuk membuat elemen komentar baru (DIJAGA DARI KODE LAMA)
       function buatKomentarBaru(nama, ucapan, konfirmasi) {
-        // Tentukan styling badge (Hadir/Tidak Hadir/Masih Ragu)
         let badgeClass;
         let iconPath;
 
         if (konfirmasi === "Hadir") {
           badgeClass = "bg-green-100 text-green-700";
-          iconPath = "M5 13l4 4L19 7"; // Checkmark
+          iconPath = "M5 13l4 4L19 7";
         } else if (konfirmasi === "Tidak Hadir") {
           badgeClass = "bg-red-100 text-red-700";
-          iconPath = "M6 18L18 6M6 6l12 12"; // X
+          iconPath = "M6 18L18 6M6 6l12 12";
         } else {
-          // Masih Ragu
           badgeClass = "bg-yellow-100 text-yellow-700";
           iconPath =
-            "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"; // Exclamation
+            "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z";
         }
 
-        // Buat HTML lengkap untuk komentar baru
         const komentarHTML = `
-          <div class="rounded-md border border-[#c2a47d] p-3 text-left">
-              <div class="flex items-center justify-between text-sm font-bold">
-                  ${nama}
-                  <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${badgeClass}">
-                      <svg class="mr-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${iconPath}"></path>
-                      </svg>
-                      ${konfirmasi}
-                  </span>
+              <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div class="flex items-center justify-between text-sm font-bold">
+                      ${nama}
+                      <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${badgeClass}">
+                          <svg class="mr-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${iconPath}"></path>
+                          </svg>
+                          ${konfirmasi}
+                      </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">${ucapan}</p>
               </div>
-              <p class="mt-1 text-xs text-gray-700">${ucapan}</p>
-          </div>
-      `;
-
-        // Tambahkan komentar baru di bagian atas (menggunakan afterbegin)
+          `;
         daftarKomentar.insertAdjacentHTML("afterbegin", komentarHTML);
       }
-
-      // ===============================
-      // ➡️ Fungsi Mengirim Data (POST) ke GAS
-      // ===============================
 
       form?.addEventListener("submit", function (event) {
         event.preventDefault();
@@ -998,7 +1002,6 @@
         kirimButton.textContent = "Mengirim...";
         kirimButton.disabled = true;
 
-        // Data yang akan dikirim ke Apps Script dalam format JSON
         const payload = {
           nama: nama,
           ucapan: ucapan,
@@ -1008,7 +1011,6 @@
         fetch(URL_APPS_SCRIPT, {
           method: "POST",
           headers: {
-            // Content-Type harus 'text/plain' agar Apps Script bisa mem-parsing data POST
             "Content-Type": "text/plain;charset=utf-8",
           },
           body: JSON.stringify(payload),
@@ -1017,24 +1019,17 @@
             if (response.ok) {
               return response.json();
             } else {
-              // Jika respons HTTP bukan 200 OK
               throw new Error(`Koneksi Gagal (Status: ${response.status})`);
             }
           })
           .then((data) => {
-            // Pastikan data tersimpan (sukses) berdasarkan respons Apps Script
             if (data.result === "success") {
               alert(
                 "Konfirmasi & Ucapan Selamat Anda berhasil dikirim dan tersimpan!",
               );
-
-              // Muat ulang daftar komentar untuk menampilkan data terbaru dari server
               ambilDanTampilkanKomentar();
-
-              // Kosongkan form
               form.reset();
             } else {
-              // Jika Apps Script merespon dengan result: "error"
               throw new Error(data.message || "Penyimpanan data gagal.");
             }
           })
@@ -1045,18 +1040,12 @@
             );
           })
           .finally(() => {
-            // Kembalikan tombol ke keadaan normal
             kirimButton.textContent = "Kirim";
             kirimButton.disabled = false;
           });
       });
 
-      // ===============================
-      // 🔗 Fungsi Mengambil Data (GET) dari GAS
-      // ===============================
-
       function ambilDanTampilkanKomentar() {
-        // Kosongkan daftar komentar saat loading
         daftarKomentar.innerHTML =
           '<p class="text-sm text-center text-gray-500">Memuat ucapan...</p>';
 
@@ -1065,15 +1054,13 @@
         })
           .then((response) => response.json())
           .then((dataKomentar) => {
-            // Hapus pesan loading
             daftarKomentar.innerHTML = "";
 
             if (dataKomentar && dataKomentar.length > 0) {
               dataKomentar.forEach((item) => {
-                // Panggil fungsi yang sudah ada (buatKomentarBaru) untuk setiap item yang diambil
                 buatKomentarBaru(item.nama, item.ucapan, item.konfirmasi);
               });
-              updateCommentCount(); // Hitung jumlah setelah semua ditampilkan
+              updateCommentCount();
             } else {
               daftarKomentar.innerHTML =
                 '<p class="text-sm text-center text-gray-500">Jadilah yang pertama memberikan ucapan selamat! 🎉</p>';
@@ -1088,19 +1075,126 @@
           });
       }
 
-      // ===============================
-      // 🏃 Inisialisasi: Ambil Komentar Saat Halaman Dimuat
-      // ===============================
+      // FITUR: AMBIL NAMA TAMU DARI URL (TETAP)
+      function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+        const results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
 
-      // Panggil fungsi ini saat pertama kali halaman dimuat
+      function setNamaTamu() {
+        const namaTamu = getParameterByName("to");
+        const namaTamuDisplay = document.getElementById("namaTamuDisplay");
+
+        let namaBersih = "Bapak/Ibu/Saudara/i";
+
+        if (namaTamu && namaTamuDisplay) {
+          namaBersih = namaTamu.replace(/_/g, " ");
+          namaTamuDisplay.textContent = namaBersih;
+          // Menyimpan nama ke session storage (Langkah penting untuk RSVP)
+          sessionStorage.setItem("currentGuestName", namaBersih);
+        } else if (namaTamuDisplay) {
+          namaTamuDisplay.textContent = "Bapak/Ibu/Saudara/i";
+        }
+      }
+
+      // INISIALISASI AKHIR (DOM READY)
       document.addEventListener("DOMContentLoaded", function () {
-        // Pastikan DOM elemen form sudah ada sebelum dipanggil
+        // 1. Atur Nama Tamu di Awal dan simpan ke sessionStorage
+        setNamaTamu();
+
+        // 2. Isi Otomatis Form RSVP
+        const namaInput = document.getElementById("namaInput");
+        const savedName = sessionStorage.getItem("currentGuestName");
+
+        if (savedName && namaInput) {
+          namaInput.value = savedName;
+        }
         if (daftarKomentar) {
           ambilDanTampilkanKomentar();
         } else {
-          // Jika elemen daftarKomentar tidak ditemukan, atur hitungan ke 0
           updateCommentCount(0);
         }
+      });
+
+      // ===============================
+      // FITUR: ANIMASI FADE-IN SAAT SCROLL
+      // ===============================
+
+      function initScrollFadeAnimations() {
+        // 1. Ambil semua elemen dengan kelas 'scroll-fade' yang ingin dianimasikan
+        const fadeElements = document.querySelectorAll(".scroll-fade");
+
+        // 2. Buat fungsi yang akan dijalankan saat elemen terlihat
+        const observerCallback = (entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              // Jika elemen terlihat, tambahkan kelas untuk memicu transisi
+              entry.target.classList.add("is-visible");
+              // Berhenti mengamati elemen ini setelah terlihat
+              observer.unobserve(entry.target);
+            }
+          });
+        };
+
+        // 3. Opsi pengamat (Observer Options)
+        const observerOptions = {
+          root: kontenKanan, // Mengamati di dalam kontainer scrollable utama (kontenKanan)
+          rootMargin: "0px",
+          threshold: 0.1, // Elemen akan muncul jika 10% dari elemen sudah terlihat
+        };
+
+        // 4. Buat Intersection Observer baru
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions,
+        );
+
+        // 5. Mulai mengamati setiap elemen
+        fadeElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+
+      // Panggil inisialisasi animasi saat halaman sudah dimuat dan undangan dibuka
+      document.addEventListener("DOMContentLoaded", () => {
+        // ... (kode inisialisasi lainnya di sini) ...
+
+        // Panggil fungsi animasi setelah DOM siap
+        // Penting: Anda perlu memastikan elemen sudah ditambahkan di HTML
+        initScrollFadeAnimations();
+      });
+
+      // ...
+      // ===============================
+      // INISIALISASI AKHIR (DOM READY)
+      // ===============================
+
+      document.addEventListener("DOMContentLoaded", function () {
+        // 1. Atur Nama Tamu di Awal dan simpan ke sessionStorage
+        setNamaTamu();
+
+        // 2. Isi Otomatis Form RSVP (FIX)
+        const namaInput = document.getElementById("namaInput");
+        const savedName = sessionStorage.getItem("currentGuestName");
+
+        if (savedName && namaInput) {
+          namaInput.value = savedName;
+        }
+
+        // 3. Ambil Komentar Saat Halaman Dimuat
+        if (daftarKomentar) {
+          ambilDanTampilkanKomentar();
+        } else {
+          updateCommentCount(0);
+        }
+
+        // <<< TAMBAHKAN INI DI SINI >>>
+        // 4. Inisialisasi Animasi Scroll
+        initScrollFadeAnimations();
       });
     </script>
   </body>

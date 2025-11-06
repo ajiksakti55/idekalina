@@ -73,29 +73,32 @@
   color: rgb(83 69 60 / var(--tw-text-opacity));
 }
 
-/* desain01 */
-.fixed-width-wrapper {
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-  background-color: white;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
-}
-
-.fade-up {
-  opacity: 0;
-  transform: translateY(30px);
-  transition:
-    opacity 2s ease,
-    transform 2s ease;
-}
-
-.fade-up.show {
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* animasi */
+.scroll-fade {
+  opacity: 0; 
+}
+
+/* KELAS VARIASI ARAH: Mengatur posisi awal transform */
+.scroll-fade-bottom {
+  transform: translateY(30px);
+}
+.scroll-fade-top {
+  transform: translateY(-30px); 
+}
+.scroll-fade-left {
+  transform: translateX(-30px);
+}
+.scroll-fade-right {
+  transform: translateX(30px);
+}
+
+
+/* KELAS AKTIF: Mengatur posisi akhir dan opacity */
+.scroll-fade.is-visible {
+  opacity: 1; 
+  /* Reset transform ke posisi normal */
+  transform: none; 
+}
 
 /* end custome css */
 
