@@ -13,13 +13,13 @@
   </head>
   <body class="text-ideka01 font-poppins bg-white">
     <!-- audio -->
-    <!-- <audio id="undanganMusic" loop>
+    <audio id="undanganMusic" loop>
       <source
         src="img/01/audio/Victor Lundberg - I Fall.mp3"
         type="audio/mp3"
       />
       Browser Anda tidak mendukung elemen audio.
-    </audio> -->
+    </audio>
     <!-- end audio -->
     <div class="flex h-screen w-screen">
       <!-- KIRI (sticky) -->
@@ -30,7 +30,7 @@
       <!-- KANAN (scrollable) -->
       <div
         id="kontenKanan"
-        class="w-full overflow-y-auto scroll-smooth sm:w-[400px] sm:flex-shrink-0 overflow-x-hidden"
+        class="w-full overflow-x-hidden overflow-y-auto scroll-smooth sm:w-[400px] sm:flex-shrink-0"
       >
         <!-- HALAMAN 1 -->
         <section
@@ -290,14 +290,23 @@
               />
             </div>
             <div class="relative z-50 mx-auto -mt-70 text-center">
-              <p class="font-pinyon text-4xl scroll-fade scroll-fade-right transition-all duration-4000 delay-200">Akad Nikah</p>
-              <p class="mb-5 text-xl font-bold scroll-fade scroll-fade-right transition-all duration-4000 delay-400">
+              <p
+                class="font-pinyon scroll-fade scroll-fade-right text-4xl transition-all delay-200 duration-4000"
+              >
+                Akad Nikah
+              </p>
+              <p
+                class="scroll-fade scroll-fade-right mb-5 text-xl font-bold transition-all delay-400 duration-4000"
+              >
                 Minggu, <br />
                 14 Desember 2025
               </p>
-              <p class="mb-5 text-[11px] font-bold scroll-fade scroll-fade-right transition-all duration-4000 delay-600">
+              <p
+                class="scroll-fade scroll-fade-right mb-5 text-[11px] font-bold transition-all delay-600 duration-4000"
+              >
                 08.00 WIB - selesai <br />
-                <span class="font-normal scroll-fade scroll-fade-right transition-all duration-4000 delay-800"
+                <span
+                  class="scroll-fade scroll-fade-right font-normal transition-all delay-800 duration-4000"
                   >Masjid Raya Al-Furqan <br />
                   Jl. Melati No. 88, <br />
                   Yogyakarta</span
@@ -319,10 +328,10 @@
           class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
         >
           <!-- bunga -->
-          <div class="-mt-15 sm:-mt-0 scroll-fade transition-all duration-6000">
+          <div class="scroll-fade -mt-15 transition-all duration-6000 sm:-mt-0">
             <div>
               <img
-                class="relative z-40"
+                class="scroll-fade scroll-fade-top relative z-40 transition-all duration-6000"
                 src="img/01/page6/bg bunga atas.png"
                 alt=""
               />
@@ -330,20 +339,29 @@
             <!-- emblem -->
             <div class="relative z-40 mx-auto -mt-60 flex justify-center">
               <img
-                class="h-[370px] w-auto scroll-fade scroll-fade-right transition-all duration-4000"
+                class="scroll-fade scroll-fade-right h-[370px] w-auto transition-all duration-4000"
                 src="img/01/page4/emblem.png"
                 alt=""
               />
             </div>
             <div class="relative z-50 mx-auto -mt-70 text-center">
-              <p class="font-pinyon text-4xl scroll-fade scroll-fade-left transition-all duration-4000 delay-200">Resepsi</p>
-              <p class="mb-5 text-xl font-bold scroll-fade scroll-fade-left transition-all duration-4000 delay-400">
+              <p
+                class="font-pinyon scroll-fade scroll-fade-left text-4xl transition-all delay-200 duration-4000"
+              >
+                Resepsi
+              </p>
+              <p
+                class="scroll-fade scroll-fade-left mb-5 text-xl font-bold transition-all delay-400 duration-4000"
+              >
                 Minggu, <br />
                 14 Desember 2025
               </p>
-              <p class="mb-5 text-[11px] font-bold scroll-fade scroll-fade-left transition-all duration-4000 delay-400">
+              <p
+                class="scroll-fade scroll-fade-left mb-5 text-[11px] font-bold transition-all delay-400 duration-4000"
+              >
                 11.00 - 13.00 WIB <br />
-                <span class="font-normal scroll-fade scroll-fade-left transition-all duration-4000 delay-600"
+                <span
+                  class="scroll-fade scroll-fade-left font-normal transition-all delay-600 duration-4000"
                   >The Harmony Hall <br />
                   Jl. Anggrek No. 27, Sleman <br />
                   Yogyakarta</span
@@ -352,7 +370,7 @@
             </div>
             <div>
               <img
-                class="relative z-30 -mt-32 scroll-fade transition-all duration-6000"
+                class="scroll-fade scroll-fade-bottom relative z-30 -mt-32 transition-all duration-6000"
                 src="img/01/page6/bg bunga bawah.png"
                 alt=""
               />
@@ -368,22 +386,28 @@
           <div class="mx-4 sm:pt-10">
             <div class="mx-auto flex justify-center">
               <img
-                class="ml-5 h-auto w-50"
+                class="scroll-fade ml-5 h-auto w-50 transition-all duration-6000"
                 src="img/01/page8/bunga streaming.png"
                 alt=""
               />
             </div>
             <div class="mx-auto mb-5 justify-center">
-              <h1 class="font-pinyon py-4 text-4xl">Live Streaming</h1>
-              <p class="text-center font-bold">
+              <h1
+                class="font-pinyon scroll-fade scroll-fade-right py-4 text-4xl transition-all delay-200 duration-4000"
+              >
+                Live Streaming
+              </h1>
+              <p
+                class="scroll-fade scroll-fade-right text-center font-bold transition-all delay-200 duration-4000"
+              >
                 Temui kami secara virtual untuk menyaksikan acara pernikahan
                 kami melalui tautan di bawah ini:
               </p>
             </div>
             <div class="mb-5">
               <button
-                id="bukaUndangan"
-                class="bg-ideka01 inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+                id="btnig"
+                class="bg-ideka01 scroll-fade scroll-fade-right inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-300 duration-4000 hover:bg-[#7a502a]"
               >
                 <img
                   src="img/01/page8/icon ig.png"
@@ -395,8 +419,8 @@
             </div>
             <div>
               <button
-                id="bukaUndangan"
-                class="bg-ideka01 inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+                id="btnyt"
+                class="bg-ideka01 scroll-fade scroll-fade-left inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-200 duration-4000 hover:bg-[#7a502a]"
               >
                 <img
                   src="img/01/page8/icon youtube.png"
@@ -408,7 +432,9 @@
             </div>
             <!-- counting -->
             <div>
-              <h1 class="font-pinyon mt-10 text-4xl">
+              <h1
+                class="font-pinyon scroll-fade scroll-fade-top mt-10 text-4xl transition-all duration-4000"
+              >
                 Counting Days <br />
                 To Big Days
               </h1>
@@ -419,28 +445,28 @@
             >
               <!-- Hari -->
               <div
-                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-1000 duration-4000"
               >
                 <span id="days" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">hari</span>
               </div>
               <!-- Jam -->
               <div
-                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-800 duration-3000"
               >
                 <span id="hours" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">jam</span>
               </div>
               <!-- Menit -->
               <div
-                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-600 duration-2500"
               >
                 <span id="minutes" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">menit</span>
               </div>
               <!-- Detik -->
               <div
-                class="bg-ideka01 flex flex-col items-center rounded-md px-4 py-2 shadow-md"
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-400 duration-2000"
               >
                 <span id="seconds" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">detik</span>
@@ -455,33 +481,63 @@
         >
           <!-- bunga -->
           <div>
-            <img src="img/01/page9/bunga page9.png" alt="" />
+            <img
+              class="scroll-fade scroll-fade-left transition-all delay-200 duration-4000"
+              src="img/01/page9/bunga page9.png"
+              alt=""
+            />
           </div>
           <div class="mx-8 -mt-28 text-left">
-            <h2 class="font-pinyon mb-4 ml-5 text-4xl">
+            <h2
+              class="font-pinyon scroll-fade scroll-fade-right mb-4 ml-5 text-4xl transition-all delay-200 duration-4000"
+            >
               Perjalanan <br />
               Cinta Kami
             </h2>
             <div class="text-xs">
-              <h3 class="mb-1 font-semibold">2017 – Awal Bertemu</h3>
-              <p class="mb-4">
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2017 – Awal Bertemu
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
+              >
                 Takdir mempertemukan kami di sebuah kegiatan <br />
                 kampus. Saat itu, kami hanyalah dua orang asing <br />
                 yang mulai saling mengenal.
               </p>
-              <h3 class="mb-1 font-semibold">2019 – Menjalin Hubungan</h3>
-              <p class="mb-4">
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2019 – Menjalin Hubungan
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
+              >
                 Dari pertemanan, tumbuh rasa yang tulus. <br />
                 Kami pun memutuskan untuk berjalan bersama <br />sebagai
                 sepasang kekasih.
               </p>
-              <h3 class="mb-1 font-semibold">2024 – Lamaran</h3>
-              <p class="mb-4">
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2024 – Lamaran
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
+              >
                 Setelah melewati banyak cerita,<br />kami mantap melangkah ke
                 tahap yang lebih serius. <br />Keluarga pun memberi restu.
               </p>
-              <h3 class="mb-1 font-semibold">2025 – Hari Bahagia</h3>
-              <p class="">
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2025 – Hari Bahagia
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right transition-all delay-200 duration-4000"
+              >
                 Kini kami siap memulai babak baru <br />
                 sebagai suami dan istri, dengan cinta <br />
                 dan doa dari orang-orang terkasih.
@@ -498,14 +554,20 @@
             <img
               src="img/01/page10/daun.png"
               alt="Leaf"
-              class="mx-auto h-20 w-auto"
+              class="scroll-fade scroll-fade-top mx-auto h-20 w-auto transition-all delay-200 duration-4000"
             />
           </div>
 
           <!-- Judul -->
           <div class="mx-5">
-            <h2 class="font-cursive mb-2 text-2xl">Wedding Gift</h2>
-            <p class="mx-auto max-w-md text-xs leading-relaxed">
+            <h2
+              class="font-cursive scroll-fade scroll-fade-right mb-2 text-2xl transition-all delay-200 duration-4000"
+            >
+              Wedding Gift
+            </h2>
+            <p
+              class="scroll-fade scroll-fade-left mx-auto max-w-md text-xs leading-relaxed transition-all delay-200 duration-4000"
+            >
               Tanpa mengurangi rasa hormat,<br />
               bagi Bapak/Ibu/Saudara/i yang ingin <br />
               memberikan tanda kasih untuk kami, dapat melalui:
@@ -515,7 +577,9 @@
           <!-- Kartu Rekening -->
           <div class="mx-auto mt-8 max-w-md space-y-4">
             <!-- Mandiri -->
-            <div class="bg-idekasecond mx-10 rounded-xl p-4 shadow-md">
+            <div
+              class="bg-idekasecond scroll-fade scroll-fade-right mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+            >
               <img
                 src="img/01/page10/mandiri.png"
                 alt="Mandiri"
@@ -545,7 +609,9 @@
             </div>
             <!-- BNI -->
 
-            <div class="bg-idekasecond mx-10 rounded-xl p-4 shadow-md">
+            <div
+              class="bg-idekasecond scroll-fade scroll-fade-left mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+            >
               <img
                 src="img/01/page10/bni.png"
                 alt="Mandiri"
@@ -576,7 +642,7 @@
             <!-- DANA -->
 
             <div
-              class="bg-idekasecond relative z-20 mx-10 rounded-xl p-4 shadow-md"
+              class="bg-idekasecond scroll-fade scroll-fade-right relative z-20 mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
             >
               <img
                 src="img/01/page10/dana.png"
@@ -614,17 +680,17 @@
         >
           <div class="relative z-10 mx-auto flex justify-end">
             <img
-              class="mt-10 w-full max-w-sm"
+              class="scroll-fade scroll-fade-top mt-10 w-full max-w-sm transition-all delay-200 duration-4000"
               src="img/01/page11/bunga page11.png"
               alt="Bunga Halaman 11"
             />
           </div>
 
           <div
-            class="relative mx-auto -mt-55 flex w-full max-w-sm flex-col items-center p-4"
+            class="scroll-fade scroll-fade-bottom relative z-20 mx-auto -mt-55 flex w-full max-w-sm flex-col items-center p-4 transition-all delay-200 duration-4000"
           >
             <img
-              class="absolute inset-0 z-10 mx-auto h-170 w-75 object-fill"
+              class="absolute inset-0 z-20 mx-auto h-170 w-75 object-fill"
               src="img/01/page11/bgform.png"
               alt="Bingkai RSVP"
             />
@@ -817,23 +883,33 @@
               <img
                 src="img/01/page12/pengantinframe.png"
                 alt="Foto Ilustrasi Pengantin Ayudya & Baskoro"
-                class="h-full w-full object-cover p-2"
+                class="scroll-fade h-full w-full object-cover p-2 transition-all delay-200 duration-4000"
               />
             </div>
 
-            <p class="text-ideka01 mb-4 max-w-xs text-sm leading-relaxed">
+            <p
+              class="text-ideka01 scroll-fade scroll-fade-right mb-4 max-w-xs text-sm leading-relaxed transition-all delay-200 duration-4000"
+            >
               Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
               Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan doa restu
               kepada kami
             </p>
 
-            <p class="text-ideka01 mb-2 text-base font-semibold">
+            <p
+              class="text-ideka01 scroll-fade scroll-fade-left mb-2 text-base font-semibold transition-all delay-200 duration-4000"
+            >
               Wassalamu'alaikum Wr.Wb.
             </p>
 
-            <p class="text-ideka01 mb-4 text-sm">Kami yang berbahagia,</p>
+            <p
+              class="text-ideka01 scroll-fade scroll-fade-right mb-4 text-sm transition-all delay-200 duration-4000"
+            >
+              Kami yang berbahagia,
+            </p>
 
-            <p class="font-pinyon text-ideka01 text-[40px] font-medium">
+            <p
+              class="font-pinyon text-ideka01 scroll-fade scroll-fade-right text-[40px] font-medium transition-all delay-200 duration-4000"
+            >
               Ayudya & Baskoro
             </p>
           </div>
