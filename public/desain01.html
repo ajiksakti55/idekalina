@@ -1,0 +1,1404 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Pinyon+Script&family=Poppins:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="output.css" rel="stylesheet" />
+    <title>Desain01</title>
+    <link class="" rel="icon" type="image/png" href="img/Hero/favicon.png" />
+  </head>
+  <body class="text-ideka01 font-poppins bg-white">
+    <div class="flex h-screen w-screen">
+      <!-- KIRI (sticky) -->
+      <div class="sticky top-0 hidden sm:block sm:h-screen sm:flex-grow">
+        <img src="img/01/Page1/bgkiri.png" class="h-full w-full object-cover" />
+      </div>
+
+      <!-- KANAN (scrollable) -->
+      <div
+        id="kontenKanan"
+        class="w-full overflow-x-hidden overflow-y-auto scroll-smooth sm:w-[400px] sm:flex-shrink-0"
+      >
+        <!-- HALAMAN 1 -->
+        <section
+          id="halaman1"
+          class="min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- BUNGA -->
+          <div class="relative z-20 w-full overflow-hidden">
+            <img
+              src="img/01/Page1/bunga cover.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 w-full sm:-mt-0"
+            />
+          </div>
+          <!-- PENGANTIN -->
+          <div class="relative z-40 -mt-40 flex justify-center">
+            <img
+              class="xm:-mt-5 xxm:-mt-18 w-70 sm:-mt-0 sm:w-50"
+              src="img/01/Page1/pengantin.png"
+              alt=""
+            />
+          </div>
+          <!-- TEXT -->
+          <h1 class="mt-2 text-xl">the wedding of</h1>
+          <h1 class="font-pinyon text-[46px] font-semibold">
+            Ayundya & Baskoro
+          </h1>
+          <h2>Kepada Yth:</h2>
+          <h3 class="font-semibold" id="namaTamuDisplay">Nama Tamu</h3>
+          <!-- TOMBOL -->
+          <div class="flex justify-center py-5">
+            <button
+              id="bukaUndanganButton"
+              class="bg-ideka01 inline-flex items-center rounded-full px-6 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+            >
+              <img
+                src="img/01/Envelope.png"
+                alt="Amplop"
+                class="mr-2 h-auto w-5"
+              />
+              Buka Undangan
+            </button>
+          </div>
+        </section>
+
+        <!-- audio -->
+        <div
+          id="musicControl"
+          class="pointer-events-none invisible fixed right-4 bottom-4 z-[99999] cursor-pointer rounded-full bg-white/70 p-2 opacity-0 shadow-lg backdrop-blur-sm"
+        >
+          <img
+            id="playImage"
+            src="img/01/audio/play.gif"
+            alt="Play Music"
+            class="h-6 w-6"
+          />
+
+          <img
+            id="pauseImage"
+            src="img/01/audio/pause.png"
+            alt="Pause Music"
+            class="hidden h-6 w-6"
+          />
+        </div>
+
+        <audio id="undanganMusic" loop>
+          <source
+            src="img/01/audio/Victor Lundberg - I Fall.mp3"
+            type="audio/mp3"
+          />
+          Browser Anda tidak mendukung elemen audio.
+        </audio>
+        <!-- end audio -->
+
+        <!-- HALAMAN 2 -->
+        <section
+          id="halaman2"
+          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="relative z-20 w-full overflow-hidden">
+            <img
+              src="img/01/Page1/bunga cover.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 scroll-fade js-animate-after w-full transition-all duration-6000 sm:-mt-0"
+            />
+          </div>
+          <!-- pengantin -->
+          <div class="relative z-40 -mt-43 flex justify-center">
+            <img
+              class="xm:-mt-5 xxm:-mt-18 scroll-fade scroll-fade-bottom w-60 transition-all duration-4000 sm:-mt-0 sm:w-50"
+              src="img/01/Page2/duapengantin.png"
+              alt=""
+            />
+          </div>
+          <h1
+            class="scroll-fade scroll-fade-bottom mt-2 transition-all delay-1000 duration-3000"
+          >
+            the wedding of
+          </h1>
+          <div
+            class="scroll-fade scroll-fade-bottom leading-none transition-all delay-1500 duration-3000"
+          >
+            <h1 class="font-pinyon -mb-5 text-[55px] font-medium">Ayundya</h1>
+            <div class="font-pinyon my-[-4px] text-5xl leading-none">&</div>
+            <h1 class="font-pinyon -mt-5 text-[55px] font-medium">Baskoro</h1>
+            <h2 class="font-bold">25.09.2025</h2>
+          </div>
+        </section>
+        <!-- halaman 3 -->
+        <section
+          id="halaman3"
+          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- Logo -->
+          <div class="relative z-40 flex justify-center pt-10 pb-10">
+            <img
+              class="xm:-mt-5 xxm:-mt-18 scroll-fade h-auto w-70 transition-all duration-6000 sm:-mt-0 sm:w-50"
+              src="img/01/page3/frame.png"
+              alt=""
+            />
+          </div>
+          <div class="mx-10 -mb-19 text-center text-[11px]">
+            <p
+              class="scroll-fade scroll-fade-bottom mb-4 leading-relaxed font-bold transition-all delay-100 duration-3000"
+            >
+              Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan
+              pasangan pasangan untukmu dari jenismu sendiri, agar kamu
+              cenderung dan merasa tenteram kepadanya, dan Dia menjadikan di
+              antaramu rasa kasih dan sayang.
+            </p>
+            <p
+              class="scroll-fade scroll-fade-bottom mx-2 mb-4 font-bold transition-all delay-200 duration-3000"
+            >
+              Sungguh, pada yang demikian itu <br />benar-benar terdapat
+              tanda-tanda <br />
+              (kebesaran Allah) bagi kaum yang berpikir.
+            </p>
+            <p
+              class="scroll-fade scroll-fade-bottom mt-6 text-sm font-bold tracking-widest uppercase transition-all delay-200 duration-3000"
+            >
+              QS Ar-Rum : 21
+            </p>
+          </div>
+
+          <!-- bunga -->
+          <div class="relative z-20 w-full overflow-hidden">
+            <img
+              src="img/01/page3/bunga page3.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 scroll-fade w-full transition-all duration-4000 sm:-mt-0"
+            />
+          </div>
+        </section>
+        <!-- halaman 4 -->
+        <section
+          id="halaman4"
+          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="relative z-20 -mt-0.5 w-full overflow-hidden">
+            <img
+              src="img/01/page4/bunga page4.png"
+              alt="Bunga Atas"
+              class="xm:-mt-30 scroll-fade w-full transition-all duration-100 sm:-mt-0"
+            />
+          </div>
+          <!-- pengantin -->
+          <div class="mx-6">
+            <div class="relative z-40 mt-10">
+              <img
+                class="xm:-mt-5 xxm:-mt-18 scroll-fade scroll-fade-top h-auto w-90 transition-all duration-4000 sm:-mt-0"
+                src="img/01/page4/pengantin wanita (1).png"
+                alt=""
+              />
+            </div>
+            <!-- type -->
+            <div class="relative z-50 -mt-83 ml-35 text-left">
+              <p
+                class="scroll-fade scroll-fade-bottom text-xs font-bold transition-all delay-200 duration-3000"
+              >
+                Mempelai Wanita
+              </p>
+              <p
+                class="font-pinyon scroll-fade scroll-fade-bottom text-3xl transition-all delay-400 duration-3000"
+              >
+                Ayundya
+              </p>
+              <p
+                class="scroll-fade scroll-fade-bottom mb-5 text-xl font-bold transition-all delay-400 duration-3000"
+              >
+                Prameswari
+              </p>
+              <p
+                class="scroll-fade scroll-fade-bottom mb-5 text-[11px] transition-all delay-600 duration-3000"
+              >
+                Putri pertama dari <br />
+                <span
+                  class="scroll-fade scroll-fade-bottom font-bold transition-all delay-800 duration-3000"
+                  >Bapak H. Bambang Santoso <br />
+                  & Ibu Hj. Nurhayati</span
+                >
+              </p>
+              <p
+                class="scroll-fade scroll-fade-bottom text-[11px] transition-all delay-1000 duration-3000"
+              >
+                Jl. Cempaka Indah No. 21 <br />
+                Kel. Sukamaju, Kec. Tegalrejo <br />
+                Yogyakarta 55243
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- halaman 5 -->
+        <section
+          id="halaman5"
+          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- pengantin -->
+          <div class="mx-6">
+            <div class="relative z-40 pt-20">
+              <img
+                class="xm:-mt-5 xxm:-mt-18 scroll-fade scroll-fade-bottom h-auto w-90 transition-all duration-4000 sm:-mt-0"
+                src="img/01/page5/PENGANTIN PRIA.png"
+                alt=""
+              />
+            </div>
+            <!-- type -->
+            <div class="relative z-50 -mt-75 mr-36 text-right">
+              <p
+                class="scroll-fade scroll-fade-top text-xs font-bold transition-all delay-200 duration-3000"
+              >
+                Mempelai Pria
+              </p>
+              <p
+                class="font-pinyon scroll-fade scroll-fade-top text-3xl transition-all delay-400 duration-3000"
+              >
+                Baskoro
+              </p>
+              <p
+                class="scroll-fade scroll-fade-top mb-5 text-xl font-bold transition-all delay-400 duration-3000"
+              >
+                Satya Nugroho
+              </p>
+              <p
+                class="scroll-fade scroll-fade-top mb-5 text-[11px] transition-all delay-600 duration-3000"
+              >
+                Putra kedua dari <br />
+                <span
+                  class="scroll-fade scroll-fade-top font-bold transition-all delay-800 duration-3000"
+                  >Bapak H. Widodo<br />
+                  & Ibu Hj. Siti Rohmah</span
+                >
+              </p>
+              <p
+                class="scroll-fade scroll-fade-top text-[11px] transition-all delay-1000 duration-3000"
+              >
+                Jl. Mawar No. 23<br />
+                Kelurahan Mantrijeron<br />
+                Kecamatan Mantrijeron <br />
+                Kota Yogyakarta
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- halaman 6 -->
+        <section
+          id="halaman6"
+          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="">
+            <div>
+              <img
+                class="scroll-fade scroll-fade-top js-animate-after transition-all duration-6000"
+                src="img/01/page6/bg bunga atas.png"
+                alt=""
+              />
+            </div>
+            <!-- emblem -->
+            <div class="relative z-30 mx-auto -mt-60 flex justify-center">
+              <img
+                class="scroll-fade scroll-fade-left h-[370px] w-auto transition-all duration-4000"
+                src="img/01/page4/emblem.png"
+                alt=""
+              />
+            </div>
+            <div class="relative z-50 mx-auto -mt-70 text-center">
+              <p
+                class="font-pinyon scroll-fade scroll-fade-right text-4xl transition-all delay-200 duration-4000"
+              >
+                Akad Nikah
+              </p>
+              <p
+                class="scroll-fade scroll-fade-right mb-5 text-xl font-bold transition-all delay-400 duration-4000"
+              >
+                Minggu, <br />
+                14 Desember 2025
+              </p>
+              <p
+                class="scroll-fade scroll-fade-right mb-5 text-[11px] font-bold transition-all delay-600 duration-4000"
+              >
+                08.00 WIB - selesai <br />
+                <span
+                  class="scroll-fade scroll-fade-right font-normal transition-all delay-800 duration-4000"
+                  >Masjid Raya Al-Furqan <br />
+                  Jl. Melati No. 88, <br />
+                  Yogyakarta</span
+                >
+              </p>
+            </div>
+            <div class="-mt-26">
+              <img
+                class="scroll-fade scroll-fade-bottom js-animate-after transition-all duration-6000"
+                src="img/01/page6/bg bunga bawah.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <!-- halaman 7 -->
+        <section
+          id="halaman7"
+          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="scroll-fade -mt-15 transition-all duration-6000 sm:-mt-0">
+            <div>
+              <img
+                class="scroll-fade scroll-fade-top js-animate-after relative z-40 transition-all duration-6000"
+                src="img/01/page6/bg bunga atas.png"
+                alt=""
+              />
+            </div>
+            <!-- emblem -->
+            <div class="relative z-40 mx-auto -mt-60 flex justify-center">
+              <img
+                class="scroll-fade scroll-fade-right h-[370px] w-auto transition-all duration-4000"
+                src="img/01/page4/emblem.png"
+                alt=""
+              />
+            </div>
+            <div class="relative z-50 mx-auto -mt-70 text-center">
+              <p
+                class="font-pinyon scroll-fade scroll-fade-left text-4xl transition-all delay-200 duration-4000"
+              >
+                Resepsi
+              </p>
+              <p
+                class="scroll-fade scroll-fade-left mb-5 text-xl font-bold transition-all delay-400 duration-4000"
+              >
+                Minggu, <br />
+                14 Desember 2025
+              </p>
+              <p
+                class="scroll-fade scroll-fade-left mb-5 text-[11px] font-bold transition-all delay-400 duration-4000"
+              >
+                11.00 - 13.00 WIB <br />
+                <span
+                  class="scroll-fade scroll-fade-left font-normal transition-all delay-600 duration-4000"
+                  >The Harmony Hall <br />
+                  Jl. Anggrek No. 27, Sleman <br />
+                  Yogyakarta</span
+                >
+              </p>
+            </div>
+            <div>
+              <img
+                class="scroll-fade scroll-fade-bottom js-animate-after relative z-30 -mt-32 transition-all duration-6000"
+                src="img/01/page6/bg bunga bawah.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </section>
+        <!-- halaman 8 -->
+        <section
+          id="halaman8"
+          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+        >
+          <!-- bunga -->
+          <div class="mx-4 sm:pt-10">
+            <div class="mx-auto flex justify-center">
+              <img
+                class="scroll-fade js-animate-after ml-5 h-auto w-50 transition-all duration-6000"
+                src="img/01/page8/bunga streaming.png"
+                alt=""
+              />
+            </div>
+            <div class="mx-auto mb-5 justify-center">
+              <h1
+                class="font-pinyon scroll-fade scroll-fade-right py-4 text-4xl transition-all delay-200 duration-4000"
+              >
+                Live Streaming
+              </h1>
+              <p
+                class="scroll-fade scroll-fade-right text-center font-bold transition-all delay-200 duration-4000"
+              >
+                Temui kami secara virtual untuk menyaksikan acara pernikahan
+                kami melalui tautan di bawah ini:
+              </p>
+            </div>
+            <div class="mb-5">
+              <button
+                id="btnig"
+                class="bg-ideka01 scroll-fade scroll-fade-right inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-300 duration-4000 hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page8/icon ig.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                @username
+              </button>
+            </div>
+            <div>
+              <button
+                id="btnyt"
+                class="bg-ideka01 scroll-fade scroll-fade-left inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-200 duration-4000 hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page8/icon youtube.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                @username
+              </button>
+            </div>
+            <!-- counting -->
+            <div>
+              <h1
+                class="font-pinyon scroll-fade scroll-fade-top mt-10 text-4xl transition-all duration-4000"
+              >
+                Counting Days <br />
+                To Big Days
+              </h1>
+            </div>
+            <div
+              id="countdown"
+              class="mt-5 flex justify-center gap-3 text-white"
+            >
+              <!-- Hari -->
+              <div
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-1000 duration-4000"
+              >
+                <span id="days" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">hari</span>
+              </div>
+              <!-- Jam -->
+              <div
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-800 duration-3000"
+              >
+                <span id="hours" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">jam</span>
+              </div>
+              <!-- Menit -->
+              <div
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-600 duration-2500"
+              >
+                <span id="minutes" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">menit</span>
+              </div>
+              <!-- Detik -->
+              <div
+                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-400 duration-2000"
+              >
+                <span id="seconds" class="text-2xl font-bold">0</span>
+                <span class="mt-1 text-sm">detik</span>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Halaman 9 -->
+        <section
+          id="halaman9"
+          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+        >
+          <!-- bunga -->
+          <div>
+            <img
+              class="scroll-fade scroll-fade-left js-animate-after transition-all delay-200 duration-4000"
+              src="img/01/page9/bunga page9.png"
+              alt=""
+            />
+          </div>
+          <div class="mx-8 -mt-28 text-left">
+            <h2
+              class="font-pinyon scroll-fade scroll-fade-right mb-4 ml-5 text-4xl transition-all delay-200 duration-4000"
+            >
+              Perjalanan <br />
+              Cinta Kami
+            </h2>
+            <div class="text-xs">
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2017 – Awal Bertemu
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
+              >
+                Takdir mempertemukan kami di sebuah kegiatan <br />
+                kampus. Saat itu, kami hanyalah dua orang asing <br />
+                yang mulai saling mengenal.
+              </p>
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2019 – Menjalin Hubungan
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
+              >
+                Dari pertemanan, tumbuh rasa yang tulus. <br />
+                Kami pun memutuskan untuk berjalan bersama <br />sebagai
+                sepasang kekasih.
+              </p>
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2024 – Lamaran
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
+              >
+                Setelah melewati banyak cerita,<br />kami mantap melangkah ke
+                tahap yang lebih serius. <br />Keluarga pun memberi restu.
+              </p>
+              <h3
+                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+              >
+                2025 – Hari Bahagia
+              </h3>
+              <p
+                class="scroll-fade scroll-fade-right transition-all delay-200 duration-4000"
+              >
+                Kini kami siap memulai babak baru <br />
+                sebagai suami dan istri, dengan cinta <br />
+                dan doa dari orang-orang terkasih.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- halaman 10 -->
+        <section
+          id="halaman10"
+          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+        >
+          <div class="mb-4 pt-10">
+            <img
+              src="img/01/page10/daun.png"
+              alt="Leaf"
+              class="scroll-fade scroll-fade-top js-animate-daun mx-auto h-20 w-auto transition-all delay-200 duration-4000"
+            />
+          </div>
+
+          <!-- Judul -->
+          <div class="mx-5">
+            <h2
+              class="font-cursive scroll-fade scroll-fade-right mb-2 text-2xl transition-all delay-200 duration-4000"
+            >
+              Wedding Gift
+            </h2>
+            <p
+              class="scroll-fade scroll-fade-left mx-auto max-w-md text-xs leading-relaxed transition-all delay-200 duration-4000"
+            >
+              Tanpa mengurangi rasa hormat,<br />
+              bagi Bapak/Ibu/Saudara/i yang ingin <br />
+              memberikan tanda kasih untuk kami, dapat melalui:
+            </p>
+          </div>
+
+          <!-- Kartu Rekening -->
+          <div class="mx-auto mt-8 max-w-md space-y-4">
+            <!-- Mandiri -->
+            <div
+              class="bg-idekasecond scroll-fade scroll-fade-right mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+            >
+              <img
+                src="img/01/page10/mandiri.png"
+                alt="Mandiri"
+                class="mx-auto mb-2 h-10"
+              />
+              <p class="font-semibold">An. Ayudya Prameswari</p>
+              <p class="mb-2 text-sm">No. Rekening: 123 00 4567890 1</p>
+              <!-- Notifikasi -->
+              <div
+                id="copyNotification"
+                class="bg-idekabutton fixed bottom-5 left-1/2 z-50 hidden -translate-x-1/2 transform rounded-full px-4 py-2 text-sm text-white shadow-lg"
+              >
+                Nomor berhasil disalin!
+              </div>
+              <button
+                onclick="copyToClipboard('1230045678901')"
+                id="bukaUndangan"
+                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page10/icon copy.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                Salin Nomor
+              </button>
+            </div>
+            <!-- BNI -->
+
+            <div
+              class="bg-idekasecond scroll-fade scroll-fade-left mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+            >
+              <img
+                src="img/01/page10/bni.png"
+                alt="Mandiri"
+                class="mx-auto mb-2 h-10"
+              />
+              <p class="font-semibold">An. Ayudya Prameswari</p>
+              <p class="mb-2 text-sm">No. Rekening: 123 00 4567890 1</p>
+              <!-- Notifikasi -->
+              <div
+                id="copyNotification"
+                class="bg-idekabutton fixed bottom-5 left-1/2 z-50 hidden -translate-x-1/2 transform rounded-full px-4 py-2 text-sm text-white shadow-lg"
+              >
+                Nomor berhasil disalin!
+              </div>
+              <button
+                onclick="copyToClipboard('1230045678901')"
+                id="bukaUndangan"
+                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page10/icon copy.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                Salin Nomor
+              </button>
+            </div>
+            <!-- DANA -->
+
+            <div
+              class="bg-idekasecond scroll-fade scroll-fade-right relative z-20 mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+            >
+              <img
+                src="img/01/page10/dana.png"
+                alt="Mandiri"
+                class="mx-auto mb-2 h-10"
+              />
+              <p class="font-semibold">An. Ayudya Prameswari</p>
+              <p class="mb-2 text-sm">No. Rekening: 123 00 4567890 1</p>
+              <!-- Notifikasi -->
+              <div
+                id="copyNotification"
+                class="bg-idekabutton fixed bottom-5 left-1/2 z-50 hidden -translate-x-1/2 transform rounded-full px-4 py-2 text-sm text-white shadow-lg"
+              >
+                Nomor berhasil disalin!
+              </div>
+              <button
+                onclick="copyToClipboard('1230045678901')"
+                id="bukaUndangan"
+                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+              >
+                <img
+                  src="img/01/page10/icon copy.png"
+                  alt="Amplop"
+                  class="mr-2 h-auto w-5"
+                />
+                Salin Nomor
+              </button>
+            </div>
+          </div>
+        </section>
+        <!-- halaman11 -->
+        <section
+          id="halaman11"
+          class="relative z-10 -mt-0.5 hidden bg-[url('img/01/Page1/background.png')] bg-cover bg-center pb-20 text-center"
+        >
+          <div class="relative z-10 mx-auto flex justify-end">
+            <img
+              class="scroll-fade scroll-fade-top js-animate-after mt-10 w-full max-w-sm transition-all delay-200 duration-4000"
+              src="img/01/page11/bunga page11.png"
+              alt="Bunga Halaman 11"
+            />
+          </div>
+
+          <div
+            class="scroll-fade scroll-fade-bottom relative z-20 mx-auto -mt-55 flex w-full max-w-sm flex-col items-center p-4 transition-all delay-200 duration-4000"
+          >
+            <img
+              class="absolute inset-0 z-20 mx-auto h-170 w-75 object-fill"
+              src="img/01/page11/bgform.png"
+              alt="Bingkai RSVP"
+            />
+
+            <div class="relative z-20 w-full px-10 pt-2 pb-10">
+              <h2 class="font-pinyon mt-4 text-4xl text-[#71502f]">Rsvp</h2>
+              <p class="mb-6 text-sm leading-tight font-semibold">
+                Konfirmasi Kehadiran <br />
+                & Ucapan Selamat
+              </p>
+
+              <div
+                class="mb-1 flex items-center justify-start text-xs font-semibold"
+              >
+                <img
+                  class="mr-1 w-4"
+                  src="img/01/page11/tweet.png"
+                  alt="Twitter Icon"
+                />
+                <p id="commentCountDisplay">5 Comments</p>
+              </div>
+
+              <form id="rsvpForm" class="space-y-1">
+                <input
+                  id="namaInput"
+                  type="text"
+                  placeholder="Nama..."
+                  class="w-full rounded-md border border-[#c2a47d] px-3 py-2 text-sm placeholder:text-gray-400 focus:border-[#71502f] focus:bg-transparent focus:ring-2 focus:ring-[#71502f] focus:outline-none"
+                />
+                <textarea
+                  id="ucapanInput"
+                  placeholder="Ucapan"
+                  rows="4"
+                  maxlength="500"
+                  class="w-full rounded-md border border-[#c2a47d] px-3 py-1 text-sm placeholder:text-gray-400 focus:border-[#71502f] focus:bg-transparent focus:ring-2 focus:ring-[#71502f] focus:outline-none"
+                ></textarea>
+                <div class="text-right text-[10px] text-gray-500">500</div>
+                <select
+                  id="konfirmasiInput"
+                  class="w-full rounded-md border border-[#c2a47d] px-3 py-2 text-sm text-gray-700 focus:border-[#71502f] focus:bg-transparent focus:ring-2 focus:ring-[#71502f] focus:outline-none"
+                >
+                  <option value="" disabled selected>
+                    Konfirmasi Kehadiran
+                  </option>
+                  <option value="Hadir">Hadir</option>
+                  <option value="Tidak Hadir">Tidak Hadir</option>
+                  <option value="Masih Ragu">Masih Ragu</option>
+                </select>
+                <div class="flex justify-end pt-2">
+                  <button
+                    type="submit"
+                    id="kirimButton"
+                    class="rounded-md bg-[#7b5e3d] px-4 py-2 text-sm font-medium text-white transition-all hover:bg-[#5d472d]"
+                  >
+                    Kirim
+                  </button>
+                </div>
+              </form>
+
+              <div
+                id="daftarKomentar"
+                class="relative z-30 mt-6 h-60 space-y-2 overflow-y-scroll pr-4"
+              >
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Rian Hidayat
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      <svg
+                        class="mr-1 h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">
+                    Selamat atas pernikahannya! Semoga samawa.
+                  </p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Siska Dewi
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      <svg
+                        class="mr-1 h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M5 13l4 4L19 7"
+                        ></path>
+                      </svg>
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">Selamat</p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Budi Santoso
+                    <span
+                      class="inline-flex items-center rounded-full bg-red-100 px-2 py-0.5 text-xs font-medium text-red-700"
+                    >
+                      <svg
+                        class="mr-1 h-3 w-3"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M6 18L18 6M6 6l12 12"
+                        ></path>
+                      </svg>
+                      Tidak Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">
+                    Mohon maaf belum bisa hadir.
+                  </p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Tamu Dummy 4
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">Semoga lancar.</p>
+                </div>
+
+                <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div
+                    class="flex items-center justify-between text-sm font-bold"
+                  >
+                    Tamu Dummy 5
+                    <span
+                      class="inline-flex items-center rounded-full bg-green-100 px-2 py-0.5 text-xs font-medium text-green-700"
+                    >
+                      Hadir
+                    </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">Happy wedding!</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- halaman12 -->
+        <section
+          id="halaman12"
+          class="relative z-10 -mt-0.5 hidden bg-[url('img/01/Page1/background.png')] bg-cover bg-center pt-2 pb-20 text-center"
+        >
+          <div class="mx-auto flex flex-col items-center justify-center p-4">
+            <div class="relative mb-6 h-64 w-64">
+              <img
+                src="img/01/page12/pengantinframe.png"
+                alt="Foto Ilustrasi Pengantin Ayudya & Baskoro"
+                class="scroll-fade h-full w-full object-cover p-2 transition-all delay-200 duration-4000"
+              />
+            </div>
+
+            <p
+              class="text-ideka01 scroll-fade scroll-fade-right mb-4 max-w-xs text-sm leading-relaxed transition-all delay-200 duration-4000"
+            >
+              Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
+              Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan doa restu
+              kepada kami
+            </p>
+
+            <p
+              class="text-ideka01 scroll-fade scroll-fade-left mb-2 text-base font-semibold transition-all delay-200 duration-4000"
+            >
+              Wassalamu'alaikum Wr.Wb.
+            </p>
+
+            <p
+              class="text-ideka01 scroll-fade scroll-fade-right mb-4 text-sm transition-all delay-200 duration-4000"
+            >
+              Kami yang berbahagia,
+            </p>
+
+            <p
+              class="font-pinyon text-ideka01 scroll-fade scroll-fade-right text-[40px] font-medium transition-all delay-200 duration-4000"
+            >
+              Ayudya & Baskoro
+            </p>
+          </div>
+        </section>
+        <!-- footer -->
+        <section id="halaman13" class="relative z-10 hidden">
+          <div class="w-full bg-[#9f856f] px-4 py-6">
+            <div
+              class="mx-auto flex max-w-sm flex-col items-center justify-center"
+            >
+              <img
+                src="img/01/page12/idekalina.png"
+                alt="Idekalina Logo"
+                class="mb-3 h-10 w-auto object-contain"
+              />
+
+              <p class="mb-5 text-center text-[11px] text-white">
+                Wrapped in gratitude, exclusive design for
+                <span class="font-semibold">Ayudya & Baskoro</span>
+              </p>
+
+              <div class="flex space-x-6">
+                <a
+                  href="https://www.instagram.com/idekalina/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="img/01/page12/logoig.png"
+                    alt="Instagram"
+                    class="h-5 w-5 object-contain"
+                  />
+                </a>
+
+                <a
+                  href="https://wa.me/6281235962004?text=Halo%20Idekalina,%20saya%20ingin%20menanyakan%20soal%20undangan%20digital%20dan%20fisik"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img
+                    src="img/01/page12/logowa.png"
+                    alt="WhatsApp"
+                    class="h-5 w-5 object-contain"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- SCRIPT -->
+    <script>
+      // --- 1. DEKLARASI VARIABEL GLOBAL ---
+      const bukaBtn = document.getElementById("bukaUndanganButton");
+      const halaman1 = document.getElementById("halaman1");
+      const kontenKanan = document.getElementById("kontenKanan");
+      const semuaHalaman = document.querySelectorAll("[id^='halaman']");
+      const form = document.getElementById("rsvpForm");
+      const daftarKomentar = document.getElementById("daftarKomentar");
+      const commentCountDisplay = document.getElementById(
+        "commentCountDisplay",
+      );
+
+      const URL_APPS_SCRIPT =
+        "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
+
+      // --- 2. KONTROL MUSIK ---
+      const music = document.getElementById("undanganMusic");
+      const musicControl = document.getElementById("musicControl");
+      const playImage = document.getElementById("playImage");
+      const pauseImage = document.getElementById("pauseImage");
+
+      function toggleMusic() {
+        if (!music || !musicControl || !playImage || !pauseImage) return;
+
+        if (music.paused) {
+          music.volume = 0.8;
+          music
+            .play()
+            .then(() => {
+              playImage.classList.remove("hidden");
+              pauseImage.classList.add("hidden");
+            })
+            .catch((error) => {
+              console.warn("Play gagal, interaksi diperlukan.");
+              playImage.classList.remove("hidden");
+              pauseImage.classList.add("hidden");
+            });
+        } else {
+          music.pause();
+          playImage.classList.add("hidden");
+          pauseImage.classList.remove("hidden");
+        }
+      }
+
+      // --- 3. FUNGSI ANIMASI FADE-IN & WOBBLE (DIPINDAH KE ATAS) ---
+      const observerCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+
+            if (entry.target.classList.contains("js-animate-after")) {
+              const wobbleHandler = function (e) {
+                if (
+                  e.propertyName === "opacity" ||
+                  e.propertyName === "transform"
+                ) {
+                  entry.target.classList.add("animate-wobble");
+                  entry.target.removeEventListener(
+                    "transitionend",
+                    wobbleHandler,
+                  );
+                }
+              };
+              entry.target.addEventListener("transitionend", wobbleHandler);
+            } else if (entry.target.classList.contains("js-animate-daun")) {
+              const daunHandler = function (e) {
+                if (
+                  e.propertyName === "opacity" ||
+                  e.propertyName === "transform"
+                ) {
+                  entry.target.classList.add("animate-daun");
+                  entry.target.removeEventListener(
+                    "transitionend",
+                    daunHandler,
+                  );
+                }
+              };
+              entry.target.addEventListener("transitionend", daunHandler);
+            }
+          }
+        });
+      };
+
+      function initScrollFadeAnimations() {
+        const fadeElements = document.querySelectorAll(".scroll-fade");
+
+        if (!kontenKanan) {
+          console.error(
+            "Elemen #kontenKanan tidak ditemukan. Animasi scroll tidak bisa diinisialisasi.",
+          );
+          return;
+        }
+
+        const observerOptions = {
+          root: kontenKanan,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions,
+        );
+
+        fadeElements.forEach((element) => {
+          observer.observe(element);
+        });
+      }
+      // --- AKHIR FUNGSI ANIMASI ---
+
+      // --- 4. FUNGSI UTAMA BUKA UNDANGAN (FIX INTERACTIVITY & POINTER-EVENTS) ---
+      function bukaUndangan() {
+        // Sembunyikan Cover
+        if (halaman1) halaman1.style.display = "none";
+        document.body.classList.remove("overflow-hidden");
+
+        // konten utama terlihat
+        if (kontenKanan) {
+          kontenKanan.classList.remove("hidden", "opacity-0", "invisible");
+        }
+        semuaHalaman.forEach((halaman) => {
+          if (halaman.id !== "halaman1") {
+            halaman.classList.remove("hidden");
+          }
+        });
+        if (kontenKanan) kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
+
+        // TAMPILKAN TOMBOL MUSIK
+        if (musicControl) {
+          // Hapus kelas penyembunyi
+          musicControl.classList.remove(
+            "hidden",
+            "opacity-0",
+            "invisible",
+            "pointer-events-none",
+          );
+
+          // Aktifkan interaksi setelah jeda 50ms (Solusi bug klik)
+          setTimeout(() => {
+            musicControl.classList.add("pointer-events-auto");
+          }, 50);
+        }
+
+        // Memanggil fungsi toggleMusic() untuk mencoba play
+        toggleMusic();
+
+        // Simpan status dibuka
+        sessionStorage.setItem("undanganDibuka", "true");
+
+        // Inisialisasi animasi scroll (Sekarang fungsi ini sudah didefinisikan di atas, jadi tidak error)
+        initScrollFadeAnimations();
+      }
+      // --- AKHIR FUNGSI BUKA UNDANGAN ---
+
+      // --- SISA FUNGSI LAIN (COUNTDOWN, KOMENTAR, NAMA TAMU) DI SINI ---
+
+      // ... (Fungsi-fungsi Anda yang lain, seperti COUNTDOWN, KOMENTAR, RSVP, setNamaTamu tetap di tempatnya) ...
+      // ... (Anda bisa menempelkan sisa skrip Anda di sini, atau membiarkannya di bawah) ...
+
+      // --- FUNGSI COUNTDOWN (TETAP) ---
+      const targetDate = new Date("2026-07-16T14:26:00").getTime();
+      const countdown = setInterval(() => {
+        const now = new Date().getTime();
+        const distance = targetDate - now;
+
+        if (distance < 0) {
+          clearInterval(countdown);
+          const countdownSection = document.getElementById("countdown");
+          countdownSection.innerHTML = `
+                          <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
+                            <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
+                            <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
+                          </div>
+                      `;
+          return;
+        }
+
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById("days")
+          ? (document.getElementById("days").innerText = days)
+          : null;
+        document.getElementById("hours")
+          ? (document.getElementById("hours").innerText = hours)
+          : null;
+        document.getElementById("minutes")
+          ? (document.getElementById("minutes").innerText = minutes)
+          : null;
+        document.getElementById("seconds")
+          ? (document.getElementById("seconds").innerText = seconds)
+          : null;
+      }, 1000);
+
+      // --- FUNGSI KOMENTAR & RSVP (TETAP) ---
+      function updateCommentCount(count) {
+        if (typeof count === "number") {
+          commentCountDisplay.textContent = `${count} Comments`;
+          return;
+        }
+        const actualCount =
+          daftarKomentar.querySelectorAll(".rounded-md.border").length;
+        commentCountDisplay.textContent = `${actualCount} Comments`;
+      }
+
+      function buatKomentarBaru(nama, ucapan, konfirmasi) {
+        let badgeClass;
+        let iconPath;
+
+        if (konfirmasi === "Hadir") {
+          badgeClass = "bg-green-100 text-green-700";
+          iconPath = "M5 13l4 4L19 7";
+        } else if (konfirmasi === "Tidak Hadir") {
+          badgeClass = "bg-red-100 text-red-700";
+          iconPath = "M6 18L18 6M6 6l12 12";
+        } else {
+          badgeClass = "bg-yellow-100 text-yellow-700";
+          iconPath =
+            "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z";
+        }
+
+        const komentarHTML = `
+              <div class="rounded-md border border-[#c2a47d] p-3 text-left">
+                  <div class="flex items-center justify-between text-sm font-bold">
+                      ${nama}
+                      <span class="inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium ${badgeClass}">
+                          <svg class="mr-1 h-3 w-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="${iconPath}"></path>
+                          </svg>
+                          ${konfirmasi}
+                      </span>
+                  </div>
+                  <p class="mt-1 text-xs text-gray-700">${ucapan}</p>
+              </div>
+          `;
+        if (daftarKomentar)
+          daftarKomentar.insertAdjacentHTML("afterbegin", komentarHTML);
+      }
+
+      form?.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const nama = document.getElementById("namaInput").value.trim();
+        const ucapan = document.getElementById("ucapanInput").value.trim();
+        const konfirmasi = document.getElementById("konfirmasiInput").value;
+
+        if (!nama || !ucapan || konfirmasi === "") {
+          alert(
+            "Mohon lengkapi semua kolom form (Nama, Ucapan, dan Konfirmasi Kehadiran).",
+          );
+          return;
+        }
+
+        const kirimButton = document.getElementById("kirimButton");
+        kirimButton.textContent = "Mengirim...";
+        kirimButton.disabled = true;
+
+        const payload = { nama: nama, ucapan: ucapan, konfirmasi: konfirmasi };
+
+        fetch(URL_APPS_SCRIPT, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload),
+        })
+          .then((response) => {
+            if (response.ok) {
+              return response.json();
+            } else {
+              throw new Error(`Koneksi Gagal (Status: ${response.status})`);
+            }
+          })
+          .then((data) => {
+            if (data.result === "success") {
+              alert(
+                "Konfirmasi & Ucapan Selamat Anda berhasil dikirim dan tersimpan!",
+              );
+              ambilDanTampilkanKomentar();
+              form.reset();
+            } else {
+              throw new Error(data.message || "Penyimpanan data gagal.");
+            }
+          })
+          .catch((error) => {
+            console.error("Error saat mengirim data:", error);
+            alert(
+              "Terjadi kesalahan saat mengirim data. Coba periksa URL Apps Script dan Deployment Anda.",
+            );
+          })
+          .finally(() => {
+            kirimButton.textContent = "Kirim";
+            kirimButton.disabled = false;
+          });
+      });
+
+      function ambilDanTampilkanKomentar() {
+        if (!daftarKomentar) return;
+
+        daftarKomentar.innerHTML =
+          '<p class="text-sm text-center text-gray-500">Memuat ucapan...</p>';
+
+        fetch(URL_APPS_SCRIPT, { method: "GET" })
+          .then((response) => response.json())
+          .then((dataKomentar) => {
+            daftarKomentar.innerHTML = "";
+
+            if (dataKomentar && dataKomentar.length > 0) {
+              dataKomentar.reverse().forEach((item) => {
+                buatKomentarBaru(item.nama, item.ucapan, item.konfirmasi);
+              });
+              updateCommentCount(dataKomentar.length);
+            } else {
+              daftarKomentar.innerHTML =
+                '<p class="text-sm text-center text-gray-500">Jadilah yang pertama memberikan ucapan selamat! 🎉</p>';
+              updateCommentCount(0);
+            }
+          })
+          .catch((error) => {
+            console.error("Error saat mengambil data:", error);
+            daftarKomentar.innerHTML =
+              '<p class="text-sm text-center text-red-500">Gagal memuat ucapan dari server. Cek koneksi Anda.</p>';
+            updateCommentCount(0);
+          });
+      }
+
+      // --- FUNGSI NAMA TAMU & LAINNYA (TETAP) ---
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const notif = document.getElementById("copyNotification");
+          if (notif) {
+            notif.classList.remove("hidden");
+            setTimeout(() => {
+              notif.classList.add("hidden");
+            }, 2000);
+          }
+        });
+      }
+
+      function getParameterByName(name, url = window.location.href) {
+        name = name.replace(/[\[\]]/g, "\\$&");
+        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+        const results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return "";
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+      }
+
+      function setNamaTamu() {
+        const namaTamu = getParameterByName("to");
+        const namaTamuDisplay = document.getElementById("namaTamuDisplay");
+
+        let namaBersih = "Bapak/Ibu/Saudara/i";
+
+        if (namaTamu && namaTamuDisplay) {
+          namaBersih = namaTamu.replace(/_/g, " ");
+          namaTamuDisplay.textContent = namaBersih;
+          sessionStorage.setItem("currentGuestName", namaBersih);
+        } else if (namaTamuDisplay) {
+          namaTamuDisplay.textContent = "Bapak/Ibu/Saudara/i";
+        }
+      }
+
+      // --- 8. INISIALISASI AKHIR (DOM READY) ---
+      document.addEventListener("DOMContentLoaded", function () {
+        setNamaTamu();
+        bukaBtn?.addEventListener("click", bukaUndangan);
+
+        // Listener untuk icon musik
+        if (musicControl) {
+          musicControl.addEventListener("click", toggleMusic);
+        }
+
+        const undanganSudahDibuka =
+          sessionStorage.getItem("undanganDibuka") === "true";
+
+        if (undanganSudahDibuka) {
+          // Jika sudah dibuka, panggil bukaUndangan() untuk menampilkan konten dan musicControl.
+          bukaUndangan();
+        } else {
+          // Jika baru pertama kali diakses, JANGAN panggil bukaUndangan().
+          // Pastikan musicControl tersembunyi dan tidak interaktif.
+          if (musicControl) {
+            musicControl.classList.add(
+              "hidden",
+              "opacity-0",
+              "invisible",
+              "pointer-events-none",
+            );
+          }
+
+          // Atur default icon ke Play, meski kontainer tersembunyi
+          if (playImage && pauseImage) {
+            playImage.classList.remove("hidden");
+            pauseImage.classList.add("hidden");
+          }
+        }
+
+        const namaInput = document.getElementById("namaInput");
+        const savedName = sessionStorage.getItem("currentGuestName");
+
+        if (savedName && namaInput) {
+          namaInput.value = savedName;
+        }
+
+        if (daftarKomentar) {
+          ambilDanTampilkanKomentar();
+        } else {
+          updateCommentCount(0);
+        }
+      });
+    </script>
+  </body>
+</html>

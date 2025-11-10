@@ -1,0 +1,206 @@
+@import "tailwindcss";
+
+/* custome css */
+/* navbar */
+.hamburger {
+  margin-block: 8px;
+  display: block;
+  height: 2px;
+  width: 30px;
+  background-color: #b58b75;
+}
+
+.hamburger-active > span:nth-child(1) {
+  @apply rotate-45;
+}
+
+.hamburger-active > span:nth-child(2) {
+  @apply scale-0;
+}
+
+.hamburger-active > span:nth-child(3) {
+  @apply -rotate-45;
+}
+
+.navbar-fixed {
+  @apply bg-idekasecond/30 fixed z-[9999];
+  backdrop-filter: blur(5px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+/* swiper testimoni */
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  width: 16px !important;
+  height: 4px !important;
+  border-radius: 5px !important;
+  margin: 0 6px !important;
+}
+
+.swiper-pagination {
+  bottom: 2px !important;
+}
+
+.swiper-wrapper {
+  height: max-content !important;
+  width: max-content !important;
+  padding-bottom: 80px;
+}
+
+.swiper-pagination-bullet-active {
+  background: #b58b75 !important;
+}
+
+.swiper-slide.swiper-slide-active > .slide_active\:border-indigo-600 {
+  --tw-border-opacity: 1;
+  border-color: rgb(181 139 117 / var(--tw-border-opacity));
+  transform: scale(1.12);
+}
+
+.swiper-slide {
+  opacity: 0.6;
+  transition: all 0.4s ease-in-out;
+}
+
+.swiper-slide.swiper-slide-active {
+  opacity: 1;
+  z-index: 2;
+}
+
+.swiper-slide.swiper-slide-active > .group .slide_active\:text-gray-800 {
+  ---tw-text-opacity: 1;
+  color: rgb(83 69 60 / var(--tw-text-opacity));
+}
+
+/* animasi */
+.scroll-fade {
+  opacity: 0;
+}
+.scroll-fade-bottom {
+  transform: translateY(30px);
+}
+.scroll-fade-top {
+  transform: translateY(-30px);
+}
+.scroll-fade-left {
+  transform: translateX(-30px);
+}
+.scroll-fade-right {
+  transform: translateX(30px);
+}
+.animate-wobble {
+  animation-name: wobble-bunga;
+  animation-duration: 11s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.animate-daun {
+  animation-name: wobble-daun;
+  animation-duration: 10s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+.scroll-fade.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* end custome css */
+
+@theme {
+  --font-poppins: "Poppins", sans-serif;
+  --font-pinyon: "Pinyon Script", cursive;
+  --font-dmserif: "DM Serif Display", serif;
+  --color-idekalina: #faf6f0;
+  --color-idekatext: #53453c;
+  --color-idekabutton: #b58b75;
+  --color-idekabuttonhover: #a87c60;
+  --color-idekasecond: #eed6c8;
+  --color-idekadiscn: #f76c5e;
+  --color-ideka01: #9f6e45;
+  --breakpoint-xm: 26.875rem;
+  --breakpoint-xxm: 36.25rem;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: var(--color-idekatext);
+    border-radius: 9999px;
+    border: 1px solid var(--color-gray-300);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-idekabutton);
+  }
+}
+
+/* animasi */
+@keyframes wobble-bunga {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    /* Goyang sedikit ke Kanan dan Naik */
+    transform: translateY(-1px) rotate(0.19deg) scale(1.03);
+  }
+  50% {
+    /* Goyang sedikit ke Kiri dan Turun */
+    transform: translateY(0) rotate(-0.19deg) scale(1);
+  }
+  75% {
+    /* Goyang sedikit ke Kanan dan Naik lagi */
+    transform: translateY(-1px) rotate(0.19deg) scale(1.03);
+  }
+  100% {
+    /* Kembali ke posisi awal */
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes wobble-daun {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    /* Goyang sedikit ke Kanan dan Naik */
+    transform: translateY(-1px) rotate(10deg) scale(1.2);
+  }
+  50% {
+    /* Goyang sedikit ke Kiri dan Turun */
+    transform: translateY(0) rotate(-0deg) scale(1);
+  }
+  75% {
+    /* Goyang sedikit ke Kanan dan Naik lagi */
+    transform: translateY(-1px) rotate(-10deg) scale(1.2);
+  }
+  100% {
+    /* Kembali ke posisi awal */
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+/* playpause */
+
+#musicControl {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#musicControl img {
+  width: 24px;
+  height: 24px;
+}
+
+/* end */
