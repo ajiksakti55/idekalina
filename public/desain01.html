@@ -10,10 +10,43 @@
       rel="stylesheet"
     />
     <link href="output.css" rel="stylesheet" />
+<<<<<<< HEAD
     <title>Desain01</title>
     <link class="" rel="icon" type="image/png" href="img/Hero/favicon.png" />
   </head>
   <body class="text-ideka01 font-poppins bg-white">
+=======
+  </head>
+  <body class="text-ideka01 font-poppins bg-white">
+    <!-- audio -->
+    <div
+      id="musicControl"
+      class="pointer-events-none invisible fixed right-4 bottom-4 z-50 cursor-pointer rounded-full bg-white/70 p-2 opacity-0 shadow-lg backdrop-blur-sm"
+    >
+      <img
+        id="playImage"
+        src="img/01/audio/play.gif"
+        alt="Play Music"
+        class="h-6 w-6"
+      />
+
+      <img
+        id="pauseImage"
+        src="img/01/audio/pause.png"
+        alt="Pause Music"
+        class="hidden h-6 w-6"
+      />
+    </div>
+
+    <audio id="undanganMusic" loop>
+      <source
+        src="img/01/audio/Victor Lundberg - I Fall.mp3"
+        type="audio/mp3"
+      />
+      Browser Anda tidak mendukung elemen audio.
+    </audio>
+    <!-- end audio -->
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
     <div class="flex h-screen w-screen">
       <!-- KIRI (sticky) -->
       <div class="sticky top-0 hidden sm:block sm:h-screen sm:flex-grow">
@@ -69,6 +102,7 @@
           </div>
         </section>
 
+<<<<<<< HEAD
         <!-- audio -->
         <div
           id="musicControl"
@@ -98,6 +132,8 @@
         </audio>
         <!-- end audio -->
 
+=======
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
         <!-- HALAMAN 2 -->
         <section
           id="halaman2"
@@ -1010,19 +1046,33 @@
         if (!music || !musicControl || !playImage || !pauseImage) return;
 
         if (music.paused) {
+<<<<<<< HEAD
+=======
+          // Coba Play
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
           music.volume = 0.8;
           music
             .play()
             .then(() => {
+<<<<<<< HEAD
               playImage.classList.remove("hidden");
               pauseImage.classList.add("hidden");
             })
             .catch((error) => {
+=======
+              // Berhasil Play: Tampilkan GIF Play
+              playImage.classList.remove("hidden"); // Tampilkan ikon CD/Play (GIF)
+              pauseImage.classList.add("hidden"); // Sembunyikan ikon Pause (PNG)
+            })
+            .catch((error) => {
+              // Gagal Play (Autoplay diblokir)
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
               console.warn("Play gagal, interaksi diperlukan.");
               playImage.classList.remove("hidden");
               pauseImage.classList.add("hidden");
             });
         } else {
+<<<<<<< HEAD
           music.pause();
           playImage.classList.add("hidden");
           pauseImage.classList.remove("hidden");
@@ -1030,6 +1080,52 @@
       }
 
       // --- 3. FUNGSI ANIMASI FADE-IN & WOBBLE (DIPINDAH KE ATAS) ---
+=======
+          // Pause
+          music.pause();
+          playImage.classList.add("hidden"); // Sembunyikan ikon CD/Play (GIF)
+          pauseImage.classList.remove("hidden"); // Tampilkan ikon Pause (PNG)
+        }
+      }
+
+      // --- 3. FUNGSI UTAMA BUKA UNDANGAN (FINAL) ---
+      function bukaUndangan() {
+        // TAMPILKAN TOMBOL MUSIK
+        if (musicControl) {
+          musicControl.classList.remove(
+            "opacity-0",
+            "invisible",
+            "pointer-events-none", // Baris ini memastikan elemen bisa diklik lagi
+          );
+        }
+
+        // Sembunyikan Cover
+        if (halaman1) halaman1.style.display = "none";
+        document.body.classList.remove("overflow-hidden");
+
+        // konten utama terlihat
+        if (kontenKanan) {
+          kontenKanan.classList.remove("hidden", "opacity-0", "invisible");
+        }
+        semuaHalaman.forEach((halaman) => {
+          if (halaman.id !== "halaman1") {
+            halaman.classList.remove("hidden");
+          }
+        });
+        if (kontenKanan) kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
+
+        // Memanggil fungsi toggleMusic() untuk mencoba play
+        toggleMusic();
+
+        // Simpan status dibuka
+        sessionStorage.setItem("undanganDibuka", "true");
+
+        // Inisialisasi animasi scroll setelah konten terlihat
+        initScrollFadeAnimations();
+      }
+
+      // --- 4. LOGIKA ANIMASI FADE-IN & WOBBLE (TETAP) ---
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
       const observerCallback = (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -1094,6 +1190,7 @@
           observer.observe(element);
         });
       }
+<<<<<<< HEAD
       // --- AKHIR FUNGSI ANIMASI ---
 
       // --- 4. FUNGSI UTAMA BUKA UNDANGAN (FIX INTERACTIVITY & POINTER-EVENTS) ---
@@ -1146,6 +1243,10 @@
       // ... (Anda bisa menempelkan sisa skrip Anda di sini, atau membiarkannya di bawah) ...
 
       // --- FUNGSI COUNTDOWN (TETAP) ---
+=======
+
+      // --- 5. FUNGSI COUNTDOWN (TETAP) ---
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
       const targetDate = new Date("2026-07-16T14:26:00").getTime();
       const countdown = setInterval(() => {
         const now = new Date().getTime();
@@ -1184,7 +1285,11 @@
           : null;
       }, 1000);
 
+<<<<<<< HEAD
       // --- FUNGSI KOMENTAR & RSVP (TETAP) ---
+=======
+      // --- 6. FUNGSI KOMENTAR & RSVP (TETAP) ---
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
       function updateCommentCount(count) {
         if (typeof count === "number") {
           commentCountDisplay.textContent = `${count} Comments`;
@@ -1314,7 +1419,11 @@
           });
       }
 
+<<<<<<< HEAD
       // --- FUNGSI NAMA TAMU & LAINNYA (TETAP) ---
+=======
+      // --- 7. FUNGSI NAMA TAMU & LAINNYA (TETAP) ---
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
       function copyToClipboard(text) {
         navigator.clipboard.writeText(text).then(() => {
           const notif = document.getElementById("copyNotification");
@@ -1361,10 +1470,15 @@
           musicControl.addEventListener("click", toggleMusic);
         }
 
+<<<<<<< HEAD
+=======
+        // --- PERBAIKAN LOGIKA MUSIC CONTROL DI SINI ---
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
         const undanganSudahDibuka =
           sessionStorage.getItem("undanganDibuka") === "true";
 
         if (undanganSudahDibuka) {
+<<<<<<< HEAD
           // Jika sudah dibuka, panggil bukaUndangan() untuk menampilkan konten dan musicControl.
           bukaUndangan();
         } else {
@@ -1377,6 +1491,16 @@
               "invisible",
               "pointer-events-none",
             );
+=======
+          // Jika sudah dibuka sebelumnya, panggil bukaUndangan() untuk menampilkan konten
+          // dan juga musicControl.
+          bukaUndangan();
+        } else {
+          // Jika baru pertama kali diakses, JANGAN panggil bukaUndangan().
+          // Pastikan musicControl SANGAT tersembunyi (redundancy yang aman)
+          if (musicControl) {
+            musicControl.classList.add("hidden");
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
           }
 
           // Atur default icon ke Play, meski kontainer tersembunyi
@@ -1385,6 +1509,10 @@
             pauseImage.classList.add("hidden");
           }
         }
+<<<<<<< HEAD
+=======
+        // --- AKHIR PERBAIKAN LOGIKA MUSIC CONTROL ---
+>>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
 
         const namaInput = document.getElementById("namaInput");
         const savedName = sessionStorage.getItem("currentGuestName");
