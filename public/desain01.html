@@ -13,6 +13,25 @@
   </head>
   <body class="text-ideka01 font-poppins bg-white">
     <!-- audio -->
+    <div
+      id="musicControl"
+      class="fixed right-4 bottom-4 z-50 cursor-pointer rounded-full bg-white/70 p-2 shadow-lg backdrop-blur-sm"
+    >
+      <img
+        id="playImage"
+        src="img/01/audio/play.gif"
+        alt="Play Music"
+        class="h-6 w-6"
+      />
+
+      <img
+        id="pauseImage"
+        src="img/01/audio/pause.png"
+        alt="Pause Music"
+        class="hidden h-6 w-6"
+      />
+    </div>
+
     <audio id="undanganMusic" loop>
       <source
         src="img/01/audio/Victor Lundberg - I Fall.mp3"
@@ -86,7 +105,7 @@
             <img
               src="img/01/Page1/bunga cover.png"
               alt="Bunga Atas"
-              class="xm:-mt-30 scroll-fade w-full transition-all duration-6000 sm:-mt-0"
+              class="xm:-mt-30 scroll-fade js-animate-after w-full transition-all duration-6000 sm:-mt-0"
             />
           </div>
           <!-- pengantin -->
@@ -119,7 +138,7 @@
           <!-- Logo -->
           <div class="relative z-40 flex justify-center pt-10 pb-10">
             <img
-              class="xm:-mt-5 xxm:-mt-18 scroll-fade h-auto w-70 transition-all duration-4000 sm:-mt-0 sm:w-50"
+              class="xm:-mt-5 xxm:-mt-18 scroll-fade h-auto w-70 transition-all duration-6000 sm:-mt-0 sm:w-50"
               src="img/01/page3/frame.png"
               alt=""
             />
@@ -166,7 +185,7 @@
             <img
               src="img/01/page4/bunga page4.png"
               alt="Bunga Atas"
-              class="xm:-mt-30 w-full sm:-mt-0"
+              class="xm:-mt-30 scroll-fade w-full transition-all duration-100 sm:-mt-0"
             />
           </div>
           <!-- pengantin -->
@@ -276,7 +295,7 @@
           <div class="">
             <div>
               <img
-                class="scroll-fade scroll-fade-top transition-all duration-6000"
+                class="scroll-fade scroll-fade-top js-animate-after transition-all duration-6000"
                 src="img/01/page6/bg bunga atas.png"
                 alt=""
               />
@@ -315,7 +334,7 @@
             </div>
             <div class="-mt-26">
               <img
-                class="scroll-fade scroll-fade-bottom transition-all duration-6000"
+                class="scroll-fade scroll-fade-bottom js-animate-after transition-all duration-6000"
                 src="img/01/page6/bg bunga bawah.png"
                 alt=""
               />
@@ -331,7 +350,7 @@
           <div class="scroll-fade -mt-15 transition-all duration-6000 sm:-mt-0">
             <div>
               <img
-                class="scroll-fade scroll-fade-top relative z-40 transition-all duration-6000"
+                class="scroll-fade scroll-fade-top js-animate-after relative z-40 transition-all duration-6000"
                 src="img/01/page6/bg bunga atas.png"
                 alt=""
               />
@@ -370,7 +389,7 @@
             </div>
             <div>
               <img
-                class="scroll-fade scroll-fade-bottom relative z-30 -mt-32 transition-all duration-6000"
+                class="scroll-fade scroll-fade-bottom js-animate-after relative z-30 -mt-32 transition-all duration-6000"
                 src="img/01/page6/bg bunga bawah.png"
                 alt=""
               />
@@ -386,7 +405,7 @@
           <div class="mx-4 sm:pt-10">
             <div class="mx-auto flex justify-center">
               <img
-                class="scroll-fade ml-5 h-auto w-50 transition-all duration-6000"
+                class="scroll-fade js-animate-after ml-5 h-auto w-50 transition-all duration-6000"
                 src="img/01/page8/bunga streaming.png"
                 alt=""
               />
@@ -482,7 +501,7 @@
           <!-- bunga -->
           <div>
             <img
-              class="scroll-fade scroll-fade-left transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-left js-animate-after transition-all delay-200 duration-4000"
               src="img/01/page9/bunga page9.png"
               alt=""
             />
@@ -554,7 +573,7 @@
             <img
               src="img/01/page10/daun.png"
               alt="Leaf"
-              class="scroll-fade scroll-fade-top mx-auto h-20 w-auto transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-top js-animate-daun mx-auto h-20 w-auto transition-all delay-200 duration-4000"
             />
           </div>
 
@@ -680,7 +699,7 @@
         >
           <div class="relative z-10 mx-auto flex justify-end">
             <img
-              class="scroll-fade scroll-fade-top mt-10 w-full max-w-sm transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-top js-animate-after mt-10 w-full max-w-sm transition-all delay-200 duration-4000"
               src="img/01/page11/bunga page11.png"
               alt="Bunga Halaman 11"
             />
@@ -933,7 +952,7 @@
 
               <div class="flex space-x-6">
                 <a
-                  href="URL_INSTAGRAM_ANDA"
+                  href="https://www.instagram.com/idekalina/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -945,7 +964,7 @@
                 </a>
 
                 <a
-                  href="URL_WHATSAPP_ANDA"
+                  href="https://wa.me/6281235962004?text=Halo%20Idekalina,%20saya%20ingin%20menanyakan%20soal%20undangan%20digital%20dan%20fisik"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -964,17 +983,69 @@
 
     <!-- SCRIPT -->
     <script>
+      // --- 1. DEKLARASI VARIABEL GLOBAL ---
       const bukaBtn = document.getElementById("bukaUndanganButton");
       const halaman1 = document.getElementById("halaman1");
       const kontenKanan = document.getElementById("kontenKanan");
       const semuaHalaman = document.querySelectorAll("[id^='halaman']");
+      const form = document.getElementById("rsvpForm");
+      const daftarKomentar = document.getElementById("daftarKomentar");
+      const commentCountDisplay = document.getElementById(
+        "commentCountDisplay",
+      );
 
+      const URL_APPS_SCRIPT =
+        "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
+
+      // --- 2. KONTROL MUSIK (REVISI AKHIR UNTUK IMG GIF/PNG) ---
+      // Pastikan ID ini sesuai dengan elemen <audio> dan <div> kontrol di HTML
+      const music = document.getElementById("undanganMusic");
+      const musicControl = document.getElementById("musicControl");
+      // Perubahan: Merujuk ke elemen <img>
+      const playImage = document.getElementById("playImage");
+      const pauseImage = document.getElementById("pauseImage");
+
+      function toggleMusic() {
+        // Cek semua elemen yang dibutuhkan
+        if (!music || !musicControl || !playImage || !pauseImage) return;
+
+        if (music.paused) {
+          // Coba Play
+          music.volume = 0.8;
+          music
+            .play()
+            .then(() => {
+              // Berhasil Play: Tampilkan GIF Play
+              // Kita tidak perlu class 'is-playing' di kontainer jika GIF sudah berputar
+              // musicControl.classList.remove('is-playing'); // Hapus jika GIF sudah berputar
+              playImage.classList.remove("hidden"); // Tampilkan ikon CD/Play (GIF)
+              pauseImage.classList.add("hidden"); // Sembunyikan ikon Pause (PNG)
+            })
+            .catch((error) => {
+              // Gagal Play (Autoplay diblokir)
+              console.warn("Play gagal, interaksi diperlukan.");
+              // Set status awal ke Pause (ikon Play/CD)
+              // musicControl.classList.remove('is-playing');
+              playImage.classList.remove("hidden");
+              pauseImage.classList.add("hidden");
+            });
+        } else {
+          // Pause
+          music.pause();
+          // Matikan rotasi (tidak perlu jika GIF sudah berhenti karena di-pause)
+          // musicControl.classList.remove('is-playing');
+          playImage.classList.add("hidden"); // Sembunyikan ikon CD/Play (GIF)
+          pauseImage.classList.remove("hidden"); // Tampilkan ikon Pause (PNG)
+        }
+      }
+
+      // --- 3. FUNGSI UTAMA BUKA UNDANGAN (TETAP) ---
       function bukaUndangan() {
-        // --- Sembunyikan Cover ---
+        // Sembunyikan Cover
         if (halaman1) halaman1.style.display = "none";
         document.body.classList.remove("overflow-hidden");
 
-        // --- konten utama terlihat ---
+        // konten utama terlihat
         if (kontenKanan) {
           kontenKanan.classList.remove("hidden", "opacity-0", "invisible");
         }
@@ -985,30 +1056,89 @@
         });
         if (kontenKanan) kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
 
-        const music = document.getElementById("undanganMusic");
-        if (music) {
-          music.volume = 0.8;
-          try {
-            music.play();
-          } catch (error) {
-            console.warn("Autoplay musik gagal, tombol tetap berfungsi.");
-          }
-        }
+        // Memanggil fungsi toggleMusic() untuk mencoba play
+        toggleMusic();
 
         // Simpan status dibuka
         sessionStorage.setItem("undanganDibuka", "true");
+
+        // Inisialisasi animasi scroll setelah konten terlihat
+        initScrollFadeAnimations();
       }
 
-      //tombol berfungsi saat di-klik
-      if (sessionStorage.getItem("undanganDibuka") === "true") {
-        bukaUndangan();
+      // --- 4. LOGIKA ANIMASI FADE-IN & WOBBLE (TETAP) ---
+
+      // Fungsi Callback untuk Intersection Observer
+      const observerCallback = (entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+
+            // LOGIKA WOBBLE BUNGA
+            if (entry.target.classList.contains("js-animate-after")) {
+              const wobbleHandler = function (e) {
+                if (
+                  e.propertyName === "opacity" ||
+                  e.propertyName === "transform"
+                ) {
+                  entry.target.classList.add("animate-wobble");
+                  entry.target.removeEventListener(
+                    "transitionend",
+                    wobbleHandler,
+                  );
+                }
+              };
+              entry.target.addEventListener("transitionend", wobbleHandler);
+            } else if (entry.target.classList.contains("js-animate-daun")) {
+              // KONDISI DAUN
+              const daunHandler = function (e) {
+                if (
+                  e.propertyName === "opacity" ||
+                  e.propertyName === "transform"
+                ) {
+                  entry.target.classList.add("animate-daun");
+                  entry.target.removeEventListener(
+                    "transitionend",
+                    daunHandler,
+                  );
+                }
+              };
+              entry.target.addEventListener("transitionend", daunHandler);
+            }
+          }
+        });
+      };
+
+      // Fungsi Utama Inisialisasi Scroll Fade
+      function initScrollFadeAnimations() {
+        const fadeElements = document.querySelectorAll(".scroll-fade");
+
+        if (!kontenKanan) {
+          console.error(
+            "Elemen #kontenKanan tidak ditemukan. Animasi scroll tidak bisa diinisialisasi.",
+          );
+          return;
+        }
+
+        const observerOptions = {
+          root: kontenKanan,
+          rootMargin: "0px",
+          threshold: 0.1,
+        };
+
+        const observer = new IntersectionObserver(
+          observerCallback,
+          observerOptions,
+        );
+
+        fadeElements.forEach((element) => {
+          observer.observe(element);
+        });
       }
 
-      bukaBtn?.addEventListener("click", bukaUndangan);
-
-      // FITUR: COUNTDOWN
+      // --- 5. FUNGSI COUNTDOWN (TETAP) ---
       const targetDate = new Date("2026-07-16T14:26:00").getTime();
-
       const countdown = setInterval(() => {
         const now = new Date().getTime();
         const distance = targetDate - now;
@@ -1016,7 +1146,6 @@
         if (distance < 0) {
           clearInterval(countdown);
           const countdownSection = document.getElementById("countdown");
-
           countdownSection.innerHTML = `
                   <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
                     <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
@@ -1033,36 +1162,21 @@
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-        document.getElementById("days").innerText = days;
-        document.getElementById("hours").innerText = hours;
-        document.getElementById("minutes").innerText = minutes;
-        document.getElementById("seconds").innerText = seconds;
+        document.getElementById("days")
+          ? (document.getElementById("days").innerText = days)
+          : null;
+        document.getElementById("hours")
+          ? (document.getElementById("hours").innerText = hours)
+          : null;
+        document.getElementById("minutes")
+          ? (document.getElementById("minutes").innerText = minutes)
+          : null;
+        document.getElementById("seconds")
+          ? (document.getElementById("seconds").innerText = seconds)
+          : null;
       }, 1000);
 
-      // FITUR: NOTIFIKASI COPY
-
-      function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(() => {
-          const notif = document.getElementById("copyNotification");
-          if (notif) {
-            notif.classList.remove("hidden");
-            setTimeout(() => {
-              notif.classList.add("hidden");
-            }, 2000);
-          }
-        });
-      }
-
-      // FITUR: GOOGLE SHEETS (FETCH API) (TETAP)
-      const URL_APPS_SCRIPT =
-        "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
-
-      const form = document.getElementById("rsvpForm");
-      const daftarKomentar = document.getElementById("daftarKomentar");
-      const commentCountDisplay = document.getElementById(
-        "commentCountDisplay",
-      );
-
+      // --- 6. FUNGSI KOMENTAR & RSVP (TETAP) ---
       function updateCommentCount(count) {
         if (typeof count === "number") {
           commentCountDisplay.textContent = `${count} Comments`;
@@ -1103,7 +1217,8 @@
                   <p class="mt-1 text-xs text-gray-700">${ucapan}</p>
               </div>
           `;
-        daftarKomentar.insertAdjacentHTML("afterbegin", komentarHTML);
+        if (daftarKomentar)
+          daftarKomentar.insertAdjacentHTML("afterbegin", komentarHTML);
       }
 
       form?.addEventListener("submit", function (event) {
@@ -1124,17 +1239,11 @@
         kirimButton.textContent = "Mengirim...";
         kirimButton.disabled = true;
 
-        const payload = {
-          nama: nama,
-          ucapan: ucapan,
-          konfirmasi: konfirmasi,
-        };
+        const payload = { nama: nama, ucapan: ucapan, konfirmasi: konfirmasi };
 
         fetch(URL_APPS_SCRIPT, {
           method: "POST",
-          headers: {
-            "Content-Type": "text/plain;charset=utf-8",
-          },
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
           body: JSON.stringify(payload),
         })
           .then((response) => {
@@ -1168,21 +1277,21 @@
       });
 
       function ambilDanTampilkanKomentar() {
+        if (!daftarKomentar) return;
+
         daftarKomentar.innerHTML =
           '<p class="text-sm text-center text-gray-500">Memuat ucapan...</p>';
 
-        fetch(URL_APPS_SCRIPT, {
-          method: "GET",
-        })
+        fetch(URL_APPS_SCRIPT, { method: "GET" })
           .then((response) => response.json())
           .then((dataKomentar) => {
             daftarKomentar.innerHTML = "";
 
             if (dataKomentar && dataKomentar.length > 0) {
-              dataKomentar.forEach((item) => {
+              dataKomentar.reverse().forEach((item) => {
                 buatKomentarBaru(item.nama, item.ucapan, item.konfirmasi);
               });
-              updateCommentCount();
+              updateCommentCount(dataKomentar.length);
             } else {
               daftarKomentar.innerHTML =
                 '<p class="text-sm text-center text-gray-500">Jadilah yang pertama memberikan ucapan selamat! 🎉</p>';
@@ -1197,7 +1306,19 @@
           });
       }
 
-      // FITUR: AMBIL NAMA TAMU DARI URL (TETAP)
+      // --- 7. FUNGSI NAMA TAMU & LAINNYA (TETAP) ---
+      function copyToClipboard(text) {
+        navigator.clipboard.writeText(text).then(() => {
+          const notif = document.getElementById("copyNotification");
+          if (notif) {
+            notif.classList.remove("hidden");
+            setTimeout(() => {
+              notif.classList.add("hidden");
+            }, 2000);
+          }
+        });
+      }
+
       function getParameterByName(name, url = window.location.href) {
         name = name.replace(/[\[\]]/g, "\\$&");
         const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
@@ -1216,90 +1337,26 @@
         if (namaTamu && namaTamuDisplay) {
           namaBersih = namaTamu.replace(/_/g, " ");
           namaTamuDisplay.textContent = namaBersih;
-          // Menyimpan nama ke session storage (Langkah penting untuk RSVP)
           sessionStorage.setItem("currentGuestName", namaBersih);
         } else if (namaTamuDisplay) {
           namaTamuDisplay.textContent = "Bapak/Ibu/Saudara/i";
         }
       }
 
-      // INISIALISASI AKHIR (DOM READY)
+      // --- 8. INISIALISASI AKHIR (DOM READY) ---
       document.addEventListener("DOMContentLoaded", function () {
-        // 1. Atur Nama Tamu di Awal dan simpan ke sessionStorage
         setNamaTamu();
+        bukaBtn?.addEventListener("click", bukaUndangan);
 
-        // 2. Isi Otomatis Form RSVP
-        const namaInput = document.getElementById("namaInput");
-        const savedName = sessionStorage.getItem("currentGuestName");
-
-        if (savedName && namaInput) {
-          namaInput.value = savedName;
+        // Listener untuk icon musik
+        if (musicControl) {
+          musicControl.addEventListener("click", toggleMusic);
         }
-        if (daftarKomentar) {
-          ambilDanTampilkanKomentar();
-        } else {
-          updateCommentCount(0);
+
+        if (sessionStorage.getItem("undanganDibuka") === "true") {
+          bukaUndangan();
         }
-      });
 
-      // ===============================
-      // FITUR: ANIMASI FADE-IN SAAT SCROLL
-      // ===============================
-
-      function initScrollFadeAnimations() {
-        // 1. Ambil semua elemen dengan kelas 'scroll-fade' yang ingin dianimasikan
-        const fadeElements = document.querySelectorAll(".scroll-fade");
-
-        // 2. Buat fungsi yang akan dijalankan saat elemen terlihat
-        const observerCallback = (entries, observer) => {
-          entries.forEach((entry) => {
-            if (entry.isIntersecting) {
-              // Jika elemen terlihat, tambahkan kelas untuk memicu transisi
-              entry.target.classList.add("is-visible");
-              // Berhenti mengamati elemen ini setelah terlihat
-              observer.unobserve(entry.target);
-            }
-          });
-        };
-
-        // 3. Opsi pengamat (Observer Options)
-        const observerOptions = {
-          root: kontenKanan, // Mengamati di dalam kontainer scrollable utama (kontenKanan)
-          rootMargin: "0px",
-          threshold: 0.1, // Elemen akan muncul jika 10% dari elemen sudah terlihat
-        };
-
-        // 4. Buat Intersection Observer baru
-        const observer = new IntersectionObserver(
-          observerCallback,
-          observerOptions,
-        );
-
-        // 5. Mulai mengamati setiap elemen
-        fadeElements.forEach((element) => {
-          observer.observe(element);
-        });
-      }
-
-      // Panggil inisialisasi animasi saat halaman sudah dimuat dan undangan dibuka
-      document.addEventListener("DOMContentLoaded", () => {
-        // ... (kode inisialisasi lainnya di sini) ...
-
-        // Panggil fungsi animasi setelah DOM siap
-        // Penting: Anda perlu memastikan elemen sudah ditambahkan di HTML
-        initScrollFadeAnimations();
-      });
-
-      // ...
-      // ===============================
-      // INISIALISASI AKHIR (DOM READY)
-      // ===============================
-
-      document.addEventListener("DOMContentLoaded", function () {
-        // 1. Atur Nama Tamu di Awal dan simpan ke sessionStorage
-        setNamaTamu();
-
-        // 2. Isi Otomatis Form RSVP (FIX)
         const namaInput = document.getElementById("namaInput");
         const savedName = sessionStorage.getItem("currentGuestName");
 
@@ -1307,16 +1364,11 @@
           namaInput.value = savedName;
         }
 
-        // 3. Ambil Komentar Saat Halaman Dimuat
         if (daftarKomentar) {
           ambilDanTampilkanKomentar();
         } else {
           updateCommentCount(0);
         }
-
-        // <<< TAMBAHKAN INI DI SINI >>>
-        // 4. Inisialisasi Animasi Scroll
-        initScrollFadeAnimations();
       });
     </script>
   </body>

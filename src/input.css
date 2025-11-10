@@ -75,7 +75,7 @@
 
 /* animasi */
 .scroll-fade {
-  opacity: 0; 
+  opacity: 0;
 }
 
 /* KELAS VARIASI ARAH: Mengatur posisi awal transform */
@@ -83,7 +83,7 @@
   transform: translateY(30px);
 }
 .scroll-fade-top {
-  transform: translateY(-30px); 
+  transform: translateY(-30px);
 }
 .scroll-fade-left {
   transform: translateX(-30px);
@@ -91,13 +91,24 @@
 .scroll-fade-right {
   transform: translateX(30px);
 }
+.animate-wobble {
+  animation-name: wobble-bunga;
+  animation-duration: 11s; /* Durasi 5 detik untuk satu siklus */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* Ulangi terus menerus */
+}
 
-
+.animate-daun {
+  animation-name: wobble-daun;
+  animation-duration: 10s; /* Durasi detik untuk satu siklus */
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite; /* Ulangi terus menerus */
+}
 /* KELAS AKTIF: Mengatur posisi akhir dan opacity */
 .scroll-fade.is-visible {
-  opacity: 1; 
+  opacity: 1;
   /* Reset transform ke posisi normal */
-  transform: none; 
+  transform: none;
 }
 
 /* end custome css */
@@ -135,3 +146,69 @@
     background-color: var(--color-idekabutton);
   }
 }
+
+/* animasi */
+@keyframes wobble-bunga {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    /* Goyang sedikit ke Kanan dan Naik */
+    transform: translateY(-1px) rotate(0.19deg) scale(1.03);
+  }
+  50% {
+    /* Goyang sedikit ke Kiri dan Turun */
+    transform: translateY(0) rotate(-0.19deg) scale(1);
+  }
+  75% {
+    /* Goyang sedikit ke Kanan dan Naik lagi */
+    transform: translateY(-1px) rotate(0.19deg) scale(1.03);
+  }
+  100% {
+    /* Kembali ke posisi awal */
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+@keyframes wobble-daun {
+  0% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  25% {
+    /* Goyang sedikit ke Kanan dan Naik */
+    transform: translateY(-1px) rotate(10deg) scale(1.2);
+  }
+  50% {
+    /* Goyang sedikit ke Kiri dan Turun */
+    transform: translateY(0) rotate(-0deg) scale(1);
+  }
+  75% {
+    /* Goyang sedikit ke Kanan dan Naik lagi */
+    transform: translateY(-1px) rotate(-10deg) scale(1.2);
+  }
+  100% {
+    /* Kembali ke posisi awal */
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+}
+
+/* playpause */
+
+/* --- CSS KONTROL MUSIK UNTUK TATA LETAK --- */
+#musicControl {
+  /* Kelas Tailwind sudah membantu, tapi ini memastikan konsistensi */
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Pastikan semua img di dalamnya berukuran sama */
+#musicControl img {
+  /* Sesuaikan ukuran jika w-6 h-6 tidak cukup */
+  width: 24px;
+  height: 24px;
+}
+
+/* end */
