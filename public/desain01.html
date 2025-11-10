@@ -15,7 +15,7 @@
     <!-- audio -->
     <div
       id="musicControl"
-      class="fixed right-4 bottom-4 z-50 cursor-pointer rounded-full bg-white/70 p-2 shadow-lg backdrop-blur-sm"
+      class="pointer-events-none invisible fixed right-4 bottom-4 z-50 cursor-pointer rounded-full bg-white/70 p-2 opacity-0 shadow-lg backdrop-blur-sm"
     >
       <img
         id="playImage"
@@ -997,16 +997,13 @@
       const URL_APPS_SCRIPT =
         "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
 
-      // --- 2. KONTROL MUSIK (REVISI AKHIR UNTUK IMG GIF/PNG) ---
-      // Pastikan ID ini sesuai dengan elemen <audio> dan <div> kontrol di HTML
+      // --- 2. KONTROL MUSIK ---
       const music = document.getElementById("undanganMusic");
       const musicControl = document.getElementById("musicControl");
-      // Perubahan: Merujuk ke elemen <img>
       const playImage = document.getElementById("playImage");
       const pauseImage = document.getElementById("pauseImage");
 
       function toggleMusic() {
-        // Cek semua elemen yang dibutuhkan
         if (!music || !musicControl || !playImage || !pauseImage) return;
 
         if (music.paused) {
@@ -1016,31 +1013,34 @@
             .play()
             .then(() => {
               // Berhasil Play: Tampilkan GIF Play
-              // Kita tidak perlu class 'is-playing' di kontainer jika GIF sudah berputar
-              // musicControl.classList.remove('is-playing'); // Hapus jika GIF sudah berputar
               playImage.classList.remove("hidden"); // Tampilkan ikon CD/Play (GIF)
               pauseImage.classList.add("hidden"); // Sembunyikan ikon Pause (PNG)
             })
             .catch((error) => {
               // Gagal Play (Autoplay diblokir)
               console.warn("Play gagal, interaksi diperlukan.");
-              // Set status awal ke Pause (ikon Play/CD)
-              // musicControl.classList.remove('is-playing');
               playImage.classList.remove("hidden");
               pauseImage.classList.add("hidden");
             });
         } else {
           // Pause
           music.pause();
-          // Matikan rotasi (tidak perlu jika GIF sudah berhenti karena di-pause)
-          // musicControl.classList.remove('is-playing');
           playImage.classList.add("hidden"); // Sembunyikan ikon CD/Play (GIF)
           pauseImage.classList.remove("hidden"); // Tampilkan ikon Pause (PNG)
         }
       }
 
-      // --- 3. FUNGSI UTAMA BUKA UNDANGAN (TETAP) ---
+      // --- 3. FUNGSI UTAMA BUKA UNDANGAN (FINAL) ---
       function bukaUndangan() {
+        // TAMPILKAN TOMBOL MUSIK
+        if (musicControl) {
+          musicControl.classList.remove(
+            "opacity-0",
+            "invisible",
+            "pointer-events-none", // Baris ini memastikan elemen bisa diklik lagi
+          );
+        }
+
         // Sembunyikan Cover
         if (halaman1) halaman1.style.display = "none";
         document.body.classList.remove("overflow-hidden");
@@ -1067,15 +1067,12 @@
       }
 
       // --- 4. LOGIKA ANIMASI FADE-IN & WOBBLE (TETAP) ---
-
-      // Fungsi Callback untuk Intersection Observer
       const observerCallback = (entries, observer) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add("is-visible");
             observer.unobserve(entry.target);
 
-            // LOGIKA WOBBLE BUNGA
             if (entry.target.classList.contains("js-animate-after")) {
               const wobbleHandler = function (e) {
                 if (
@@ -1091,7 +1088,6 @@
               };
               entry.target.addEventListener("transitionend", wobbleHandler);
             } else if (entry.target.classList.contains("js-animate-daun")) {
-              // KONDISI DAUN
               const daunHandler = function (e) {
                 if (
                   e.propertyName === "opacity" ||
@@ -1110,7 +1106,6 @@
         });
       };
 
-      // Fungsi Utama Inisialisasi Scroll Fade
       function initScrollFadeAnimations() {
         const fadeElements = document.querySelectorAll(".scroll-fade");
 
@@ -1147,11 +1142,11 @@
           clearInterval(countdown);
           const countdownSection = document.getElementById("countdown");
           countdownSection.innerHTML = `
-                  <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
-                    <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
-                    <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
-                  </div>
-              `;
+                          <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
+                            <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
+                            <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
+                          </div>
+                      `;
           return;
         }
 
@@ -1353,9 +1348,28 @@
           musicControl.addEventListener("click", toggleMusic);
         }
 
-        if (sessionStorage.getItem("undanganDibuka") === "true") {
+        // --- PERBAIKAN LOGIKA MUSIC CONTROL DI SINI ---
+        const undanganSudahDibuka =
+          sessionStorage.getItem("undanganDibuka") === "true";
+
+        if (undanganSudahDibuka) {
+          // Jika sudah dibuka sebelumnya, panggil bukaUndangan() untuk menampilkan konten
+          // dan juga musicControl.
           bukaUndangan();
+        } else {
+          // Jika baru pertama kali diakses, JANGAN panggil bukaUndangan().
+          // Pastikan musicControl SANGAT tersembunyi (redundancy yang aman)
+          if (musicControl) {
+            musicControl.classList.add("hidden");
+          }
+
+          // Atur default icon ke Play, meski kontainer tersembunyi
+          if (playImage && pauseImage) {
+            playImage.classList.remove("hidden");
+            pauseImage.classList.add("hidden");
+          }
         }
+        // --- AKHIR PERBAIKAN LOGIKA MUSIC CONTROL ---
 
         const namaInput = document.getElementById("namaInput");
         const savedName = sessionStorage.getItem("currentGuestName");
