@@ -13,11 +13,11 @@
     <title>Desain02</title>
     <link class="" rel="icon" type="image/png" href="img/Hero/favicon.png" />
   </head>
-  <body class="text-ideka01 font-poppins bg-white">
+  <body class="font-poppins bg-white text-black">
     <div class="flex h-screen w-screen">
       <!-- KIRI (sticky) -->
       <div class="sticky top-0 hidden sm:block sm:h-screen sm:flex-grow">
-        <img src="img/01/Page1/bgkiri.png" class="h-full w-full object-cover" />
+        <img src="img/02/coverkiri.png" class="h-full w-full object-cover" />
       </div>
 
       <!-- KANAN (scrollable) -->
@@ -28,36 +28,28 @@
         <!-- HALAMAN 1 -->
         <section
           id="halaman1"
-          class="min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+          class="min-h-svh bg-[url('img/02/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
         >
-          <!-- BUNGA -->
-          <div class="relative z-20 w-full overflow-hidden">
-            <img
-              src="img/01/Page1/bunga cover.png"
-              alt="Bunga Atas"
-              class="xm:-mt-30 w-full sm:-mt-0"
-            />
-          </div>
-          <!-- PENGANTIN -->
-          <div class="relative z-40 -mt-40 flex justify-center">
-            <img
-              class="xm:-mt-5 xxm:-mt-18 w-70 sm:-mt-0 sm:w-50"
-              src="img/01/Page1/pengantin.png"
-              alt=""
-            />
-          </div>
-          <!-- TEXT -->
-          <h1 class="mt-2 text-xl">the wedding of</h1>
-          <h1 class="font-pinyon text-[46px] font-semibold">
+          <!-- TEXT h1 -->
+          <h1 class="pt-4 text-[14px] text-white">the wedding of</h1>
+          <h1 class="font-pinyon text-[36px] font-semibold text-white">
             Ayundya & Baskoro
           </h1>
-          <h2>Kepada Yth:</h2>
-          <h3 class="font-semibold" id="namaTamuDisplay">Nama Tamu</h3>
+          <!-- PENGANTIN -->
+          <div class="relative z-40 flex justify-center">
+            <img class="w-80" src="img/02/Page1/pengantin.png" alt="" />
+          </div>
+          <!-- text 2 -->
+          <h2 class="text-[11px] text-white">Kepada Yth:</h2>
+          <h3 class="text-[12px] font-semibold text-white" id="namaTamuDisplay">
+            Nama Tamu
+          </h3>
+
           <!-- TOMBOL -->
-          <div class="flex justify-center py-5">
+          <div class="-mt-3 flex justify-center py-5">
             <button
               id="bukaUndanganButton"
-              class="bg-ideka01 inline-flex items-center rounded-full px-6 py-3 text-sm font-bold text-white uppercase shadow-md transition hover:bg-[#7a502a]"
+              class="text-ideka02 inline-flex items-center rounded-full bg-white px-6 py-2 text-sm font-bold uppercase shadow-md transition hover:bg-[#EFE3D8]"
             >
               <img
                 src="img/01/Envelope.png"
@@ -101,14 +93,14 @@
         <!-- HALAMAN 2 -->
         <section
           id="halaman2"
-          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+          class="hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-no-repeat text-center"
         >
           <!-- bunga -->
           <div class="relative z-20 w-full overflow-hidden">
             <img
-              src="img/01/Page1/bunga cover.png"
+              src="img/02/Page2/bunga.png"
               alt="Bunga Atas"
-              class="xm:-mt-30 scroll-fade js-animate-after w-full transition-all duration-6000 sm:-mt-0"
+              class="scroll-fade js-animate-after w-full transition-all duration-6000"
             />
           </div>
           <!-- pengantin -->
@@ -136,17 +128,30 @@
         <!-- halaman 3 -->
         <section
           id="halaman3"
-          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+          class="-mt-1 hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-repeat pt-17 text-center"
         >
-          <!-- Logo -->
-          <div class="relative z-40 flex justify-center pt-10 pb-10">
+          <!-- bunga -->
+          <div class="relative z-10 overflow-hidden pt-2">
             <img
-              class="xm:-mt-5 xxm:-mt-18 scroll-fade h-auto w-70 transition-all duration-6000 sm:-mt-0 sm:w-50"
-              src="img/01/page3/frame.png"
+              src="img/02/Page3/bungakiri.png"
+              alt="Bunga Atas"
+              class="scroll-fade js-animate-after top-0 left-0 w-25 transition-all duration-4000"
+            />
+            <img
+              src="img/02/Page3/bungakanan.png"
+              alt="Bunga Atas"
+              class="scroll-fade js-animate-after absolute top-0 right-0 w-28 transition-all duration-4000"
+            />
+          </div>
+          <!-- Logo -->
+          <div class="relative z-20 flex justify-center">
+            <img
+              class="scroll-fade scroll-fade-top -mt-130 h-50 w-50 transition-all delay-500 duration-6000"
+              src="img/02/Page3/frame.png"
               alt=""
             />
           </div>
-          <div class="mx-10 -mb-19 text-center text-[11px]">
+          <div class="relative z-20 mx-20 -mt-80 text-center text-[9px]">
             <p
               class="scroll-fade scroll-fade-bottom mb-4 leading-relaxed font-bold transition-all delay-100 duration-3000"
             >
@@ -168,40 +173,23 @@
               QS Ar-Rum : 21
             </p>
           </div>
-
-          <!-- bunga -->
-          <div class="relative z-20 w-full overflow-hidden">
-            <img
-              src="img/01/page3/bunga page3.png"
-              alt="Bunga Atas"
-              class="xm:-mt-30 scroll-fade w-full transition-all duration-4000 sm:-mt-0"
-            />
-          </div>
         </section>
         <!-- halaman 4 -->
         <section
           id="halaman4"
-          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+          class="-mt-2 hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-no-repeat text-center"
         >
-          <!-- bunga -->
-          <div class="relative z-20 -mt-0.5 w-full overflow-hidden">
-            <img
-              src="img/01/page4/bunga page4.png"
-              alt="Bunga Atas"
-              class="xm:-mt-30 scroll-fade w-full transition-all duration-100 sm:-mt-0"
-            />
-          </div>
           <!-- pengantin -->
-          <div class="mx-6">
-            <div class="relative z-40 mt-10">
+          <div class="">
+            <div class="z-40 mx-auto flex justify-center pt-20">
               <img
-                class="xm:-mt-5 xxm:-mt-18 scroll-fade scroll-fade-top h-auto w-90 transition-all duration-4000 sm:-mt-0"
-                src="img/01/page4/pengantin wanita (1).png"
+                class="scroll-fade scroll-fade-top h-auto w-86 transition-all duration-4000"
+                src="img/02/Page4/fpengantin.png"
                 alt=""
               />
             </div>
             <!-- type -->
-            <div class="relative z-50 -mt-83 ml-35 text-left">
+            <div class="relative z-50 mx-auto -mt-75 text-center text-white">
               <p
                 class="scroll-fade scroll-fade-bottom text-xs font-bold transition-all delay-200 duration-3000"
               >
@@ -240,19 +228,21 @@
         <!-- halaman 5 -->
         <section
           id="halaman5"
-          class="hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+          class="hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-no-repeat text-center"
         >
           <!-- pengantin -->
           <div class="mx-6">
-            <div class="relative z-40 pt-20">
+            <div class="z-40 mx-auto flex justify-center pt-20">
               <img
-                class="xm:-mt-5 xxm:-mt-18 scroll-fade scroll-fade-bottom h-auto w-90 transition-all duration-4000 sm:-mt-0"
-                src="img/01/page5/PENGANTIN PRIA.png"
+                class="scroll-fade scroll-fade-bottom h-auto w-86 transition-all duration-4000 sm:-mt-0"
+                src="img/02/Page5/mpengantin.png"
                 alt=""
               />
             </div>
             <!-- type -->
-            <div class="relative z-50 -mt-75 mr-36 text-right">
+            <div
+              class="relative z-50 mx-auto -mt-80 pl-5 text-center text-white"
+            >
               <p
                 class="scroll-fade scroll-fade-top text-xs font-bold transition-all delay-200 duration-3000"
               >
@@ -292,28 +282,28 @@
         <!-- halaman 6 -->
         <section
           id="halaman6"
-          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+          class="-mt-1 hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-repeat text-center"
         >
           <!-- bunga -->
           <div class="">
             <div>
               <img
                 class="scroll-fade scroll-fade-top js-animate-after transition-all duration-6000"
-                src="img/01/page6/bg bunga atas.png"
+                src="img/02/Page6/bungaatas.png"
                 alt=""
               />
             </div>
             <!-- emblem -->
-            <div class="relative z-30 mx-auto -mt-60 flex justify-center">
+            <div class="relative z-30 mx-auto -mt-29 flex justify-center">
               <img
-                class="scroll-fade scroll-fade-left h-[370px] w-auto transition-all duration-4000"
-                src="img/01/page4/emblem.png"
+                class="scroll-fade scroll-fade-left w-90 transition-all duration-4000"
+                src="img/02/Page6/bunga.png"
                 alt=""
               />
             </div>
-            <div class="relative z-50 mx-auto -mt-70 text-center">
+            <div class="relative z-50 mx-auto -mt-80 text-center">
               <p
-                class="font-pinyon scroll-fade scroll-fade-right text-4xl transition-all delay-200 duration-4000"
+                class="font-pinyon scroll-fade scroll-fade-right mb-5 text-4xl transition-all delay-200 duration-4000"
               >
                 Akad Nikah
               </p>
@@ -335,10 +325,10 @@
                 >
               </p>
             </div>
-            <div class="-mt-26">
+            <div class="-mt-8">
               <img
-                class="scroll-fade scroll-fade-bottom js-animate-after transition-all duration-6000"
-                src="img/01/page6/bg bunga bawah.png"
+                class="scroll-fade scroll-fade-bottom js-animate-after pb-2 transition-all duration-6000"
+                src="img/02/Page6/bungabawah.png"
                 alt=""
               />
             </div>
@@ -347,26 +337,26 @@
         <!-- halaman 7 -->
         <section
           id="halaman7"
-          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+          class="-mt-1 hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-repeat text-center"
         >
           <!-- bunga -->
-          <div class="scroll-fade -mt-15 transition-all duration-6000 sm:-mt-0">
+          <div class="">
             <div>
               <img
                 class="scroll-fade scroll-fade-top js-animate-after relative z-40 transition-all duration-6000"
-                src="img/01/page6/bg bunga atas.png"
+                src="img/02/Page6/bungaatas.png"
                 alt=""
               />
             </div>
             <!-- emblem -->
-            <div class="relative z-40 mx-auto -mt-60 flex justify-center">
+            <div class="relative z-40 mx-auto -mt-29 flex justify-center">
               <img
-                class="scroll-fade scroll-fade-right h-[370px] w-auto transition-all duration-4000"
-                src="img/01/page4/emblem.png"
+                class="scroll-fade scroll-fade-right w-90 transition-all duration-4000"
+                src="img/02/Page6/bunga.png"
                 alt=""
               />
             </div>
-            <div class="relative z-50 mx-auto -mt-70 text-center">
+            <div class="relative z-50 mx-auto -mt-80 text-center">
               <p
                 class="font-pinyon scroll-fade scroll-fade-left text-4xl transition-all delay-200 duration-4000"
               >
@@ -392,8 +382,8 @@
             </div>
             <div>
               <img
-                class="scroll-fade scroll-fade-bottom js-animate-after relative z-30 -mt-32 transition-all duration-6000"
-                src="img/01/page6/bg bunga bawah.png"
+                class="scroll-fade scroll-fade-bottom js-animate-after relative z-30 -mt-8 pb-2 transition-all duration-6000"
+                src="img/02/Page6/bungabawah.png"
                 alt=""
               />
             </div>
@@ -402,14 +392,14 @@
         <!-- halaman 8 -->
         <section
           id="halaman8"
-          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+          class="-mt-1 hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-repeat text-center"
         >
           <!-- bunga -->
-          <div class="mx-4 sm:pt-10">
+          <div class="pt-10">
             <div class="mx-auto flex justify-center">
               <img
-                class="scroll-fade js-animate-after ml-5 h-auto w-50 transition-all duration-6000"
-                src="img/01/page8/bunga streaming.png"
+                class="scroll-fade js-animate-after w-15 transition-all duration-6000 mb-5"
+                src="img/02/Page8/bungastreaming.png"
                 alt=""
               />
             </div>
@@ -420,7 +410,7 @@
                 Live Streaming
               </h1>
               <p
-                class="scroll-fade scroll-fade-right text-center font-bold transition-all delay-200 duration-4000"
+                class="scroll-fade scroll-fade-right text-center text-[12px] transition-all delay-200 duration-4000 mx-20"
               >
                 Temui kami secara virtual untuk menyaksikan acara pernikahan
                 kami melalui tautan di bawah ini:
@@ -429,7 +419,7 @@
             <div class="mb-5">
               <button
                 id="btnig"
-                class="bg-ideka01 scroll-fade scroll-fade-right inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-300 duration-4000 hover:bg-[#7a502a]"
+                class="bg-ideka02 scroll-fade scroll-fade-right inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-300 duration-4000 hover:bg-[#7a502a]"
               >
                 <img
                   src="img/01/page8/icon ig.png"
@@ -439,10 +429,10 @@
                 @username
               </button>
             </div>
-            <div>
+            <div class="mb-10">
               <button
                 id="btnyt"
-                class="bg-ideka01 scroll-fade scroll-fade-left inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-200 duration-4000 hover:bg-[#7a502a]"
+                class="bg-ideka02 scroll-fade scroll-fade-left inline-flex items-center rounded-full px-15 py-3 text-sm font-bold text-white uppercase shadow-md transition-all delay-200 duration-4000 hover:bg-[#7a502a]"
               >
                 <img
                   src="img/01/page8/icon youtube.png"
@@ -463,32 +453,32 @@
             </div>
             <div
               id="countdown"
-              class="mt-5 flex justify-center gap-3 text-white"
+              class="mt-5 flex justify-center gap-3 text-white pb-10"
             >
               <!-- Hari -->
               <div
-                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-1000 duration-4000"
+                class="bg-ideka02 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-1000 duration-4000"
               >
                 <span id="days" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">hari</span>
               </div>
               <!-- Jam -->
               <div
-                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-800 duration-3000"
+                class="bg-ideka02 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-800 duration-3000"
               >
                 <span id="hours" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">jam</span>
               </div>
               <!-- Menit -->
               <div
-                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-600 duration-2500"
+                class="bg-ideka02 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-600 duration-2500"
               >
                 <span id="minutes" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">menit</span>
               </div>
               <!-- Detik -->
               <div
-                class="bg-ideka01 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-400 duration-2000"
+                class="bg-ideka02 scroll-fade scroll-fade-right flex flex-col items-center rounded-md px-4 py-2 shadow-md transition-all delay-400 duration-2000"
               >
                 <span id="seconds" class="text-2xl font-bold">0</span>
                 <span class="mt-1 text-sm">detik</span>

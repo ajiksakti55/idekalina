@@ -77,11 +77,6 @@
 .scroll-fade {
   opacity: 0;
 }
-<<<<<<< HEAD
-=======
-
-/* KELAS VARIASI ARAH: Mengatur posisi awal transform */
->>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
 .scroll-fade-bottom {
   transform: translateY(30px);
 }
@@ -96,45 +91,36 @@
 }
 .animate-wobble {
   animation-name: wobble-bunga;
-<<<<<<< HEAD
   animation-duration: 11s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-=======
-  animation-duration: 11s; /* Durasi 5 detik untuk satu siklus */
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; /* Ulangi terus menerus */
->>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
 }
 
 .animate-daun {
   animation-name: wobble-daun;
-<<<<<<< HEAD
   animation-duration: 10s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
 }
 .scroll-fade.is-visible {
   opacity: 1;
-=======
-  animation-duration: 10s; /* Durasi detik untuk satu siklus */
-  animation-timing-function: ease-in-out;
-  animation-iteration-count: infinite; /* Ulangi terus menerus */
-}
-/* KELAS AKTIF: Mengatur posisi akhir dan opacity */
-.scroll-fade.is-visible {
-  opacity: 1;
-  /* Reset transform ke posisi normal */
->>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
   transform: none;
 }
 
 /* end custome css */
-
+/* font */
+@font-face {
+  font-family: "KentisScript";
+  src: url("../public/fonts/kentish.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-pinyon: "Pinyon Script", cursive;
   --font-dmserif: "DM Serif Display", serif;
+  --font-kentis: "KentisScript", cursive;
   --color-idekalina: #faf6f0;
   --color-idekatext: #53453c;
   --color-idekabutton: #b58b75;
@@ -142,6 +128,8 @@
   --color-idekasecond: #eed6c8;
   --color-idekadiscn: #f76c5e;
   --color-ideka01: #9f6e45;
+  /* desain02 */
+  --color-ideka02: #803333;
   --breakpoint-xm: 26.875rem;
   --breakpoint-xxm: 36.25rem;
 }
@@ -212,13 +200,7 @@
 
 /* playpause */
 
-<<<<<<< HEAD
 #musicControl {
-=======
-/* --- CSS KONTROL MUSIK UNTUK TATA LETAK --- */
-#musicControl {
-  /* Kelas Tailwind sudah membantu, tapi ini memastikan konsistensi */
->>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
   width: 44px;
   height: 44px;
   display: flex;
@@ -226,13 +208,7 @@
   justify-content: center;
 }
 
-<<<<<<< HEAD
 #musicControl img {
-=======
-/* Pastikan semua img di dalamnya berukuran sama */
-#musicControl img {
-  /* Sesuaikan ukuran jika w-6 h-6 tidak cukup */
->>>>>>> 22447dc910e78f0eedf60483c2f5583dc7cdaed4
   width: 24px;
   height: 24px;
 }
