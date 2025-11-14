@@ -13,7 +13,7 @@
     <title>Desain02</title>
     <link class="" rel="icon" type="image/png" href="img/Hero/favicon.png" />
   </head>
-  <body class="font-poppins bg-white text-black">
+  <body class="font-poppins bg-white text-black overflow-hidden">
     <div class="flex h-screen w-screen">
       <!-- KIRI (sticky) -->
       <div class="sticky top-0 hidden sm:block sm:h-screen sm:flex-grow">
@@ -23,12 +23,12 @@
       <!-- KANAN (scrollable) -->
       <div
         id="kontenKanan"
-        class="w-full overflow-x-hidden overflow-y-auto scroll-smooth sm:w-[400px] sm:flex-shrink-0"
+        class="h-screen w-full overflow-x-hidden overflow-y-hidden scroll-smooth sm:w-[400px] sm:flex-shrink-0"
       >
         <!-- HALAMAN 1 -->
         <section
           id="halaman1"
-          class="min-h-svh bg-[url('img/02/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
+          class="min-h-screen bg-[url('img/02/Page1/background.png')] bg-cover bg-center bg-no-repeat text-center"
         >
           <!-- TEXT h1 -->
           <h1 class="pt-4 text-[14px] text-white">the wedding of</h1>
@@ -358,7 +358,7 @@
             </div>
             <div class="relative z-50 mx-auto -mt-80 text-center">
               <p
-                class="font-pinyon scroll-fade scroll-fade-left text-4xl transition-all delay-200 duration-4000"
+                class="font-pinyon scroll-fade scroll-fade-left mb-5 text-4xl transition-all delay-200 duration-4000"
               >
                 Resepsi
               </p>
@@ -488,85 +488,164 @@
         </section>
         <!-- Halaman 9 -->
         <section
-          id="halaman9"
-          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+          id="halaman-timeline"
+          class="relative min-h-svh w-full overflow-hidden bg-[url('img/02/Page2/baground.png')] bg-cover bg-center pt-8 pb-16 text-black"
         >
-          <!-- bunga -->
-          <div>
+          <div class="relative mx-auto w-full max-w-xl px-6">
             <img
-              class="scroll-fade scroll-fade-left js-animate-after transition-all delay-200 duration-4000"
-              src="img/01/page9/bunga page9.png"
-              alt=""
+              class="scroll-fade scroll-fade-left js-animate-after absolute top-0 left-0 z-0 w-36 pt-10 transition-all delay-200 duration-4000"
+              src="img/02/Page9/bunga.png"
+              alt="Bunga Dekorasi"
             />
-          </div>
-          <div class="mx-8 -mt-28 text-left">
+
             <h2
-              class="font-pinyon scroll-fade scroll-fade-right mb-4 ml-5 text-4xl transition-all delay-200 duration-4000"
+              class="font-dmserif scroll-fade scroll-fade-right z-10 mb-15 pt-20 pl-25 text-center text-4xl leading-snug transition-all delay-200 duration-4000"
             >
-              Perjalanan <br />
-              Cinta Kami
+              PERJALANAN <br />
+              CINTA KAMI
             </h2>
-            <div class="text-xs">
-              <h3
-                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
+          </div>
+
+          <div class="relative mx-auto max-w-xl px-6">
+            <div
+              class="scroll-fade scroll-fade-top absolute top-4 bottom-0 left-[28%] z-0 h-full w-0.5 -translate-x-px transform bg-black opacity-50 transition-all delay-700 duration-4000 md:left-[33%]"
+            ></div>
+
+            <div
+              class="relative z-10 mb-8 grid grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)] gap-x-0 last:mb-0 md:grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)]"
+            >
+              <div class="top-0 col-span-1 pr-6 text-right">
+                <p
+                  class="scroll-fade scroll-fade-top js-animate-after mb-1 text-lg font-bold text-black transition-all delay-300 duration-4000"
+                >
+                  2017
+                </p>
+                <p
+                  class="scroll-fade scroll-fade-top js-animate-after text-xs leading-tight transition-all delay-400 duration-4000"
+                >
+                  Awal <br />Bertemu
+                </p>
+              </div>
+
+              <div class="relative col-span-1 h-full">
+                <div
+                  class="bg-ideka02 scroll-fade scroll-fade-top absolute top-2 right-0 h-3 w-3 -translate-x-[22px] -translate-y-px transform rounded-full transition-all delay-900 duration-6000"
+                ></div>
+              </div>
+
+              <div class="col-span-1 pt-1 text-left text-xs">
+                <p
+                  class="scroll-fade scroll-fade-right mt-0 transition-all delay-200 duration-4000"
+                >
+                  Takdir mempertemukan kami di sebuah kegiatan kampus. Saat itu,
+                  kami hanyalah dua orang asing yang mulai saling mengenal.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative z-10 mb-8 grid grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)] gap-x-0 last:mb-0 md:grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)]"
+            >
+              <div class="col-span-1 pt-0.5 pr-6 text-right">
+                <p
+                  class="scroll-fade scroll-fade-top mb-1 text-lg font-bold text-black transition-all delay-500 duration-4000"
+                >
+                  2019
+                </p>
+                <p
+                  class="scroll-fade scroll-fade-top text-xs leading-tight transition-all delay-600 duration-4000"
+                >
+                  Menjalin <br />Hubungan
+                </p>
+              </div>
+              <div class="relative col-span-1 h-full">
+                <div
+                  class="bg-ideka02 scroll-fade scroll-fade-top absolute top-2 right-0 h-3 w-3 -translate-x-[22px] -translate-y-px transform rounded-full transition-all delay-1000 duration-6000"
+                ></div>
+              </div>
+              <div
+                class="scroll-fade scroll-fade-right col-span-1 pt-1 text-left text-xs transition-all delay-600 duration-4000"
               >
-                2017 – Awal Bertemu
-              </h3>
-              <p
-                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
-              >
-                Takdir mempertemukan kami di sebuah kegiatan <br />
-                kampus. Saat itu, kami hanyalah dua orang asing <br />
-                yang mulai saling mengenal.
-              </p>
-              <h3
-                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
-              >
-                2019 – Menjalin Hubungan
-              </h3>
-              <p
-                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
-              >
-                Dari pertemanan, tumbuh rasa yang tulus. <br />
-                Kami pun memutuskan untuk berjalan bersama <br />sebagai
-                sepasang kekasih.
-              </p>
-              <h3
-                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
-              >
-                2024 – Lamaran
-              </h3>
-              <p
-                class="scroll-fade scroll-fade-right mb-4 transition-all delay-200 duration-4000"
-              >
-                Setelah melewati banyak cerita,<br />kami mantap melangkah ke
-                tahap yang lebih serius. <br />Keluarga pun memberi restu.
-              </p>
-              <h3
-                class="scroll-fade scroll-fade-right mb-1 font-semibold transition-all delay-200 duration-4000"
-              >
-                2025 – Hari Bahagia
-              </h3>
-              <p
-                class="scroll-fade scroll-fade-right transition-all delay-200 duration-4000"
-              >
-                Kini kami siap memulai babak baru <br />
-                sebagai suami dan istri, dengan cinta <br />
-                dan doa dari orang-orang terkasih.
-              </p>
+                <p
+                  class="scroll-fade scroll-fade-top mt-0 transition-all delay-600 duration-4000"
+                >
+                  Dari pertemanan, tumbuh rasa yang tulus. Kami pun memutuskan
+                  untuk berjalan bersama sebagai sepasang kekasih.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative z-10 mb-8 grid grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)] gap-x-0 last:mb-0 md:grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)]"
+            >
+              <div class="col-span-1 pt-0.5 pr-6 text-right">
+                <p
+                  class="scroll-fade scroll-fade-top mb-1 text-lg font-bold text-black transition-all delay-700 duration-4000"
+                >
+                  2019
+                </p>
+                <p
+                  class="scroll-fade scroll-fade-top text-xs leading-tight transition-all delay-700 duration-4000"
+                >
+                  Menjalin <br />Hubungan
+                </p>
+              </div>
+              <div class="relative col-span-1 h-full">
+                <div
+                  class="bg-ideka02 scroll-fade scroll-fade-top absolute top-2 right-0 h-3 w-3 -translate-x-[22px] -translate-y-px transform rounded-full transition-all delay-1100 duration-6000"
+                ></div>
+              </div>
+              <div class="col-span-1 pt-1 text-left text-xs">
+                <p
+                  class="scroll-fade scroll-fade-right mt-0 transition-all delay-700 duration-4000"
+                >
+                  Setelah melewati banyak cerita, kami mantap melangkah ke tahap
+                  yang lebih serius. Keluarga pun memberi restu.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative z-10 mb-8 grid grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)] gap-x-0 last:mb-0 md:grid-cols-[minmax(0,33%)_20px_minmax(0,1fr)]"
+            >
+              <div class="col-span-1 pt-0.5 pr-6 text-right">
+                <p
+                  class="scroll-fade scroll-fade-top mb-1 text-lg font-bold text-black transition-all delay-800 duration-4000"
+                >
+                  2025
+                </p>
+                <p
+                  class="scroll-fade scroll-fade-top text-xs leading-tight transition-all delay-800 duration-4000"
+                >
+                  Hari <br />Bahagia
+                </p>
+              </div>
+              <div class="relative col-span-1 h-full">
+                <div
+                  class="bg-ideka02 scroll-fade scroll-fade-top absolute top-2 right-0 h-3 w-3 -translate-x-[22px] -translate-y-px transform rounded-full transition-all delay-1200 duration-6000"
+                ></div>
+              </div>
+              <div class="col-span-1 pt-1 text-left text-xs">
+                <p
+                  class="scroll-fade scroll-fade-right mt-0 transition-all delay-800 duration-4000"
+                >
+                  Kini kami siap memulai babak baru sebagai suami dan istri,
+                  dengan cinta dan doa dari orang-orang terkasih.
+                </p>
+              </div>
             </div>
           </div>
         </section>
         <!-- halaman 10 -->
         <section
           id="halaman10"
-          class="-mt-0.5 hidden min-h-svh bg-[url('img/01/Page1/background.png')] bg-cover bg-center bg-repeat text-center"
+          class="-mt-0.5 hidden min-h-svh bg-[url('img/02/Page2/baground.png')] bg-cover bg-center bg-repeat text-center"
         >
           <div class="mb-4 pt-10">
             <img
-              src="img/01/page10/daun.png"
+              src="img/02/Page10/daun.png"
               alt="Leaf"
-              class="scroll-fade scroll-fade-top js-animate-daun mx-auto h-20 w-auto transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-top js-animate-daun mx-auto h-18 w-auto transition-all delay-200 duration-4000"
             />
           </div>
 
@@ -590,7 +669,7 @@
           <div class="mx-auto mt-8 max-w-md space-y-4">
             <!-- Mandiri -->
             <div
-              class="bg-idekasecond scroll-fade scroll-fade-right mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-right border-ideka02 mx-10 rounded-xl border-2 bg-[#F0E5D7] p-4 shadow-md transition-all delay-200 duration-4000"
             >
               <img
                 src="img/01/page10/mandiri.png"
@@ -609,7 +688,7 @@
               <button
                 onclick="copyToClipboard('1230045678901')"
                 id="bukaUndangan"
-                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+                class="bg-ideka02 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#913D3D]"
               >
                 <img
                   src="img/01/page10/icon copy.png"
@@ -622,7 +701,7 @@
             <!-- BNI -->
 
             <div
-              class="bg-idekasecond scroll-fade scroll-fade-left mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-left border-ideka02 mx-10 rounded-xl border-2 bg-[#F0E5D7] p-4 shadow-md transition-all delay-200 duration-4000"
             >
               <img
                 src="img/01/page10/bni.png"
@@ -641,7 +720,7 @@
               <button
                 onclick="copyToClipboard('1230045678901')"
                 id="bukaUndangan"
-                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+                class="bg-ideka02 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#913D3D]"
               >
                 <img
                   src="img/01/page10/icon copy.png"
@@ -654,7 +733,7 @@
             <!-- DANA -->
 
             <div
-              class="bg-idekasecond scroll-fade scroll-fade-right relative z-20 mx-10 rounded-xl p-4 shadow-md transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-right border-ideka02 relative z-20 mx-10 rounded-xl border-2 bg-[#F0E5D7] p-4 shadow-md transition-all delay-200 duration-4000"
             >
               <img
                 src="img/01/page10/dana.png"
@@ -673,7 +752,7 @@
               <button
                 onclick="copyToClipboard('1230045678901')"
                 id="bukaUndangan"
-                class="bg-ideka01 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#7a502a]"
+                class="bg-ideka02 text-idekalina inline-flex items-center px-5 py-3 text-sm font-bold shadow-md transition hover:bg-[#913D3D]"
               >
                 <img
                   src="img/01/page10/icon copy.png"
@@ -688,18 +767,18 @@
         <!-- halaman11 -->
         <section
           id="halaman11"
-          class="relative z-10 -mt-0.5 hidden bg-[url('img/01/Page1/background.png')] bg-cover bg-center pb-20 text-center"
+          class="relative z-10 -mt-0.5 hidden bg-[url('img/02/Page2/baground.png')] bg-cover bg-center pb-20 text-center"
         >
           <div class="relative z-10 mx-auto flex justify-end">
             <img
               class="scroll-fade scroll-fade-top js-animate-after mt-10 w-full max-w-sm transition-all delay-200 duration-4000"
-              src="img/01/page11/bunga page11.png"
+              src="img/02/Page11/bunga.png"
               alt="Bunga Halaman 11"
             />
           </div>
 
           <div
-            class="scroll-fade scroll-fade-bottom relative z-20 mx-auto -mt-55 flex w-full max-w-sm flex-col items-center p-4 transition-all delay-200 duration-4000"
+            class="scroll-fade scroll-fade-bottom relative z-20 mx-auto -mt-110 flex w-full max-w-sm flex-col items-center p-4 transition-all delay-200 duration-4000"
           >
             <img
               class="absolute inset-0 z-20 mx-auto h-170 w-75 object-fill"
@@ -888,19 +967,19 @@
         <!-- halaman12 -->
         <section
           id="halaman12"
-          class="relative z-10 -mt-0.5 hidden bg-[url('img/01/Page1/background.png')] bg-cover bg-center pt-2 pb-20 text-center"
+          class="relative z-10 -mt-0.5 hidden bg-[url('img/02/Page2/baground.png')] bg-cover bg-center pt-2 pb-20 text-center"
         >
           <div class="mx-auto flex flex-col items-center justify-center p-4">
             <div class="relative mb-6 h-64 w-64">
               <img
-                src="img/01/page12/pengantinframe.png"
+                src="img/02/Page12/pengantin.png"
                 alt="Foto Ilustrasi Pengantin Ayudya & Baskoro"
                 class="scroll-fade h-full w-full object-cover p-2 transition-all delay-200 duration-4000"
               />
             </div>
 
             <p
-              class="text-ideka01 scroll-fade scroll-fade-right mb-4 max-w-xs text-sm leading-relaxed transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-right mb-4 max-w-xs text-sm leading-relaxed transition-all delay-200 duration-4000"
             >
               Merupakan suatu kebahagiaan dan kehormatan bagi kami, apabila
               Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan doa restu
@@ -908,19 +987,19 @@
             </p>
 
             <p
-              class="text-ideka01 scroll-fade scroll-fade-left mb-2 text-base font-semibold transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-left mb-2 text-base font-semibold transition-all delay-200 duration-4000"
             >
               Wassalamu'alaikum Wr.Wb.
             </p>
 
             <p
-              class="text-ideka01 scroll-fade scroll-fade-right mb-4 text-sm transition-all delay-200 duration-4000"
+              class="scroll-fade scroll-fade-right mb-4 text-sm transition-all delay-200 duration-4000"
             >
               Kami yang berbahagia,
             </p>
 
             <p
-              class="font-pinyon text-ideka01 scroll-fade scroll-fade-right text-[40px] font-medium transition-all delay-200 duration-4000"
+              class="font-pinyon scroll-fade scroll-fade-right text-[40px] font-medium transition-all delay-200 duration-4000"
             >
               Ayudya & Baskoro
             </p>
@@ -984,224 +1063,243 @@
       const form = document.getElementById("rsvpForm");
       const daftarKomentar = document.getElementById("daftarKomentar");
       const commentCountDisplay = document.getElementById(
-        "commentCountDisplay",
+          "commentCountDisplay",
       );
-
+  
       const URL_APPS_SCRIPT =
-        "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
-
+          "https://script.google.com/macros/s/AKfycbwcD01sAOS3lfHMaH1c6FVggAUMbJ0b8cLJlZgLrc9bPvWB-m17uj6KYTcJTQkURAE8/exec";
+  
       // --- 2. KONTROL MUSIK ---
       const music = document.getElementById("undanganMusic");
       const musicControl = document.getElementById("musicControl");
       const playImage = document.getElementById("playImage");
       const pauseImage = document.getElementById("pauseImage");
-
+  
       function toggleMusic() {
-        if (!music || !musicControl || !playImage || !pauseImage) return;
-
-        if (music.paused) {
-          music.volume = 0.8;
-          music
-            .play()
-            .then(() => {
-              playImage.classList.remove("hidden");
-              pauseImage.classList.add("hidden");
-            })
-            .catch((error) => {
-              console.warn("Play gagal, interaksi diperlukan.");
-              playImage.classList.remove("hidden");
-              pauseImage.classList.add("hidden");
-            });
-        } else {
-          music.pause();
-          playImage.classList.add("hidden");
-          pauseImage.classList.remove("hidden");
-        }
+          if (!music || !musicControl || !playImage || !pauseImage) return;
+  
+          if (music.paused) {
+              music.volume = 0.8;
+              music
+                  .play()
+                  .then(() => {
+                      playImage.classList.remove("hidden");
+                      pauseImage.classList.add("hidden");
+                  })
+                  .catch((error) => {
+                      console.warn("Play gagal, interaksi diperlukan.");
+                      playImage.classList.remove("hidden");
+                      pauseImage.classList.add("hidden");
+                  });
+          } else {
+              music.pause();
+              playImage.classList.add("hidden");
+              pauseImage.classList.remove("hidden");
+          }
       }
-
+  
       // --- 3. FUNGSI ANIMASI FADE-IN & WOBBLE (DIPINDAH KE ATAS) ---
       const observerCallback = (entries, observer) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("is-visible");
-            observer.unobserve(entry.target);
-
-            if (entry.target.classList.contains("js-animate-after")) {
-              const wobbleHandler = function (e) {
-                if (
-                  e.propertyName === "opacity" ||
-                  e.propertyName === "transform"
-                ) {
-                  entry.target.classList.add("animate-wobble");
-                  entry.target.removeEventListener(
-                    "transitionend",
-                    wobbleHandler,
-                  );
-                }
-              };
-              entry.target.addEventListener("transitionend", wobbleHandler);
-            } else if (entry.target.classList.contains("js-animate-daun")) {
-              const daunHandler = function (e) {
-                if (
-                  e.propertyName === "opacity" ||
-                  e.propertyName === "transform"
-                ) {
-                  entry.target.classList.add("animate-daun");
-                  entry.target.removeEventListener(
-                    "transitionend",
-                    daunHandler,
-                  );
-                }
-              };
-              entry.target.addEventListener("transitionend", daunHandler);
-            }
-          }
-        });
+          entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("is-visible");
+                  observer.unobserve(entry.target);
+  
+                  if (entry.target.classList.contains("js-animate-after")) {
+                      const wobbleHandler = function (e) {
+                          if (
+                              e.propertyName === "opacity" ||
+                              e.propertyName === "transform"
+                          ) {
+                              entry.target.classList.add("animate-wobble");
+                              entry.target.removeEventListener(
+                                  "transitionend",
+                                  wobbleHandler,
+                              );
+                          }
+                      };
+                      entry.target.addEventListener("transitionend", wobbleHandler);
+                  } else if (entry.target.classList.contains("js-animate-daun")) {
+                      const daunHandler = function (e) {
+                          if (
+                              e.propertyName === "opacity" ||
+                              e.propertyName === "transform"
+                          ) {
+                              entry.target.classList.add("animate-daun");
+                              entry.target.removeEventListener(
+                                  "transitionend",
+                                  daunHandler,
+                              );
+                          }
+                      };
+                      entry.target.addEventListener("transitionend", daunHandler);
+                  }
+              }
+          });
       };
-
+  
       function initScrollFadeAnimations() {
-        const fadeElements = document.querySelectorAll(".scroll-fade");
-
-        if (!kontenKanan) {
-          console.error(
-            "Elemen #kontenKanan tidak ditemukan. Animasi scroll tidak bisa diinisialisasi.",
+          const fadeElements = document.querySelectorAll(".scroll-fade");
+  
+          if (!kontenKanan) {
+              console.error(
+                  "Elemen #kontenKanan tidak ditemukan. Animasi scroll tidak bisa diinisialisasi.",
+              );
+              return;
+          }
+  
+          const observerOptions = {
+              root: kontenKanan,
+              rootMargin: "0px",
+              threshold: 0.1,
+          };
+  
+          const observer = new IntersectionObserver(
+              observerCallback,
+              observerOptions,
           );
-          return;
-        }
-
-        const observerOptions = {
-          root: kontenKanan,
-          rootMargin: "0px",
-          threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver(
-          observerCallback,
-          observerOptions,
-        );
-
-        fadeElements.forEach((element) => {
-          observer.observe(element);
-        });
+  
+          fadeElements.forEach((element) => {
+              observer.observe(element);
+          });
       }
       // --- AKHIR FUNGSI ANIMASI ---
-
-      // --- 4. FUNGSI UTAMA BUKA UNDANGAN (FIX INTERACTIVITY & POINTER-EVENTS) ---
+  
+      // --- 4. FUNGSI UTAMA BUKA UNDANGAN (FIX SCROLL & INTERACTIVITY) ---
       function bukaUndangan() {
-        // Sembunyikan Cover
-        if (halaman1) halaman1.style.display = "none";
-        document.body.classList.remove("overflow-hidden");
-
-        // konten utama terlihat
-        if (kontenKanan) {
-          kontenKanan.classList.remove("hidden", "opacity-0", "invisible");
-        }
-        semuaHalaman.forEach((halaman) => {
-          if (halaman.id !== "halaman1") {
-            halaman.classList.remove("hidden");
+          // 1. KONTROL SCROLL GLOBAL (Fix Mobile Scroll Kecil):
+          // Hapus kunci scroll dari BODY dan HTML
+          document.body.classList.remove("overflow-hidden");
+          document.documentElement.style.overflow = ''; // Tambahan untuk memastikan scroll elemen <html> diizinkan
+  
+          // 2. KONTROL SCROLL & TINGGI pada kontainer utama:
+          if (kontenKanan) {
+              // Hapus kelas yang mengunci tinggi dan scroll (#kontenKanan harus memiliki h-screen dan overflow-y-hidden di HTML awal)
+              kontenKanan.classList.remove("h-screen", "overflow-y-hidden");
+              kontenKanan.classList.add("overflow-y-auto");
           }
-        });
-        if (kontenKanan) kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
-
-        // TAMPILKAN TOMBOL MUSIK
-        if (musicControl) {
-          // Hapus kelas penyembunyi
-          musicControl.classList.remove(
-            "hidden",
-            "opacity-0",
-            "invisible",
-            "pointer-events-none",
-          );
-
-          // Aktifkan interaksi setelah jeda 50ms (Solusi bug klik)
+  
+          // 3. SEMBUNYIKAN COVER
+          if (halaman1) {
+              halaman1.style.display = "none";
+              halaman1.classList.remove("hidden", "min-h-screen"); // Menghapus min-h-screen juga opsional
+          }
+  
+          // Tampilkan semua halaman yang tersembunyi
+          semuaHalaman.forEach((halaman) => {
+              if (halaman.id !== "halaman1") {
+                  halaman.classList.remove("hidden");
+              }
+          });
+  
+          // 4. GULIR KE ATAS/HALAMAN KEDUA (dengan jeda untuk memastikan DOM sudah update)
           setTimeout(() => {
-            musicControl.classList.add("pointer-events-auto");
+              const halamanDua = document.getElementById("halaman2");
+              if (halamanDua) {
+                  // Scroll ke halaman 2 jika ada
+                  halamanDua.scrollIntoView({ behavior: "smooth", block: "start" });
+              } else if (kontenKanan) {
+                  // Jika tidak ada halaman 2, scroll ke atas kontenKanan
+                  kontenKanan.scrollTo({ top: 0, behavior: "smooth" });
+              }
           }, 50);
-        }
-
-        // Memanggil fungsi toggleMusic() untuk mencoba play
-        toggleMusic();
-
-        // Simpan status dibuka
-        sessionStorage.setItem("undanganDibuka", "true");
-
-        // Inisialisasi animasi scroll (Sekarang fungsi ini sudah didefinisikan di atas, jadi tidak error)
-        initScrollFadeAnimations();
+  
+          // 5. TAMPILKAN TOMBOL MUSIK
+          if (musicControl) {
+              // Hapus kelas penyembunyi
+              musicControl.classList.remove(
+                  "hidden",
+                  "opacity-0",
+                  "invisible",
+                  "pointer-events-none",
+              );
+  
+              // Aktifkan interaksi setelah jeda 50ms (Solusi bug klik)
+              setTimeout(() => {
+                  musicControl.classList.add("pointer-events-auto");
+              }, 50);
+          }
+  
+          // Memanggil fungsi toggleMusic() untuk mencoba play
+          toggleMusic();
+  
+          // Simpan status dibuka
+          sessionStorage.setItem("undanganDibuka", "true");
+  
+          // Inisialisasi animasi scroll
+          initScrollFadeAnimations();
       }
       // --- AKHIR FUNGSI BUKA UNDANGAN ---
-
+  
       // --- SISA FUNGSI LAIN (COUNTDOWN, KOMENTAR, NAMA TAMU) DI SINI ---
-
-      // ... (Fungsi-fungsi Anda yang lain, seperti COUNTDOWN, KOMENTAR, RSVP, setNamaTamu tetap di tempatnya) ...
-      // ... (Anda bisa menempelkan sisa skrip Anda di sini, atau membiarkannya di bawah) ...
-
+  
       // --- FUNGSI COUNTDOWN (TETAP) ---
       const targetDate = new Date("2026-07-16T14:26:00").getTime();
       const countdown = setInterval(() => {
-        const now = new Date().getTime();
-        const distance = targetDate - now;
-
-        if (distance < 0) {
-          clearInterval(countdown);
-          const countdownSection = document.getElementById("countdown");
-          countdownSection.innerHTML = `
-                          <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
-                            <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
-                            <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
-                          </div>
-                      `;
-          return;
-        }
-
-        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        const hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-        );
-        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-        document.getElementById("days")
-          ? (document.getElementById("days").innerText = days)
-          : null;
-        document.getElementById("hours")
-          ? (document.getElementById("hours").innerText = hours)
-          : null;
-        document.getElementById("minutes")
-          ? (document.getElementById("minutes").innerText = minutes)
-          : null;
-        document.getElementById("seconds")
-          ? (document.getElementById("seconds").innerText = seconds)
-          : null;
+          const now = new Date().getTime();
+          const distance = targetDate - now;
+  
+          if (distance < 0) {
+              clearInterval(countdown);
+              const countdownSection = document.getElementById("countdown");
+              countdownSection.innerHTML = `
+                                              <div class="bg-ideka01 text-white px-6 py-4 rounded-lg shadow-md w-full">
+                                                  <p class="text-xl font-semibold">Acara Sedang Berlangsung</p>
+                                                  <p class="text-sm mt-1">Terima kasih telah hadir dan mendoakan kami ❤️</p>
+                                              </div>
+                                          `;
+              return;
+          }
+  
+          const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          const hours = Math.floor(
+              (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+          const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+          document.getElementById("days")
+              ? (document.getElementById("days").innerText = days)
+              : null;
+          document.getElementById("hours")
+              ? (document.getElementById("hours").innerText = hours)
+              : null;
+          document.getElementById("minutes")
+              ? (document.getElementById("minutes").innerText = minutes)
+              : null;
+          document.getElementById("seconds")
+              ? (document.getElementById("seconds").innerText = seconds)
+              : null;
       }, 1000);
-
+  
       // --- FUNGSI KOMENTAR & RSVP (TETAP) ---
       function updateCommentCount(count) {
-        if (typeof count === "number") {
-          commentCountDisplay.textContent = `${count} Comments`;
-          return;
-        }
-        const actualCount =
-          daftarKomentar.querySelectorAll(".rounded-md.border").length;
-        commentCountDisplay.textContent = `${actualCount} Comments`;
+          if (typeof count === "number") {
+              commentCountDisplay.textContent = `${count} Comments`;
+              return;
+          }
+          const actualCount =
+              daftarKomentar.querySelectorAll(".rounded-md.border").length;
+          commentCountDisplay.textContent = `${actualCount} Comments`;
       }
-
+  
       function buatKomentarBaru(nama, ucapan, konfirmasi) {
-        let badgeClass;
-        let iconPath;
-
-        if (konfirmasi === "Hadir") {
-          badgeClass = "bg-green-100 text-green-700";
-          iconPath = "M5 13l4 4L19 7";
-        } else if (konfirmasi === "Tidak Hadir") {
-          badgeClass = "bg-red-100 text-red-700";
-          iconPath = "M6 18L18 6M6 6l12 12";
-        } else {
-          badgeClass = "bg-yellow-100 text-yellow-700";
-          iconPath =
-            "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z";
-        }
-
-        const komentarHTML = `
+          let badgeClass;
+          let iconPath;
+  
+          if (konfirmasi === "Hadir") {
+              badgeClass = "bg-green-100 text-green-700";
+              iconPath = "M5 13l4 4L19 7";
+          } else if (konfirmasi === "Tidak Hadir") {
+              badgeClass = "bg-red-100 text-red-700";
+              iconPath = "M6 18L18 6M6 6l12 12";
+          } else {
+              badgeClass = "bg-yellow-100 text-yellow-700";
+              iconPath =
+                  "M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z";
+          }
+  
+          const komentarHTML = `
               <div class="rounded-md border border-[#c2a47d] p-3 text-left">
                   <div class="flex items-center justify-between text-sm font-bold">
                       ${nama}
@@ -1215,180 +1313,187 @@
                   <p class="mt-1 text-xs text-gray-700">${ucapan}</p>
               </div>
           `;
-        if (daftarKomentar)
-          daftarKomentar.insertAdjacentHTML("afterbegin", komentarHTML);
+          if (daftarKomentar)
+              daftarKomentar.insertAdjacentHTML("afterbegin", komentarHTML);
       }
-
+  
       form?.addEventListener("submit", function (event) {
-        event.preventDefault();
-
-        const nama = document.getElementById("namaInput").value.trim();
-        const ucapan = document.getElementById("ucapanInput").value.trim();
-        const konfirmasi = document.getElementById("konfirmasiInput").value;
-
-        if (!nama || !ucapan || konfirmasi === "") {
-          alert(
-            "Mohon lengkapi semua kolom form (Nama, Ucapan, dan Konfirmasi Kehadiran).",
-          );
-          return;
-        }
-
-        const kirimButton = document.getElementById("kirimButton");
-        kirimButton.textContent = "Mengirim...";
-        kirimButton.disabled = true;
-
-        const payload = { nama: nama, ucapan: ucapan, konfirmasi: konfirmasi };
-
-        fetch(URL_APPS_SCRIPT, {
-          method: "POST",
-          headers: { "Content-Type": "text/plain;charset=utf-8" },
-          body: JSON.stringify(payload),
-        })
-          .then((response) => {
-            if (response.ok) {
-              return response.json();
-            } else {
-              throw new Error(`Koneksi Gagal (Status: ${response.status})`);
-            }
-          })
-          .then((data) => {
-            if (data.result === "success") {
+          event.preventDefault();
+  
+          const nama = document.getElementById("namaInput").value.trim();
+          const ucapan = document.getElementById("ucapanInput").value.trim();
+          const konfirmasi = document.getElementById("konfirmasiInput").value;
+  
+          if (!nama || !ucapan || konfirmasi === "") {
               alert(
-                "Konfirmasi & Ucapan Selamat Anda berhasil dikirim dan tersimpan!",
+                  "Mohon lengkapi semua kolom form (Nama, Ucapan, dan Konfirmasi Kehadiran).",
               );
-              ambilDanTampilkanKomentar();
-              form.reset();
-            } else {
-              throw new Error(data.message || "Penyimpanan data gagal.");
-            }
+              return;
+          }
+  
+          const kirimButton = document.getElementById("kirimButton");
+          kirimButton.textContent = "Mengirim...";
+          kirimButton.disabled = true;
+  
+          const payload = { nama: nama, ucapan: ucapan, konfirmasi: konfirmasi };
+  
+          fetch(URL_APPS_SCRIPT, {
+              method: "POST",
+              headers: { "Content-Type": "text/plain;charset=utf-8" },
+              body: JSON.stringify(payload),
           })
-          .catch((error) => {
-            console.error("Error saat mengirim data:", error);
-            alert(
-              "Terjadi kesalahan saat mengirim data. Coba periksa URL Apps Script dan Deployment Anda.",
-            );
-          })
-          .finally(() => {
-            kirimButton.textContent = "Kirim";
-            kirimButton.disabled = false;
-          });
-      });
-
-      function ambilDanTampilkanKomentar() {
-        if (!daftarKomentar) return;
-
-        daftarKomentar.innerHTML =
-          '<p class="text-sm text-center text-gray-500">Memuat ucapan...</p>';
-
-        fetch(URL_APPS_SCRIPT, { method: "GET" })
-          .then((response) => response.json())
-          .then((dataKomentar) => {
-            daftarKomentar.innerHTML = "";
-
-            if (dataKomentar && dataKomentar.length > 0) {
-              dataKomentar.reverse().forEach((item) => {
-                buatKomentarBaru(item.nama, item.ucapan, item.konfirmasi);
+              .then((response) => {
+                  if (response.ok) {
+                      return response.json();
+                  } else {
+                      throw new Error(`Koneksi Gagal (Status: ${response.status})`);
+                  }
+              })
+              .then((data) => {
+                  if (data.result === "success") {
+                      alert(
+                          "Konfirmasi & Ucapan Selamat Anda berhasil dikirim dan tersimpan!",
+                      );
+                      ambilDanTampilkanKomentar();
+                      form.reset();
+                  } else {
+                      throw new Error(data.message || "Penyimpanan data gagal.");
+                  }
+              })
+              .catch((error) => {
+                  console.error("Error saat mengirim data:", error);
+                  alert(
+                      "Terjadi kesalahan saat mengirim data. Coba periksa URL Apps Script dan Deployment Anda.",
+                  );
+              })
+              .finally(() => {
+                  kirimButton.textContent = "Kirim";
+                  kirimButton.disabled = false;
               });
-              updateCommentCount(dataKomentar.length);
-            } else {
-              daftarKomentar.innerHTML =
-                '<p class="text-sm text-center text-gray-500">Jadilah yang pertama memberikan ucapan selamat! 🎉</p>';
-              updateCommentCount(0);
-            }
-          })
-          .catch((error) => {
-            console.error("Error saat mengambil data:", error);
-            daftarKomentar.innerHTML =
-              '<p class="text-sm text-center text-red-500">Gagal memuat ucapan dari server. Cek koneksi Anda.</p>';
-            updateCommentCount(0);
-          });
+      });
+  
+      function ambilDanTampilkanKomentar() {
+          if (!daftarKomentar) return;
+  
+          daftarKomentar.innerHTML =
+              '<p class="text-sm text-center text-gray-500">Memuat ucapan...</p>';
+  
+          fetch(URL_APPS_SCRIPT, { method: "GET" })
+              .then((response) => response.json())
+              .then((dataKomentar) => {
+                  daftarKomentar.innerHTML = "";
+  
+                  if (dataKomentar && dataKomentar.length > 0) {
+                      dataKomentar.reverse().forEach((item) => {
+                          buatKomentarBaru(item.nama, item.ucapan, item.konfirmasi);
+                      });
+                      updateCommentCount(dataKomentar.length);
+                  } else {
+                      daftarKomentar.innerHTML =
+                          '<p class="text-sm text-center text-gray-500">Jadilah yang pertama memberikan ucapan selamat! 🎉</p>';
+                      updateCommentCount(0);
+                  }
+              })
+              .catch((error) => {
+                  console.error("Error saat mengambil data:", error);
+                  daftarKomentar.innerHTML =
+                      '<p class="text-sm text-center text-red-500">Gagal memuat ucapan dari server. Cek koneksi Anda.</p>';
+                  updateCommentCount(0);
+              });
       }
-
+  
       // --- FUNGSI NAMA TAMU & LAINNYA (TETAP) ---
       function copyToClipboard(text) {
-        navigator.clipboard.writeText(text).then(() => {
-          const notif = document.getElementById("copyNotification");
-          if (notif) {
-            notif.classList.remove("hidden");
-            setTimeout(() => {
-              notif.classList.add("hidden");
-            }, 2000);
-          }
-        });
+          navigator.clipboard.writeText(text).then(() => {
+              const notif = document.getElementById("copyNotification");
+              if (notif) {
+                  notif.classList.remove("hidden");
+                  setTimeout(() => {
+                      notif.classList.add("hidden");
+                  }, 2000);
+              }
+          });
       }
-
+  
       function getParameterByName(name, url = window.location.href) {
-        name = name.replace(/[\[\]]/g, "\\$&");
-        const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
-        const results = regex.exec(url);
-        if (!results) return null;
-        if (!results[2]) return "";
-        return decodeURIComponent(results[2].replace(/\+/g, " "));
+          name = name.replace(/[\[\]]/g, "\\$&");
+          const regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)");
+          const results = regex.exec(url);
+          if (!results) return null;
+          if (!results[2]) return "";
+          return decodeURIComponent(results[2].replace(/\+/g, " "));
       }
-
+  
       function setNamaTamu() {
-        const namaTamu = getParameterByName("to");
-        const namaTamuDisplay = document.getElementById("namaTamuDisplay");
-
-        let namaBersih = "Bapak/Ibu/Saudara/i";
-
-        if (namaTamu && namaTamuDisplay) {
-          namaBersih = namaTamu.replace(/_/g, " ");
-          namaTamuDisplay.textContent = namaBersih;
-          sessionStorage.setItem("currentGuestName", namaBersih);
-        } else if (namaTamuDisplay) {
-          namaTamuDisplay.textContent = "Bapak/Ibu/Saudara/i";
-        }
+          const namaTamu = getParameterByName("to");
+          const namaTamuDisplay = document.getElementById("namaTamuDisplay");
+  
+          let namaBersih = "Bapak/Ibu/Saudara/i";
+  
+          if (namaTamu && namaTamuDisplay) {
+              namaBersih = namaTamu.replace(/_/g, " ");
+              namaTamuDisplay.textContent = namaBersih;
+              sessionStorage.setItem("currentGuestName", namaBersih);
+          } else if (namaTamuDisplay) {
+              namaTamuDisplay.textContent = "Bapak/Ibu/Saudara/i";
+          }
       }
-
+  
       // --- 8. INISIALISASI AKHIR (DOM READY) ---
       document.addEventListener("DOMContentLoaded", function () {
-        setNamaTamu();
-        bukaBtn?.addEventListener("click", bukaUndangan);
-
-        // Listener untuk icon musik
-        if (musicControl) {
-          musicControl.addEventListener("click", toggleMusic);
-        }
-
-        const undanganSudahDibuka =
-          sessionStorage.getItem("undanganDibuka") === "true";
-
-        if (undanganSudahDibuka) {
-          // Jika sudah dibuka, panggil bukaUndangan() untuk menampilkan konten dan musicControl.
-          bukaUndangan();
-        } else {
-          // Jika baru pertama kali diakses, JANGAN panggil bukaUndangan().
-          // Pastikan musicControl tersembunyi dan tidak interaktif.
+          setNamaTamu();
+          bukaBtn?.addEventListener("click", bukaUndangan);
+  
+          // Listener untuk icon musik
           if (musicControl) {
-            musicControl.classList.add(
-              "hidden",
-              "opacity-0",
-              "invisible",
-              "pointer-events-none",
-            );
+              musicControl.addEventListener("click", toggleMusic);
           }
-
-          // Atur default icon ke Play, meski kontainer tersembunyi
-          if (playImage && pauseImage) {
-            playImage.classList.remove("hidden");
-            pauseImage.classList.add("hidden");
+  
+          const undanganSudahDibuka =
+              sessionStorage.getItem("undanganDibuka") === "true";
+  
+          // **PENTING**: Tambahkan kunci scroll global jika undangan BELUM dibuka
+          if (!undanganSudahDibuka) {
+              // Ini yang harus Anda tambahkan di HTML Anda (atau di sini jika Anda tidak bisa edit HTML)
+              // document.body.classList.add("overflow-hidden"); 
           }
-        }
-
-        const namaInput = document.getElementById("namaInput");
-        const savedName = sessionStorage.getItem("currentGuestName");
-
-        if (savedName && namaInput) {
-          namaInput.value = savedName;
-        }
-
-        if (daftarKomentar) {
-          ambilDanTampilkanKomentar();
-        } else {
-          updateCommentCount(0);
-        }
+  
+          if (undanganSudahDibuka) {
+              // Jika sudah dibuka, panggil bukaUndangan() untuk menampilkan konten dan musicControl.
+              // **Penting**: Ini akan menghapus kelas pengunci scroll di kontenKanan dan body
+              bukaUndangan();
+          } else {
+              // Jika baru pertama kali diakses, JANGAN panggil bukaUndangan().
+              // Pastikan musicControl tersembunyi dan tidak interaktif.
+              if (musicControl) {
+                  musicControl.classList.add(
+                      "hidden",
+                      "opacity-0",
+                      "invisible",
+                      "pointer-events-none",
+                  );
+              }
+  
+              // Atur default icon ke Play, meski kontainer tersembunyi
+              if (playImage && pauseImage) {
+                  playImage.classList.remove("hidden");
+                  pauseImage.classList.add("hidden");
+              }
+          }
+  
+          const namaInput = document.getElementById("namaInput");
+          const savedName = sessionStorage.getItem("currentGuestName");
+  
+          if (savedName && namaInput) {
+              namaInput.value = savedName;
+          }
+  
+          if (daftarKomentar) {
+              ambilDanTampilkanKomentar();
+          } else {
+              updateCommentCount(0);
+          }
       });
-    </script>
+  </script>
   </body>
 </html>
